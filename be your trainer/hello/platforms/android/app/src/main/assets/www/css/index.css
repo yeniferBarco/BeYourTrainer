@@ -1,0 +1,36 @@
+body{
+margin:0px;
+padding:0px;
+background-color:#b4ff00 ;
+}
+
+.ocultar{
+display:none;
+}
+
+.posicionBotones{
+ position: absolute;
+}
+
+#btnComenzar{
+top: 342px;    
+left: 88px;
+}
+#btnAcercade{
+top:412px;
+left: 88px;
+}
+#btnAjustes{
+top:482px;
+left: 88px; 
+}
+
+#logo{
+top:39px;
+left:20px; 
+}
+
+#letrero{
+top:565px;
+left: 92px 
+}
