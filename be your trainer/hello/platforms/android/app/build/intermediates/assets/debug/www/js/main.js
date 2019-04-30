@@ -7,7 +7,7 @@ function inicio(){
 		 	
 inicializar();
 asignarEventos();
-principio();
+entrada();
 
 }
 
@@ -29,10 +29,20 @@ ajustes.addEventListener("click",ajuste);
 
 }
 
+function entrada()
+{   
+	seccion_00.className="entrada animated";
+    seccion_01.className="inicio animated ocultar";
+	seccion_02.className="ejercicios ocultar";
+	seccion_03.className="acerca ocultar";
+	seccion_04.className="ajuste ocultar";
+	setTimeout(principio, 3000);
 
+}
 
 function principio()
-{
+{   
+	seccion_00.className="entrada ocultar";
     seccion_01.className="inicio animated pulse";
 	seccion_02.className="ejercicios ocultar";
 	seccion_03.className="acerca ocultar";
