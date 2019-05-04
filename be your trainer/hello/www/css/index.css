@@ -17,16 +17,73 @@ left: 12px;
 }
 
 #btnComenzar{
-top: 342px;    
-left: 88px;
+top: 279px;
+left: 97px;
 }
+  #btnCalentamiento{
+    top: 175px;
+    left: 57px;
+  }
+  #btnAbdomen{
+    top: 175px;
+    left: 212px;
+  }
+        #tituloAbdomen{
+        top: 70px;           
+        left: 96px;;
+        }
+        #btnListoAbd{
+        top: 134px;
+        left: 120px;
+        }
+          #rueda {
+          margin: 20px;
+          width: 150px;
+          height: 150px;
+          top: 103px;
+          left: 85px;
+          }
+
+                 #clock{
+                  left: 143px;
+                  top: 158px;
+                  width: 30px;
+                  height: 25px;
+                  color: black;
+                  font-family: 'Medium Italic', sans-serif;
+                  font-size: 67px;
+                  text-align: center;
+
+                  }
+
+
+  #btnPiernas{
+    top: 293px;
+    left: 57px;
+  }
+  #btnBrazos{
+    top: 293px;
+    left: 212px;
+  } 
+  #btnPectorales{
+    top: 411px;
+    left: 57px;
+  }
+  #btnGluteos{
+    top: 411px;
+    left: 212px;
+  }  
+
+
+
+
 #btnAcercade{
-top:412px;
-left: 88px;
+top: 473px;
+left: 187px;
 }
 #btnAjustes{
-top:482px;
-left: 88px; 
+top: 473px;
+left: 113px; 
 }
 
 #btnMenuEjercicios{
