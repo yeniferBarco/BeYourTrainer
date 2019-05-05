@@ -12,8 +12,8 @@ display:none;
  position: absolute;
 }
 .atras{
-top: 12px;
-left: 12px;
+top: 29px;
+left: 17px;
 }
 
 #btnComenzar{
@@ -28,9 +28,9 @@ left: 97px;
     top: 175px;
     left: 212px;
   }
-        #tituloAbdomen{
-        top: 70px;           
-        left: 96px;;
+        .titulos{
+        top: 22px;
+        left: 96px;
         }
         #btnListoAbd{
         top: 134px;
@@ -87,9 +87,9 @@ left: 113px;
 }
 
 #btnMenuEjercicios{
-top:15px;
-left:313px;
-right:12px;
+top: 31px;
+left: 316px;
+right: 12px;
 }
 #logo{
 top:39px;

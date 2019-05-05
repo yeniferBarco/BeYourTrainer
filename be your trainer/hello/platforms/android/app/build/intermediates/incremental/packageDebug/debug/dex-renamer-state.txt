@@ -1,4 +1,4 @@
-#Mon Apr 29 21:41:36 COT 2019
-base.0=C\:\\Users\\sebas\\Desktop\\be your trainer\\hello\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Sat May 04 03:44:46 COT 2019
+base.0=C\:\\Users\\sebas\\Desktop\\BeYourTrainer\\be your trainer\\hello\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

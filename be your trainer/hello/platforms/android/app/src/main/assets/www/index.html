@@ -2,6 +2,7 @@
 <html>
     <head>
 
+        <meta charset="utf-8">
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
 
         <meta name="format-detection" content="telephone=no">
@@ -15,8 +16,8 @@
     <body>
         <section id="seccion_00" class="entada">
     
-                <img src="img/entrada/fondo_entrada.png">
-                <img src="img/entrada/byt.png" id="byt" class="posicionBotones ">
+                <img src="img/fondo_entrada.png">
+                <img src="img/byt.png" id="byt" class="posicionBotones ">
                 <div class="loader posicionBotones" >Loading...</div>
                        
             
@@ -33,24 +34,52 @@
         </section>
         <section id="seccion_02" class="ejercicios">
     
-                <img src="img/comenzar/ejercicios.png">
+                <img src="img/comenzar/fondo_ejercicios.png">
+                <img src="img/comenzar/atras_ejercicios.png" id="btnAtrasInicio" class=" atras posicionBotones animated fadeInRightBig"> 
+                <img src="img/comenzar/menu_ejercicios.png" id="btnMenuEjercicios" class="posicionBotones animated fadeInLeftBig">
+
+                <img src="img/comenzar/boton_calentamiento.png" id="btnCalentamiento" class="posicionBotones animated fadeInLeftBig">
+                <img src="img/comenzar/boton_abdomen.png" id="btnAbdomen" class="posicionBotones animated fadeInRightBig">
+                <img src="img/comenzar/boton_piernas.png" id="btnPiernas" class="posicionBotones animated fadeInLeftBig">
+                <img src="img/comenzar/boton_brazos.png" id="btnBrazos" class="posicionBotones animated fadeInRightBig">
+                <img src="img/comenzar/boton_pectorales.png" id="btnPectorales" class="posicionBotones animated fadeInLeftBig">
+                <img src="img/comenzar/boton_gluteos.png" id="btnGluteos" class="posicionBotones animated fadeInRightBig">
+                                 
+        </section>
+        <section id="seccion_02_2" class="ejAbdomen">
+    
+                <img src="img/comenzar/fondo_general.png">
+                <img src="img/comenzar/boton_estoylisto.png" id="btnListoAbd" class="posicionBotones animated fadeInRightBig">
+                <img src="img/comenzar/titulo_abdomen.png" id="tituloAbdomen" class="posicionBotones animated fadeInLeftBig">                            
+            
+        </section>
+        <section id="seccion_02_2_1" class="abdomen1">
+    
+                <img src="img/comenzar/fondo_vamos.png">
+                <div id="rueda" class="posicionBotones animated fadeInRightBig"></div>
+                <img src="img/comenzar/titulo_abdomen.png" id="tituloAbdomen" class="posicionBotones animated fadeInLeftBig">
+                <div id="clock" class="posicionBotones animated fadeInLeftBig"></div> 
                            
             
         </section>
+
+
         <section id="seccion_03" class="acerca">
     
                 <img src="img/creditos/fondo_acercade.png">
-                           
+                <img src="img/comenzar/atras_ejercicios.png" id="btnAtrasAcerca" class="atras posicionBotones animated fadeInRightBig">                       
             
         </section>
         <section id="seccion_04" class="ajuste">
     
                 <img src="img/ajustes/fondo_ajustes.png">
+                <img src="img/comenzar/atras_ejercicios.png" id="btnAtrasAjuste" class="atras posicionBotones animated fadeInRightBig">
                            
             
         </section>
 
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/progressbar.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
