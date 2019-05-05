@@ -103,8 +103,7 @@ function ejercicios()
 			{
 			seccion_02_2.className="ejAbdomen ocultar";
 			seccion_02_2_1.className="abdomen1 animated pulse";
-               circular();
-               timer();
+               preparado();
           
 			  }
 
@@ -120,6 +119,17 @@ function ejercicios()
 				});
 
                bar.animate(1.0);
+               }
+
+               function preparado(){
+               document.getElementById('premisa').innerHTML = "¿PREPARADO?";
+               
+               
+               setTimeout(function(){document.getElementById('premisa').innerHTML = "¿LISTO?" , document.getElementById('premisa').style.left ="77px" },3000);
+               setTimeout(function(){document.getElementById('premisa').innerHTML = "¡YA!" , document.getElementById('premisa').style.left ="130px"},6000); 
+               setTimeout(function(){document.getElementById('premisa').innerHTML = "" },8000);
+               setTimeout(timer,8000);
+               setTimeout(circular,8000); 
                } 
 
 
@@ -130,7 +140,7 @@ function ejercicios()
 			    console.log('Final');
 			  }else{
 			    totalTime-=1;
-			     if(totalTime<9){
+			    if(totalTime<9){
 			    document.getElementById('clock').style.left ="163px";
 			    }
 			    setTimeout(timer,1000);

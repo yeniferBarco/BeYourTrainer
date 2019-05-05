@@ -49,9 +49,22 @@ left: 97px;
                   top: 158px;
                   width: 30px;
                   height: 25px;
-                  color: black;
+                  color: #282828;
                   font-family: 'Medium Italic', sans-serif;
                   font-size: 67px;
+                  font-weight: 600;
+                  text-align: center;
+
+                  }
+                  #premisa{
+                  left: 7px;
+                  top: 158px;
+                  width: 30px;
+                  height: 25px;
+                  color: #282828;
+                  font-family: 'Medium Italic', sans-serif;
+                  font-size: 43px;
+                  font-weight: 800;
                   text-align: center;
 
                   }
