@@ -10,6 +10,8 @@ var abdomen = "";
 var ListoAbd = "";
 var totalTime = 15;
 
+var ajustes_hamburguesa="";
+var acercaDe_hamburguesa="";
 
 window.onload= inicio;
 
@@ -31,6 +33,8 @@ function inicializar()
 	// menuEjercicios = document.getElementById('btnMenuEjercicios');
 	acercaDe= document.getElementById('btnAcercade');
 	ajustes= document.getElementById('btnAjustes');
+	acercaDe_hamburguesa= document.getElementById('btn_acercade');
+	ajustes_hamburguesa= document.getElementById('btn_ajustes');
 	abdomen= document.getElementById('btnAbdomen');
 	ListoAbd= document.getElementById('btnListoAbd');
 	
@@ -50,6 +54,8 @@ function asignarEventos()
 	abdomen.addEventListener("click",abdomenMenu);
 	ListoAbd.addEventListener("click",abdomenN1);
 	menu.addEventListener('click', toggleMenu, false);
+	acercaDe_hamburguesa.addEventListener("click",acerca);
+	ajustes_hamburguesa.addEventListener("click",ajuste);
 }
 
 function entrada()
@@ -160,12 +166,14 @@ function timer() {
 function acerca()
 {
     seccion_01.className="inicio ocultar";
+    ocultar();
 	seccion_03.className="acerca animated pulse";
 }
 
 function ajuste()
 {   
 	seccion_01.className="inicio ocultar";
+	ocultar();
 	seccion_04.className="ajuste animated pulse";
 }
 
