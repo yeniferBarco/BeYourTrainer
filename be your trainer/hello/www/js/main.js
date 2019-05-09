@@ -1,10 +1,11 @@
 var comenzar="";
 var acercaDe="";
 var ajustes="";
-var menuEjercicios = "";
+var menu = document.querySelector('.hamburger');
 var atrasInicio = "";
 var atrasAjuste = "";
 var atrasAcerca = "";
+var atrasAbdomen ="";
 var abdomen = "";  
 var ListoAbd = "";
 var totalTime = 15;
@@ -16,6 +17,7 @@ function inicio(){
 inicializar();
 asignarEventos();
 entrada();
+
 }
 
 function inicializar()
@@ -25,7 +27,8 @@ function inicializar()
 	atrasInicio = document.getElementById('btnAtrasInicio');
 	atrasAjuste = document.getElementById('btnAtrasAjuste');
 	atrasAcerca = document.getElementById('btnAtrasAcerca');
-	menuEjercicios = document.getElementById('btnMenuEjercicios');
+	atrasAbdomen = document.getElementById('btnAtrasAbdomen');
+	// menuEjercicios = document.getElementById('btnMenuEjercicios');
 	acercaDe= document.getElementById('btnAcercade');
 	ajustes= document.getElementById('btnAjustes');
 	abdomen= document.getElementById('btnAbdomen');
@@ -37,14 +40,16 @@ function inicializar()
 function asignarEventos()
 {
 	comenzar.addEventListener("click",ejercicios);
-	menuEjercicios.addEventListener("click", menuEjercicios);
+	// menuEjercicios.addEventListener("click", menuHamburguesa);
 	atrasInicio.addEventListener("click", retroceder);
 	atrasAjuste.addEventListener("click", retroceder);
 	atrasAcerca.addEventListener("click", retroceder);
+	atrasAbdomen.addEventListener("click", retrocederMenu);
 	acercaDe.addEventListener("click",acerca);
 	ajustes.addEventListener("click",ajuste);
 	abdomen.addEventListener("click",abdomenMenu);
 	ListoAbd.addEventListener("click",abdomenN1);
+	menu.addEventListener('click', toggleMenu, false);
 }
 
 function entrada()
@@ -83,9 +88,17 @@ function retroceder()
 	seccion_01.className="inicio animated pulse";
 }
 
-function menuEjercicios()
-{
-	seccion_01.className="inicio ocultar";
+function retrocederMenu()
+{		
+	ocultar();
+	seccion_02.className="ejercicios animated pulse";
+}
+
+// activar menu hamburguesa
+function toggleMenu (event) {
+  this.classList.toggle('is-active');
+  document.querySelector( ".menuppal" ).classList.toggle("is_active");
+  event.preventDefault();
 }
 
 function ejercicios()
@@ -94,62 +107,56 @@ function ejercicios()
 	seccion_02.className="ejercicios animated pulse";
 }
 
-	function abdomenMenu()
-	{
-    seccion_02.className="inicio ocultar";
+function abdomenMenu()
+{
+   	seccion_02.className="inicio ocultar";
 	seccion_02_2.className="ejAbdomen animated pulse";
 	}
-			function abdomenN1()
-			{
-			seccion_02_2.className="ejAbdomen ocultar";
-			seccion_02_2_1.className="abdomen1 animated pulse";
-               preparado();
-          
-			  }
+	
+function abdomenN1()
+{
+	seccion_02_2.className="ejAbdomen ocultar";
+	seccion_02_2_1.className="abdomen1 animated pulse";
+    preparado();    
+}
 
-			    function circular(){
-				var bar = new ProgressBar.Circle(rueda, {
-				  strokeWidth: 6,
-				  easing: 'easeInOut',
-				  duration: 17500,
-				  color: '#f3ff00',
-				  trailColor: '#eee',
-				  trailWidth: 1,
-				  svgStyle: null
-				});
+function circular(){
+	var bar = new ProgressBar.Circle(rueda, {
+	strokeWidth: 6,
+	easing: 'easeInOut',
+	duration: 17500,
+	color: '#f3ff00',
+	trailColor: '#eee',
+	trailWidth: 1,
+	svgStyle: null
+	});
+    bar.animate(1.0);
+}
 
-               bar.animate(1.0);
-               }
-
-               function preparado(){
-               document.getElementById('premisa').innerHTML = "¿PREPARADO?";
+function preparado(){
+    document.getElementById('premisa').innerHTML = "¿PREPARADO?";           
                
-               
-               setTimeout(function(){document.getElementById('premisa').innerHTML = "¿LISTO?" , document.getElementById('premisa').style.left ="77px" },3000);
-               setTimeout(function(){document.getElementById('premisa').innerHTML = "¡YA!" , document.getElementById('premisa').style.left ="130px"},6000); 
-               setTimeout(function(){document.getElementById('premisa').innerHTML = "" },8000);
-               setTimeout(timer,8000);
-               setTimeout(circular,8000); 
-               } 
+    setTimeout(function(){document.getElementById('premisa').innerHTML = "¿LISTO?" , document.getElementById('premisa').style.left ="77px" },3000);
+    setTimeout(function(){document.getElementById('premisa').innerHTML = "¡YA!" , document.getElementById('premisa').style.left ="130px"},6000); 
+    setTimeout(function(){document.getElementById('premisa').innerHTML = "" },8000);
+    setTimeout(timer,8000);
+    setTimeout(circular,8000); 
+} 
 
-
-
-              function timer() {
-			  document.getElementById('clock').innerHTML = totalTime;		  
-			  if(totalTime==0){
-			    console.log('Final');
-			  }else{
-			    totalTime-=1;
-			    if(totalTime<9){
-			    document.getElementById('clock').style.left ="163px";
-			    }
-			    setTimeout(timer,1000);
-
-			  }
-			 }
-
-			
-
+function timer() {
+    document.getElementById('clock').innerHTML = totalTime;		  
+	if(totalTime==0){
+		console.log('Final');
+	} 
+	else{
+	    totalTime-=1;
+	}
+	if(totalTime<9){
+	    document.getElementById('clock').style.left ="163px";
+	}
+	  setTimeout(timer,1000);
+}
+ 
 function acerca()
 {
     seccion_01.className="inicio ocultar";
@@ -161,8 +168,6 @@ function ajuste()
 	seccion_01.className="inicio ocultar";
 	seccion_04.className="ajuste animated pulse";
 }
-
-
 
 
 
