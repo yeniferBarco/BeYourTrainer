@@ -4,6 +4,100 @@ padding:0px;
 background-color:#b4ff00 ;
 }
 
+#seccion_00 {
+    width: 360px;
+    height: 616px;
+    background: url(../img/fondo_entrada.png);
+    background-repeat: no-repeat round;
+    position: relative;
+}
+
+#seccion_01 {
+    width: 360px;
+    height: 616px;
+    background: url(../img/Inicio/fondo_inicio.png);
+    background-repeat: no-repeat round;
+    position: relative;
+}
+
+#seccion_02 {
+    width: 360px;
+    height: 616px;
+    background: url(../img/comenzar/fondo_ejercicios.png);
+    background-repeat: no-repeat round;
+    position: relative;
+}
+      
+      #seccion_02_1 {
+      width: 360px;
+      height: 616px;
+      background: url(../img/comenzar/fondo_general.png);
+      background-repeat: no-repeat round;
+      position: relative;
+      }
+
+      #seccion_02_2 {
+      width: 360px;
+      height: 616px;
+      background: url(../img/comenzar/fondo_general.png);
+      background-repeat: no-repeat round;
+      position: relative;
+      }
+              #seccion_02_2_1 {
+              width: 360px;
+              height: 616px;
+              background: url(../img/comenzar/fondo_vamos.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+      #seccion_02_3 {
+      width: 360px;
+      height: 616px;
+      background: url(../img/comenzar/fondo_general.png);
+      background-repeat: no-repeat round;
+      position: relative;
+      }
+
+      #seccion_02_4 {
+      width: 360px;
+      height: 616px;
+      background: url(../img/comenzar/fondo_general.png);
+      background-repeat: no-repeat round;
+      position: relative;
+      }
+
+      #seccion_02_5 {
+      width: 360px;
+      height: 616px;
+      background: url(../img/comenzar/fondo_general.png);
+      background-repeat: no-repeat round;
+      position: relative;
+      }
+
+      #seccion_02_6 {
+      width: 360px;
+      height: 616px;
+      background: url(../img/comenzar/fondo_general.png);
+      background-repeat: no-repeat round;
+      position: relative;
+      }        
+
+#seccion_03 {
+    width: 360px;
+    height: 616px;
+    background: url(../img/creditos/fondo_acercade.png);
+    background-repeat: no-repeat round;
+    position: relative;
+}
+
+#seccion_04 {
+    width: 360px;
+    height: 616px;
+    background: url(../img/ajustes/fondo_ajustes.png);
+    background-repeat: no-repeat round;
+    position: relative;
+}
+
 .ocultar{
 display:none;
 }
@@ -22,7 +116,7 @@ left: 97px;
 }
 #btnCalentamiento{
   top: 175px;
-  left: 57px;
+  left: 42px;
 }
 #btnAbdomen{
   top: 175px;
@@ -58,15 +152,18 @@ left: 97px;
   text-align: center;
 }
 #premisa{
-  left: 7px;
+  left: 36px;
+  position: absolute;
   top: 158px;
   width: 30px;
   height: 25px;
   color: #282828;
   font-family: 'Medium Italic', sans-serif;
-  font-size: 43px;
+  font-size: 35px;
   font-weight: 800;
-  text-align: center;
+  margin-right:auto;
+  margin-left:auto;
+
 }
 
 #btnPiernas{
@@ -190,7 +287,7 @@ left:100px;
   left:296px;
   top: 11px;
   height:30px;
-  width:30px;
+  width:22px;
   padding:20px 20px;
   -webkit-transform:translate3d(0, 0, 0);
   transform:translate3d(0, 0, 0);

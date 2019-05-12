@@ -4,6 +4,100 @@ padding:0px;
 background-color:#b4ff00 ;
 }
 
+#seccion_00 {
+    width: 360px;
+    height: 616px;
+    background: url(../img/fondo_entrada.png);
+    background-repeat: no-repeat round;
+    position: relative;
+}
+
+#seccion_01 {
+    width: 360px;
+    height: 616px;
+    background: url(../img/Inicio/fondo_inicio.png);
+    background-repeat: no-repeat round;
+    position: relative;
+}
+
+#seccion_02 {
+    width: 360px;
+    height: 616px;
+    background: url(../img/comenzar/fondo_ejercicios.png);
+    background-repeat: no-repeat round;
+    position: relative;
+}
+      
+      #seccion_02_1 {
+      width: 360px;
+      height: 616px;
+      background: url(../img/comenzar/fondo_general.png);
+      background-repeat: no-repeat round;
+      position: relative;
+      }
+
+      #seccion_02_2 {
+      width: 360px;
+      height: 616px;
+      background: url(../img/comenzar/fondo_general.png);
+      background-repeat: no-repeat round;
+      position: relative;
+      }
+              #seccion_02_2_1 {
+              width: 360px;
+              height: 616px;
+              background: url(../img/comenzar/fondo_vamos.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+      #seccion_02_3 {
+      width: 360px;
+      height: 616px;
+      background: url(../img/comenzar/fondo_general.png);
+      background-repeat: no-repeat round;
+      position: relative;
+      }
+
+      #seccion_02_4 {
+      width: 360px;
+      height: 616px;
+      background: url(../img/comenzar/fondo_general.png);
+      background-repeat: no-repeat round;
+      position: relative;
+      }
+
+      #seccion_02_5 {
+      width: 360px;
+      height: 616px;
+      background: url(../img/comenzar/fondo_general.png);
+      background-repeat: no-repeat round;
+      position: relative;
+      }
+
+      #seccion_02_6 {
+      width: 360px;
+      height: 616px;
+      background: url(../img/comenzar/fondo_general.png);
+      background-repeat: no-repeat round;
+      position: relative;
+      }        
+
+#seccion_03 {
+    width: 360px;
+    height: 616px;
+    background: url(../img/creditos/fondo_acercade.png);
+    background-repeat: no-repeat round;
+    position: relative;
+}
+
+#seccion_04 {
+    width: 360px;
+    height: 616px;
+    background: url(../img/ajustes/fondo_ajustes.png);
+    background-repeat: no-repeat round;
+    position: relative;
+}
+
 .ocultar{
 display:none;
 }
@@ -12,70 +106,82 @@ display:none;
  position: absolute;
 }
 .atras{
-top: 12px;
-left: 12px;
+top: 29px;
+left: 17px;
 }
 
 #btnComenzar{
 top: 279px;
 left: 97px;
 }
-  #btnCalentamiento{
-    top: 175px;
-    left: 57px;
-  }
-  #btnAbdomen{
-    top: 175px;
-    left: 212px;
-  }
-        #tituloAbdomen{
-        top: 70px;           
-        left: 96px;;
-        }
-        #btnListoAbd{
-        top: 134px;
-        left: 120px;
-        }
-          #rueda {
-          margin: 20px;
-          width: 150px;
-          height: 150px;
-          top: 103px;
-          left: 85px;
-          }
+#btnCalentamiento{
+  top: 175px;
+  left: 42px;
+}
+#btnAbdomen{
+  top: 175px;
+  left: 212px;
+}
 
-                 #clock{
-                  left: 143px;
-                  top: 158px;
-                  width: 30px;
-                  height: 25px;
-                  color: black;
-                  font-family: 'Medium Italic', sans-serif;
-                  font-size: 67px;
-                  text-align: center;
+.titulos{
+  top: 22px;
+  left: 96px;
+}
 
-                  }
+#btnListoAbd{
+  top: 134px;
+  left: 120px;
+}
 
+#rueda {
+  margin: 20px;
+  width: 150px;
+  height: 150px;
+  top: 103px;
+  left: 85px;
+}
+#clock{
+  left: 143px;
+  top: 158px;
+  width: 30px;
+  height: 25px;
+  color: #282828;
+  font-family: 'Medium Italic', sans-serif;
+  font-size: 67px;
+  font-weight: 600;
+  text-align: center;
+}
+#premisa{
+  left: 36px;
+  position: absolute;
+  top: 158px;
+  width: 30px;
+  height: 25px;
+  color: #282828;
+  font-family: 'Medium Italic', sans-serif;
+  font-size: 35px;
+  font-weight: 800;
+  margin-right:auto;
+  margin-left:auto;
 
-  #btnPiernas{
-    top: 293px;
-    left: 57px;
-  }
-  #btnBrazos{
-    top: 293px;
-    left: 212px;
-  } 
-  #btnPectorales{
-    top: 411px;
-    left: 57px;
-  }
-  #btnGluteos{
-    top: 411px;
-    left: 212px;
-  }  
+}
 
-
-
+#btnPiernas{
+  top: 293px;
+  left: 57px;
+}
+#btnBrazos{
+  top: 293px;
+  left: 212px;
+} 
+#btnPectorales{
+  top: 411px;
+  left: 57px;
+}
+#btnGluteos{
+  top: 411px;
+  left: 212px;
+}  
 
 #btnAcercade{
 top: 473px;
@@ -87,9 +193,9 @@ left: 113px;
 }
 
 #btnMenuEjercicios{
-top:15px;
-left:313px;
-right:12px;
+top: 31px;
+left: 316px;
+right: 12px;
 }
 #logo{
 top:39px;
@@ -174,3 +280,111 @@ left:100px;
 }
 
 
+/*Estilo de menu hamburguesa de configuración*/
+.hamburger{
+  position:fixed;
+  background-color:transparent;
+  left:296px;
+  top: 11px;
+  height:30px;
+  width:22px;
+  padding:20px 20px;
+  -webkit-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+  -webkit-transition:-webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition:transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  z-index:1002;
+  cursor:pointer;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
+.hamburger.is-active{
+  background-color:none;
+}
+._layer{
+  background:#333333;
+  margin-bottom:4px;
+  border-radius:2px;
+  width:28px;
+  height:4px;
+  opacity:1;
+  -webkit-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+  -webkit-transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+.hamburger:target .-top{
+    -webkit-transform:translateY(-100%);
+    -ms-transform:translateY(-100%);
+    transform:translateY(-100%);
+}
+.hamburger:target .-bottom{
+    -webkit-transform:translateY(100%);
+    -ms-transform:translateY(100%);
+    transform:translateY(100%);
+    }
+.hamburger.is-active .-top{
+    -webkit-transform:translateY(200%) rotate(45deg) !important;
+    -ms-transform:translateY(200%) rotate(45deg) !important;
+    transform:translateY(200%) rotate(45deg) !important;
+}
+.hamburger.is-active .-mid{
+    opacity:0;
+}
+.hamburger.is-active .-bottom{
+    -webkit-transform:translateY(-200%) rotate(135deg) !important;
+    -ms-transform:translateY(-200%) rotate(135deg) !important;
+    transform:translateY(-200%) rotate(135deg) !important;
+}
+
+.menuppal.is_active{
+  transform: translate3d(-234px, 99px, 300px);
+  height: 12%;
+  background-image: url(../img/menu_hamburguesa/fondo_menu.png);
+  width: 123px;
+  padding-left: -47px;
+  margin-left: 468px;
+  right: 0px;
+  padding-bottom: 3px;
+  top: -29px;
+}
+.menuppal{
+  background-color: rgba(255, 255, 255, 0);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: translate3d(0px, -100%, 0px);
+  transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+  width: 100%;
+  z-index: 1001;
+}
+.menuppal ul{
+  margin:0;
+  padding:0;
+  width: 129.167px;
+  height: 79px;
+}
+.menuppal ul li { 
+  list-style: none;
+  margin-left: 22px;
+  text-align:left;
+  font-family: Verdadna, Arial, Helvetica;
+  color:$nav-color-text;
+  font-size:1.0rem;
+  line-height:3em;
+  height:2em;
+  color:#369;
+  text-transform:none;
+}
+.menuppal ul li a{
+  text-decoration:none;
+  color: white;
+}
+.menuppal ul li a:target{
+  text-decoration:none;
+  color:#333;
+}
