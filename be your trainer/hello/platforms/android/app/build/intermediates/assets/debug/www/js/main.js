@@ -82,6 +82,8 @@ function asignarEventos()
 
 function entrada()
 {   
+	
+    btnAtrasAbdomen.className="atras ocultar";
 	seccion_00.className="entrada animated";
     seccion_01.className="inicio animated ocultar";
 	seccion_02.className="ejercicios ocultar";
@@ -111,6 +113,7 @@ function ocultar(){
 		seccion_02_6.className="ejGluteos ocultar";	
 	seccion_03.className="acerca ocultar";
 	seccion_04.className="ajuste ocultar";
+	btnAtrasAbdomen.className="atras ocultar";
 }
 
 function principio()
@@ -147,43 +150,50 @@ function ejercicios()
 
 function calentamientoMenu()
 {
+	btnAtrasAbdomen.className="atras animated fadeInRightBig";
    	seccion_02.className="inicio ocultar";
 	seccion_02_1.className="ejAbdomen animated pulse";
 }
 
 function abdomenMenu()
-{
+{   
+	btnAtrasAbdomen.className="atras animated fadeInRightBig";
    	seccion_02.className="inicio ocultar";
 	seccion_02_2.className="ejAbdomen animated pulse";
 }
 	
 function abdomenN1()
-{
+{   
+	btnAtrasAbdomen.className="atras animated fadeInRightBig";
 	seccion_02_2.className="ejAbdomen ocultar";
 	seccion_02_2_1.className="abdomen1 animated pulse";
     preparado();    
 }
 
 function piernasMenu()
-{
+{   
+	btnAtrasAbdomen.className="atras animated fadeInRightBig";
    	seccion_02.className="inicio ocultar";
 	seccion_02_3.className="ejAbdomen animated pulse";
 }
 
 function brazosMenu()
-{
+{   
+	btnAtrasAbdomen.className="atras animated fadeInRightBig";
    	seccion_02.className="inicio ocultar";
 	seccion_02_4.className="ejAbdomen animated pulse";
 }
 
 function pectoralesMenu()
-{
+{   
+	btnAtrasAbdomen.className="atras animated fadeInRightBig";
    	seccion_02.className="inicio ocultar";
 	seccion_02_5.className="ejAbdomen animated pulse";
 }
 
 function gluteosMenu()
-{
+{   
+	btnAtrasAbdomen.className="atras animated fadeInRightBig";
    	seccion_02.className="inicio ocultar";
 	seccion_02_6.className="ejAbdomen animated pulse";
 }
