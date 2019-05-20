@@ -20,10 +20,13 @@ var totalTime = 15;
 var ajustes_hamburguesa="";
 var acercaDe_hamburguesa="";
 var play="";
+var x = document.getElementById("audio1");
+var y = document.getElementById("audioFondo");
 
 window.onload= inicio;
 
-function inicio(){		 	
+function inicio(){
+
 inicializar();
 asignarEventos();
 entrada();
@@ -121,7 +124,8 @@ function ocultar(){
 }
 
 function principio()
-{   
+{   y.autoplay = true;
+	y.play();
 	ocultar();
     seccion_01.className="inicio animated pulse";
 
@@ -216,6 +220,8 @@ function circular(){
 }
 
 function preparado(){
+	 
+	x.play(); 
 	btnPlay.className="botonPlay ocultar";
 	btnPausa.className="botonPausa animated fadeIn";
     document.getElementById('premisa').innerHTML = "¿PREPARADO?" , document.getElementById('premisa').classList.add("animated" , "fadeInRightBig");                       
