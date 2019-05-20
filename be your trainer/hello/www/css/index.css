@@ -4,9 +4,19 @@ padding:0px;
 background-color:#b4ff00 ;
 }
 
+#avisoMano {
+    width: 360px;
+    height: 616px;
+    overflow: hidden;
+    background: url(../img/fondo_mano.png);
+    background-repeat: no-repeat round;
+    position: relative;
+}
+
 #seccion_00 {
     width: 360px;
     height: 616px;
+    overflow: hidden;
     z-index: 5;
     background: url(../img/fondo_entrada.png);
     background-repeat: no-repeat round;
@@ -16,6 +26,7 @@ background-color:#b4ff00 ;
 #seccion_01 {
     width: 360px;
     height: 616px;
+    overflow: hidden;
     background: url(../img/Inicio/fondo_inicio.png);
     background-repeat: no-repeat round;
     position: relative;
@@ -24,6 +35,7 @@ background-color:#b4ff00 ;
 #seccion_02 {
     width: 360px;
     height: 616px;
+    overflow: hidden;
     background: url(../img/comenzar/fondo_ejercicios.png);
     background-repeat: no-repeat round;
     position: relative;
@@ -32,6 +44,7 @@ background-color:#b4ff00 ;
       #seccion_02_1 {
       width: 360px;
       height: 616px;
+      overflow: hidden;
       background: url(../img/comenzar/fondo_general.png);
       background-repeat: no-repeat round;
       position: relative;
@@ -40,6 +53,7 @@ background-color:#b4ff00 ;
       #seccion_02_2 {
       width: 360px;
       height: 616px;
+      overflow: hidden;
       background: url(../img/comenzar/fondo_general.png);
       background-repeat: no-repeat round;
       position: relative;
@@ -47,13 +61,15 @@ background-color:#b4ff00 ;
               #seccion_02_2_1 {
               width: 360px;
               height: 616px;
-              background: url(../img/comenzar/fondo_vamos.png);
+              overflow: hidden;
+              background: url(../img/abdomen/fondo_general.png);
               background-repeat: no-repeat round;
               position: relative;
               }
       #seccion_02_3 {
       width: 360px;
       height: 616px;
+      overflow: hidden;
       background: url(../img/comenzar/fondo_general.png);
       background-repeat: no-repeat round;
       position: relative;
@@ -62,6 +78,7 @@ background-color:#b4ff00 ;
       #seccion_02_4 {
       width: 360px;
       height: 616px;
+      overflow: hidden;
       background: url(../img/comenzar/fondo_general.png);
       background-repeat: no-repeat round;
       position: relative;
@@ -70,6 +87,7 @@ background-color:#b4ff00 ;
       #seccion_02_5 {
       width: 360px;
       height: 616px;
+      overflow: hidden;
       background: url(../img/comenzar/fondo_general.png);
       background-repeat: no-repeat round;
       position: relative;
@@ -78,6 +96,7 @@ background-color:#b4ff00 ;
       #seccion_02_6 {
       width: 360px;
       height: 616px;
+      overflow: hidden;
       background: url(../img/comenzar/fondo_general.png);
       background-repeat: no-repeat round;
       position: relative;
@@ -86,6 +105,7 @@ background-color:#b4ff00 ;
 #seccion_03 {
     width: 360px;
     height: 616px;
+    overflow: hidden;
     background: url(../img/creditos/fondo_acercade.png);
     background-repeat: no-repeat round;
     position: relative;
@@ -94,6 +114,7 @@ background-color:#b4ff00 ;
 #seccion_04 {
     width: 360px;
     height: 616px;
+    overflow: hidden;
     background: url(../img/ajustes/fondo_ajustes.png);
     background-repeat: no-repeat round;
     position: relative;
@@ -111,6 +132,36 @@ top: 29px;
 z-index: 3;
 left: 21px;
 position: absolute;
+}
+
+.botonPlay{
+  top: 487px;
+  left: 149px;
+  position: relative;
+}
+
+.fMano{
+  top: -60px;
+  left: -1px;
+  position: relative;
+}
+
+.manoAbdomen1{
+  top: 107px;
+  left: 43px;
+  position: relative;
+}
+
+.lExcelente{
+  top: -373px;
+  left: 65px;
+  position: relative;
+}
+
+.botonPausa{
+  top: 487px;
+  left: 149px;
+  position: relative;
 }
 
 #btnComenzar{
@@ -164,8 +215,7 @@ left: 97px;
   font-family: 'Medium Italic', sans-serif;
   font-size: 35px;
   font-weight: 800;
-  margin-right:auto;
-  margin-left:auto;
+  margin:auto;
 
 }
 

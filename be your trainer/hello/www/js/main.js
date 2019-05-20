@@ -19,6 +19,7 @@ var totalTime = 15;
 
 var ajustes_hamburguesa="";
 var acercaDe_hamburguesa="";
+var play="";
 
 window.onload= inicio;
 
@@ -51,6 +52,7 @@ function inicializar()
 	gluteos= document.getElementById('btnGluteos');
 	
 	ListoAbd= document.getElementById('btnListoAbd');
+	play= document.getElementById('btnPlay');
 	
 }
 
@@ -78,11 +80,12 @@ function asignarEventos()
 	menu.addEventListener('click', toggleMenu, false);
 	acercaDe_hamburguesa.addEventListener("click",acerca);
 	ajustes_hamburguesa.addEventListener("click",ajuste);
+	play.addEventListener("click",preparado);
 }
 
 function entrada()
 {   
-	
+	ocultar();
     btnAtrasAbdomen.className="atras ocultar";
 	seccion_00.className="entrada animated";
     seccion_01.className="inicio animated ocultar";
@@ -114,6 +117,7 @@ function ocultar(){
 	seccion_03.className="acerca ocultar";
 	seccion_04.className="ajuste ocultar";
 	btnAtrasAbdomen.className="atras ocultar";
+	avisoMano.className="chocala ocultar";
 }
 
 function principio()
@@ -167,7 +171,7 @@ function abdomenN1()
 	ocultar();
 	seccion_02_2.className="ejAbdomen ocultar";
 	seccion_02_2_1.className="abdomen1 animated pulse";
-    preparado();    
+       
 }
 
 function piernasMenu()
@@ -212,19 +216,24 @@ function circular(){
 }
 
 function preparado(){
-    document.getElementById('premisa').innerHTML = "¿PREPARADO?";           
-               
+	btnPlay.className="botonPlay ocultar";
+	btnPausa.className="botonPausa animated fadeIn";
+    document.getElementById('premisa').innerHTML = "¿PREPARADO?" , document.getElementById('premisa').classList.add("animated" , "fadeInRightBig");                       
     setTimeout(function(){document.getElementById('premisa').innerHTML = "¿LISTO?" , document.getElementById('premisa').style.left ="99px" },3000);
-    setTimeout(function(){document.getElementById('premisa').innerHTML = "¡YA!" , document.getElementById('premisa').style.left ="143px"},6000); 
-    setTimeout(function(){document.getElementById('premisa').innerHTML = "" },8000);
-    setTimeout(timer,8000);
-    setTimeout(circular,8000); 
+    setTimeout(function(){document.getElementById('premisa').innerHTML = "¡YA!" , document.getElementById('premisa').style.left ="143px"},5000); 
+    setTimeout(function(){document.getElementById('premisa').innerHTML = "" },7000);
+    setTimeout(timer,7000);
+    setTimeout(circular,7000); 
 } 
 
 function timer() {
     document.getElementById('clock').innerHTML = totalTime;		  
 	if(totalTime==0){
-		console.log('Final');
+		//document.getElementById('clock').style.left ="143px";
+		//totalTime=25; //clave para el contador
+		seccion_02_2_1.className="abdomen1 ocultar";
+		avisoMano.className="chocala animated pulse";
+		abdomenMano1.className="manoAbdomen1 animated bounceIn";
 
 	} 
 	else{
