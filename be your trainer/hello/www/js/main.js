@@ -15,11 +15,20 @@ var pectorales = "";
 var gluteos = ""; 
 
 var ListoAbd = "";
+
+//Contadores para la pausa.
 var totalTime = 15;
+var controlTimer;
+var controlBarra;
+var time_is_on = 0;
 
 var ajustes_hamburguesa="";
 var acercaDe_hamburguesa="";
 var play="";
+var pause = "";
+var reiniciarEjercicio = "";
+var continuarEjercicio = "";
+
 var x = document.getElementById("audio1");
 var y = document.getElementById("audioFondo");
 
@@ -56,6 +65,9 @@ function inicializar()
 	
 	ListoAbd= document.getElementById('btnListoAbd');
 	play= document.getElementById('btnPlay');
+	pause= document.getElementById('btnPausa');
+	reiniciarEjercicio= document.getElementById('btnAbandonarPausa');
+	continuarEjercicio= document.getElementById('btnContinuar');
 	
 }
 
@@ -80,10 +92,13 @@ function asignarEventos()
 
 
 	ListoAbd.addEventListener("click",abdomenN1);
-	menu.addEventListener('click', toggleMenu, false);
+	menu.addEventListener('click', abrirMenu, false);
 	acercaDe_hamburguesa.addEventListener("click",acerca);
 	ajustes_hamburguesa.addEventListener("click",ajuste);
 	play.addEventListener("click",preparado);
+	pause.addEventListener("click", pausar);
+	reiniciarEjercicio.addEventListener("click", reiniciar);
+	continuarEjercicio.addEventListener("click", continuar);
 }
 
 function entrada()
@@ -102,6 +117,8 @@ function entrada()
 		seccion_02_6.className="ejGluteos ocultar";		
 	seccion_03.className="acerca ocultar";
 	seccion_04.className="ajuste ocultar";
+	pausarEjercicio.className="menuPausa ocultar";
+	avisoMano.className="chocala ocultar";
 	setTimeout(principio, 3000);
 
 }
@@ -121,6 +138,8 @@ function ocultar(){
 	seccion_04.className="ajuste ocultar";
 	btnAtrasAbdomen.className="atras ocultar";
 	avisoMano.className="chocala ocultar";
+	avisoMano.className="chocala ocultar";
+	pausarEjercicio.className="menuPausa ocultar";
 }
 
 function principio()
@@ -129,6 +148,40 @@ function principio()
 	ocultar();
     seccion_01.className="inicio animated pulse";
 
+}
+
+function pausar(){
+	time_is_on = 0;
+	clearTimeout(controlTimer);
+	
+	if(time_is_on==0){
+		ocultar();
+		pausarEjercicio.className = "menuPausa animated pulse";
+	}
+	// circular().clearInterval(control);
+}
+
+
+function continuar(){
+
+	ocultar();
+	seccion_02_2_1.className="abdomen1 animated pulse";
+
+	setTimeout(()=>{
+		if (!time_is_on) {
+	    	time_is_on = 1;
+	    	timer();
+
+    	}
+	},1000);
+}
+
+
+function reiniciar(){
+
+	clearTimeout(controlTimer);
+	totalTime = 15;
+	abdomenMenu();
 }
 
 function retroceder()
@@ -144,10 +197,11 @@ function retrocederMenu()
 }
 
 // activar menu hamburguesa
-function toggleMenu (event) {
-  this.classList.toggle('is-active');
-  document.querySelector( ".menuppal" ).classList.toggle("is_active");
-  event.preventDefault();
+function abrirMenu (event) {
+
+	this.classList.toggle('is-active');
+	document.querySelector( ".menuppal" ).classList.toggle("is_active");
+	event.preventDefault();
 }
 
 function ejercicios()
@@ -175,7 +229,7 @@ function abdomenN1()
 	ocultar();
 	seccion_02_2.className="ejAbdomen ocultar";
 	seccion_02_2_1.className="abdomen1 animated pulse";
-       
+     preparado();    
 }
 
 function piernasMenu()
@@ -223,13 +277,23 @@ function preparado(){
 	 
 	x.play(); 
 	btnPlay.className="botonPlay ocultar";
-	btnPausa.className="botonPausa animated fadeIn";
+	
     document.getElementById('premisa').innerHTML = "¿PREPARADO?" , document.getElementById('premisa').classList.add("animated" , "fadeInRightBig");                       
     setTimeout(function(){document.getElementById('premisa').innerHTML = "¿LISTO?" , document.getElementById('premisa').style.left ="99px" },3000);
     setTimeout(function(){document.getElementById('premisa').innerHTML = "¡YA!" , document.getElementById('premisa').style.left ="143px"},5000); 
     setTimeout(function(){document.getElementById('premisa').innerHTML = "" },7000);
-    setTimeout(timer,7000);
-    setTimeout(circular,7000); 
+
+    setTimeout(()=>{
+		btnPausa.className="botonPausa animated fadeIn";
+	    
+	    // setTimeout(circular,1000);
+
+	    if (!time_is_on){
+	    	time_is_on = 1;
+	    	timer();
+	    	// circular();
+    	}
+	},7000); 
 } 
 
 function timer() {
@@ -237,7 +301,8 @@ function timer() {
 	if(totalTime==0){
 		//document.getElementById('clock').style.left ="143px";
 		//totalTime=25; //clave para el contador
-		seccion_02_2_1.className="abdomen1 ocultar";
+		ocultar();
+		// seccion_02_2_1.className="abdomen1 ocultar";
 		avisoMano.className="chocala animated pulse";
 		abdomenMano1.className="manoAbdomen1 animated bounceIn";
 
@@ -248,19 +313,17 @@ function timer() {
 	if(totalTime<9){
 	    document.getElementById('clock').style.left ="163px";
 	}
-	  setTimeout(timer,1000);
+	controlTimer = setTimeout(timer,1000);
 }
  
 function acerca()
 {
-    seccion_01.className="inicio ocultar";
     ocultar();
 	seccion_03.className="acerca animated pulse";
 }
 
 function ajuste()
 {   
-	seccion_01.className="inicio ocultar";
 	ocultar();
 	seccion_04.className="ajuste animated pulse";
 }
