@@ -142,6 +142,23 @@ background-color:#b4ff00 ;
   left: 183px;
 }
 
+.animaciones{
+  position: absolute;
+  top: 327px;
+  left: 42px;
+  
+}
+
+.abdD{
+  position: absolute;
+  top: 313px;
+  left: 42px;
+  height:172px;
+  width:272px;
+
+}
+
+
 #pausarEjercicio{
   width: 360px;
   height: 616px;
@@ -153,6 +170,10 @@ background-color:#b4ff00 ;
 
 .ocultar{
 display:none;
+}
+
+.mostar{
+display:inline;
 }
 
 .posicionBotones{

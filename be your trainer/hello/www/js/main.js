@@ -17,7 +17,7 @@ var gluteos = "";
 var ListoAbd = "";
 
 //Contadores para la pausa.
-var totalTime = 15;
+var totalTime = 50;
 var controlTimer;
 var time_is_on = 0;
 var bar;
@@ -310,7 +310,7 @@ function preparado(){
     setTimeout(function(){document.getElementById('premisa').innerHTML = "¿LISTO?" , document.getElementById('premisa').style.left ="99px" },3000);
     setTimeout(function(){document.getElementById('premisa').innerHTML = "¡YA!" , document.getElementById('premisa').style.left ="143px"},5000); 
     setTimeout(function(){document.getElementById('premisa').innerHTML = "" },7000);
-
+    setTimeout(abdom1,7000);
     setTimeout(()=>{
 		btnPausa.className="botonPausa animated fadeIn";
 	    
@@ -382,6 +382,11 @@ offV.className="offVoz animated fadeIn";
 x.muted = false;
 }
 
+function abdom1()
+{
+abdStatic1.className="abdS ocultar";	
+abdDinamic1.className="abdD mostrar";	
+}
 
 
 
