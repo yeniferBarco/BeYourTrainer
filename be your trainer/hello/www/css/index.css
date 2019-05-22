@@ -123,6 +123,7 @@ background-color:#b4ff00 ;
 #pausarEjercicio{
   width: 360px;
   height: 616px;
+  overflow: hidden;
   background: url(../img/pausa/fondo_pausa.png);
   background-repeat: no-repeat round;
   position: relative;

@@ -19,8 +19,8 @@ var ListoAbd = "";
 //Contadores para la pausa.
 var totalTime = 15;
 var controlTimer;
-var controlBarra;
 var time_is_on = 0;
+var bar;
 
 var ajustes_hamburguesa="";
 var acercaDe_hamburguesa="";
@@ -151,37 +151,47 @@ function principio()
 }
 
 function pausar(){
+
 	time_is_on = 0;
 	clearTimeout(controlTimer);
+	bar.stop();
 	
 	if(time_is_on==0){
 		ocultar();
 		pausarEjercicio.className = "menuPausa animated pulse";
 	}
-	// circular().clearInterval(control);
+	
 }
 
 
 function continuar(){
 
 	ocultar();
+	// principio();
 	seccion_02_2_1.className="abdomen1 animated pulse";
+
+	bar.animate(1.8, // {
+ //    duration: 17500
+	// }
+	);
 
 	setTimeout(()=>{
 		if (!time_is_on) {
 	    	time_is_on = 1;
 	    	timer();
-
     	}
 	},1000);
 }
 
 
 function reiniciar(){
-
+	
+	bar.destroy();
+	clock.className="clock ocultar";
 	clearTimeout(controlTimer);
 	totalTime = 15;
-	abdomenMenu();
+	preparado();
+	ejercicios();
 }
 
 function retroceder()
@@ -219,17 +229,17 @@ function calentamientoMenu()
 
 function abdomenMenu()
 {   
+	ocultar();
 	btnAtrasAbdomen.className="atras animated fadeInRightBig";
-   	seccion_02.className="inicio ocultar";
+   	// seccion_02.className="inicio ocultar";
 	seccion_02_2.className="ejAbdomen animated pulse";
 }
 	
 function abdomenN1()
 {   
 	ocultar();
-	seccion_02_2.className="ejAbdomen ocultar";
+	// seccion_02_2.className="ejAbdomen ocultar";
 	seccion_02_2_1.className="abdomen1 animated pulse";
-     preparado();    
 }
 
 function piernasMenu()
@@ -261,7 +271,7 @@ function gluteosMenu()
 }
 
 function circular(){
-	var bar = new ProgressBar.Circle(rueda, {
+	bar = new ProgressBar.Circle(rueda, {
 	strokeWidth: 6,
 	easing: 'easeInOut',
 	duration: 17500,
@@ -278,7 +288,8 @@ function preparado(){
 	x.play(); 
 	btnPlay.className="botonPlay ocultar";
 	
-    document.getElementById('premisa').innerHTML = "¿PREPARADO?" , document.getElementById('premisa').classList.add("animated" , "fadeInRightBig");                       
+    document.getElementById('premisa').style.left ="36px"; 
+	document.getElementById('premisa').innerHTML = "¿PREPARADO?" , document.getElementById('premisa').classList.add("animated" , "fadeInRightBig");                       
     setTimeout(function(){document.getElementById('premisa').innerHTML = "¿LISTO?" , document.getElementById('premisa').style.left ="99px" },3000);
     setTimeout(function(){document.getElementById('premisa').innerHTML = "¡YA!" , document.getElementById('premisa').style.left ="143px"},5000); 
     setTimeout(function(){document.getElementById('premisa').innerHTML = "" },7000);
@@ -286,18 +297,19 @@ function preparado(){
     setTimeout(()=>{
 		btnPausa.className="botonPausa animated fadeIn";
 	    
-	    // setTimeout(circular,1000);
-
 	    if (!time_is_on){
 	    	time_is_on = 1;
+	    	// setTimeout(circular,1000);
+	    	circular();
 	    	timer();
-	    	// circular();
     	}
 	},7000); 
 } 
 
 function timer() {
+	document.getElementById('clock').style.left ="143px";
     document.getElementById('clock').innerHTML = totalTime;		  
+    clock.className="clock posicionBotones";
 	if(totalTime==0){
 		//document.getElementById('clock').style.left ="143px";
 		//totalTime=25; //clave para el contador
