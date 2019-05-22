@@ -32,6 +32,14 @@ var continuarEjercicio = "";
 var x = document.getElementById("audio1");
 var y = document.getElementById("audioFondo");
 
+
+var pausaAudio = "";
+var playAudio = "";
+
+var pausaVoz = "";
+var playVoz = "";
+
+
 window.onload= inicio;
 
 function inicio(){
@@ -68,7 +76,10 @@ function inicializar()
 	pause= document.getElementById('btnPausa');
 	reiniciarEjercicio= document.getElementById('btnAbandonarPausa');
 	continuarEjercicio= document.getElementById('btnContinuar');
-	
+	pausaAudio= document.getElementById('off');
+	playAudio= document.getElementById('on');
+	pausaVoz= document.getElementById('offV');
+	playVoz= document.getElementById('onV');
 }
 
 
@@ -99,6 +110,12 @@ function asignarEventos()
 	pause.addEventListener("click", pausar);
 	reiniciarEjercicio.addEventListener("click", reiniciar);
 	continuarEjercicio.addEventListener("click", continuar);
+
+	pausaAudio.addEventListener("click", pausaM);
+	playAudio.addEventListener("click", playM);
+
+	pausaVoz.addEventListener("click", quitarVoz);
+	playVoz.addEventListener("click", ponerVoz);
 }
 
 function entrada()
@@ -315,8 +332,10 @@ function timer() {
 		//totalTime=25; //clave para el contador
 		ocultar();
 		// seccion_02_2_1.className="abdomen1 ocultar";
+		
 		avisoMano.className="chocala animated pulse";
 		abdomenMano1.className="manoAbdomen1 animated bounceIn";
+
 
 	} 
 	else{
@@ -339,6 +358,30 @@ function ajuste()
 	ocultar();
 	seccion_04.className="ajuste animated pulse";
 }
+
+function pausaM(){
+	y.pause();
+	off.className="offA ocultar";
+	on.className="onA animated fadeIn";
+}
+
+function playM(){
+	y.play();
+	on.className="onA ocultar ";
+	off.className="offA animated fadeIn";
+	
+}
+function quitarVoz(){
+offV.className="offVoz ocultar";
+onV.className="onVoz animated fadeIn";	
+x.muted = true;
+}
+function ponerVoz(){
+onV.className="onVoz ocultar";	
+offV.className="offVoz animated fadeIn";
+x.muted = false;
+}
+
 
 
 

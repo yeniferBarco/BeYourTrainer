@@ -24,10 +24,15 @@
                        
             
         </section>
+
         <audio id="audioFondo">
         <source src="audios/fondo3.mp3" type="audio/mpeg">
         </audio>
+
+
+
         <section id="seccion_01" class="inicio">
+
     
                 
                 <img src="img/Inicio/boton_comenzar_inicio.png" id="btnComenzar" class="posicionBotones animated fadeInRightBig">
@@ -38,9 +43,7 @@
             
         </section>
         <section id="seccion_02" class="ejercicios">
-    
-                
-                <img src="img/comenzar/atras_ejercicios.png" id="btnAtrasInicio" class=" atras posicionBotones animated fadeInRightBig"> 
+                 <img src="img/comenzar/atras_ejercicios.png" id="btnAtrasInicio" class=" atras posicionBotones animated fadeInRightBig"> 
                 
                 <!-- Menu de ejercicios en hamburguesa -->
 
@@ -49,18 +52,14 @@
                     <div class="_layer -mid"></div>
                     <div class="_layer -bottom"></div>
                 </div>
-                <nav class="menuppal">
-                <!--     file:///C:/Users/Usuario/Documents/BeYourTrainer/be%20your%20trainer/hello/www/index.html#seccion_03 -->
-
-                <!-- Colocar las imagenes del texto y colocarlas como botones para poder ocultar las
-                diferentes secciones -->
-                    <ul>
-                      <li><a href="index.html/#seccion_04">Ajustes</a></li>
-                      <li><a href="index.html#seccion_03">Acerca de</a></li>
-                      <li><img id="btn_ajustes" src="img/menu_hamburguesa/boton_ajustes_menu.png"></li>
-                      <li><img id="btn_acercade" src="img/menu_hamburguesa/boton_acercade_menu.png"></li>
-                      <li></li>
-                    </ul>
+                <nav class="menuppal" id="nav_menuppal">
+                    <div id="menu_hamburguesa">
+                        <ul>
+                          <li><img id="btn_ajustes" src="img/menu_hamburguesa/boton_ajustes_menu.png"></li>
+                          <li><img id="btn_acercade" src="img/menu_hamburguesa/boton_acercade_menu.png"></li>
+                          <li></li>
+                        </ul>
+                    </div>
                 </nav>
 
                 <img src="img/comenzar/boton_calentamiento.png" id="btnCalentamiento" class="posicionBotones animated fadeInLeftBig">
@@ -69,7 +68,6 @@
                 <img src="img/comenzar/boton_brazos.png" id="btnBrazos" class="posicionBotones animated fadeInRightBig">
                 <img src="img/comenzar/boton_pectorales.png" id="btnPectorales" class="posicionBotones animated fadeInLeftBig">
                 <img src="img/comenzar/boton_gluteos.png" id="btnGluteos" class="posicionBotones animated fadeInRightBig">
-                                 
         </section>
 
         <div id="btnAtrasAbdomen" class=" atras posicionBotones animated ocultar"><img src="img/comenzar/atras_ejercicios.png"></div> 
@@ -84,8 +82,6 @@
 
 
         <section id="seccion_02_2" class="ejAbdomen">
-    
-                
 
                 <img src="img/abdomen/boton_estoylisto.png" id="btnListoAbd" class="posicionBotones animated fadeInRightBig">
                 <img src="img/abdomen/titulo_abdomen.png" class=" titulos posicionBotones animated fadeInLeftBig">                            
@@ -102,8 +98,8 @@
                 <img src="img/abdomen/titulo_abdomen.png"  class=" titulos posicionBotones animated fadeInLeftBig">
                 <img src="img/abdomen/boton_play.png" id="btnPlay" class=" botonPlay animated fadeInRightBig">
                 <img src="img/abdomen/boton_pausa.png" id="btnPausa" class=" botonPausa  ocultar">
-                <div id="clock" class="posicionBotones animated fadeInLeftBig"></div>
-                <div id="premisa" class="posicionBotones "></div>                     
+                <div id="clock" class="clock posicionBotones animated fadeInLeftBig"></div>
+                <div id="premisa" class="premisa posicionBotones "></div>                     
             
         </section>
 
@@ -111,43 +107,40 @@
     
                 <img src="img/mano.png" id="abdomenMano1" class=" manoAbdomen1 ocultar "> 
                 <img src="img/texto_excelente.png" id="letreroExcelente" class=" lExcelente animated fadeInRightBig ">                     
+        </section>
+
+        <section id="pausarEjercicio" class="menuPausa">
+
+                <img src="img/pausa/texto_pausa.png" id="letreroPausa" class="lPausa animated fadeInRightBig" >
+                <img src="img/pausa/boton_continuar_pausa.png" id="btnContinuar" class="botonContinuar animated fadeInRightBig">
+                <img src="img/pausa/boton_abandonar_pausa.png" id="btnAbandonarPausa" class="botonAdandonar animated fadeInRightBig">
+                <img src="img/texto_vamos.png" id="letreroVamos" class="lVamos animated fadeInRightBig">
             
         </section>
 
         <section id="seccion_02_3" class="ejPiernas ">
     
-                
-                
                 <img src="img/abdomen/boton_estoylisto.png" id="btnListoAbd" class="posicionBotones animated fadeInRightBig">
                 <img src="img/piernas/titulo_piernas.png" class=" titulos posicionBotones animated fadeInLeftBig">                            
-            
         </section>
 
         <section id="seccion_02_4" class="ejBrazos ">
     
-                
-
                 <img src="img/abdomen/boton_estoylisto.png" id="btnListoAbd" class="posicionBotones animated fadeInRightBig">
                 <img src="img/brazos/titulo_brazos.png" class=" titulos posicionBotones animated fadeInLeftBig">                            
-            
         </section>
 
         <section id="seccion_02_5" class="ejPectorales">
-    
-                
 
                 <img src="img/abdomen/boton_estoylisto.png" id="btnListoAbd" class="posicionBotones animated fadeInRightBig">
                 <img src="img/pectorales/titulo_pectorales.png" class=" titulos posicionBotones animated fadeInLeftBig">                            
-            
         </section>
 
         <section id="seccion_02_6" class="ejGluteos ">
-    
-                
- 
+
                 <img src="img/abdomen/boton_estoylisto.png" id="btnListoAbd" class="posicionBotones animated fadeInRightBig">
-                <img src="img/gluteos/titulo_gluteos.png" class=" titulos posicionBotones animated fadeInLeftBig">                            
-            
+                <img src="img/gluteos/titulo_gluteos.png" class=" titulos posicionBotones animated fadeInLeftBig">
+                
         </section>
 
 
@@ -162,7 +155,12 @@
         <section id="seccion_04" class="ajuste ocultar">
   
                 <img src="img/comenzar/atras_ejercicios.png" id="btnAtrasAjuste" class="atras posicionBotones animated fadeInRightBig">
-                <img src="img/ajustes/titulo_ajustes.png"  class=" titulos atras posicionBotones animated fadeInLeftBig">                  
+                <img src="img/ajustes/titulo_ajustes.png"  class=" titulos atras posicionBotones animated fadeInLeftBig">
+                <img src="img/ajustes/off_ajustes.png" id="off"  class=" offA animated fadeInRightBig">
+                <img src="img/ajustes/on_ajustes.png" id="on"  class=" onA  ocultar">
+
+                <img src="img/ajustes/off_ajustes2.png" id="offV"  class=" offVoz animated fadeInRightBig">
+                <img src="img/ajustes/on_ajustes2.png" id="onV"  class=" onVoz  ocultar">                  
             
         </section>
 

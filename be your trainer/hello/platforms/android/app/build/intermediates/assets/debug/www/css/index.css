@@ -120,6 +120,37 @@ background-color:#b4ff00 ;
     position: relative;
 }
 
+#off {
+  position: absolute;
+  top: 155px;
+  left: 183px;
+}
+#on {
+  position: absolute;
+  top: 155px;
+  left: 183px;
+}
+
+#offV {
+  position: absolute;
+  top: 220px;
+  left: 183px;
+}
+#onV {
+  position: absolute;
+  top: 220px;
+  left: 183px;
+}
+
+#pausarEjercicio{
+  width: 360px;
+  height: 616px;
+  overflow: hidden;
+  background: url(../img/pausa/fondo_pausa.png);
+  background-repeat: no-repeat round;
+  position: relative;
+}
+
 .ocultar{
 display:none;
 }
@@ -158,9 +189,34 @@ position: absolute;
   position: relative;
 }
 
+.lVamos{
+  top: 231px;
+  left: 4px;
+  position: relative;  
+}
+
+.lPausa{
+  top: 62px;
+  left: 22px;
+  position: relative;
+}
+
 .botonPausa{
   top: 487px;
   left: 149px;
+  position: relative;
+}
+
+/*botones para el menu de pausa*/
+#btnAbandonarPausa{
+  top: 171px;
+  left: 114px;
+  position: relative;
+}
+
+#btnContinuar{
+  top: 151px;
+  left: 31px;
   position: relative;
 }
 

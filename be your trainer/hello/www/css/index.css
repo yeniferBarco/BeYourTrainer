@@ -120,6 +120,28 @@ background-color:#b4ff00 ;
     position: relative;
 }
 
+#off {
+  position: absolute;
+  top: 155px;
+  left: 183px;
+}
+#on {
+  position: absolute;
+  top: 155px;
+  left: 183px;
+}
+
+#offV {
+  position: absolute;
+  top: 220px;
+  left: 183px;
+}
+#onV {
+  position: absolute;
+  top: 220px;
+  left: 183px;
+}
+
 #pausarEjercicio{
   width: 360px;
   height: 616px;
