@@ -3,7 +3,13 @@ margin:0px;
 padding:0px;
 background-color:#b4ff00 ;
 }
-
+/* ejemplo 1 de 5 */
+.letreroContador
+{
+  top: 568px;
+  left: 105px;
+}
+/* para la altura de los gifs en los instructivos*/
 .topInstructivo{
   position: absolute;
   top: 165px;
@@ -139,14 +145,29 @@ background-color:#b4ff00 ;
             position: relative;
           }
 
+          .instructivosAtras
+          {
+           top: 563px;
+           left: 138px;
+
+          }
+
+          .instructivosAdelante
+          {
+            top:563px;
+            left:198px;
+          }
+
               #seccion_02_2_1 {
               width: 360px;
               height: 616px;
               overflow: hidden;
-              background: url(../img/abdomen/fondo_general.png);
+              background: url(../img/abdomen/fondo_ejercicios.png);
               background-repeat: no-repeat round;
               position: relative;
               }
+
+              
       #seccion_02_3 {
       width: 360px;
       height: 616px;

@@ -37,6 +37,19 @@ var minAbd_3="";
 var minAbd_4="";
 var minAbd_5="";
 
+//para pasar de instructivo abdomen
+var abdomenAtras1 ="";
+var abdomenAdelante1 ="";
+var abdomenAtras2 ="";
+var abdomenAdelante2 ="";
+var abdomenAtras3 ="";
+var abdomenAdelante3 ="";
+var abdomenAtras4 ="";
+var abdomenAdelante4 ="";
+var abdomenAtras5 ="";
+var abdomenAdelante5 ="";
+
+
 
 var x = document.getElementById("audio1");
 var y = document.getElementById("audioFondo");
@@ -96,6 +109,18 @@ function inicializar()
 	minAbd_3=document.getElementById('adbMin_3');
 	minAbd_4=document.getElementById('adbMin_4');
 	minAbd_5=document.getElementById('adbMin_5');
+
+	abdomenAtras1=document.getElementById('atrasInt1');
+	abdomenAdelante1=document.getElementById('adelanteInt1');
+	abdomenAtras2=document.getElementById('atrasInt2');
+	abdomenAdelante2=document.getElementById('adelanteInt2');
+	abdomenAtras3=document.getElementById('atrasInt3');
+	abdomenAdelante3=document.getElementById('adelanteInt3');
+	abdomenAtras4=document.getElementById('atrasInt4');
+	abdomenAdelante4=document.getElementById('adelanteInt4');
+	abdomenAtras5=document.getElementById('atrasInt5');
+	abdomenAdelante5=document.getElementById('adelanteInt5');
+
 }
 
 
@@ -139,6 +164,18 @@ function asignarEventos()
 	minAbd_3.addEventListener("click",inst3_abd);
 	minAbd_4.addEventListener("click",inst4_abd);
 	minAbd_5.addEventListener("click",inst5_abd);
+
+	abdomenAtras1.addEventListener("click",inst5_abd);
+    abdomenAdelante1.addEventListener("click",inst2_abd);
+    abdomenAtras2.addEventListener("click",inst1_abd);
+    abdomenAdelante2.addEventListener("click",inst3_abd);
+    abdomenAtras3.addEventListener("click",inst2_abd);
+    abdomenAdelante3.addEventListener("click",inst4_abd);
+    abdomenAtras4.addEventListener("click",inst3_abd);
+    abdomenAdelante4.addEventListener("click",inst5_abd);
+    abdomenAtras5.addEventListener("click",inst4_abd);
+    abdomenAdelante5.addEventListener("click",inst1_abd);
+
 
 }
 

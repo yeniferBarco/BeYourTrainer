@@ -4,6 +4,14 @@ padding:0px;
 background-color:#b4ff00 ;
 }
 
+.topInstructivo{
+  position: absolute;
+  top: 165px;
+  left: 42px;
+  height:172px;
+  width:272px;
+}
+
 #avisoMano {
     width: 360px;
     height: 616px;
@@ -58,6 +66,79 @@ background-color:#b4ff00 ;
       background-repeat: no-repeat round;
       position: relative;
       }
+
+          
+
+          #adbMin_1{
+            top: 353px;
+            left: 11px;
+          }
+
+          #adbMin_2{
+            top: 353px;
+            left: 124px;
+          }
+
+          #adbMin_3{
+            top: 353px;
+            left: 229px;
+          }
+
+          #adbMin_4{
+            top: 453px;
+            left: 61px;
+          }
+
+          #adbMin_5{
+            top: 453px;
+            left: 180px;
+          }
+
+          #instAbd_1{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/abdomen/abdomen_instructivo1.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+
+          #instAbd_2{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/abdomen/abdomen_instructivo2.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+
+          #instAbd_3{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/abdomen/abdomen_instructivo3.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+
+          #instAbd_4{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/abdomen/abdomen_instructivo4.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+
+          #instAbd_5{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/abdomen/abdomen_instructivo5.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+
               #seccion_02_2_1 {
               width: 360px;
               height: 616px;
@@ -158,6 +239,15 @@ background-color:#b4ff00 ;
 
 }
 
+#descansoEjercicio{
+  width: 360px;
+  height: 616px;
+  overflow: hidden;
+  background: url(../img/descanso/fondo_descanso.png);
+  background-repeat: no-repeat round;
+  position: relative;
+
+}
 
 #pausarEjercicio{
   width: 360px;
@@ -217,6 +307,12 @@ position: absolute;
 }
 
 .lPausa{
+  top: 62px;
+  left: 22px;
+  position: relative;
+}
+
+.lDescanso{
   top: 62px;
   left: 22px;
   position: relative;
@@ -293,7 +389,7 @@ left: 97px;
   font-size: 35px;
   font-weight: 800;
   margin:auto;
-
+  z-index: 10;
 }
 
 #btnPiernas{
@@ -341,6 +437,13 @@ left: 92px
 top:253px;
 left:100px; 
 }
+
+#barraCarga {
+  /*margin: 20px;*/
+  width: 400px;
+  height: 516px;
+}
+
 
 #load{
 top:300px;
