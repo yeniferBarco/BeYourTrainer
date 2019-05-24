@@ -167,7 +167,16 @@ background-color:#b4ff00 ;
               position: relative;
               }
 
-              
+              #seccion_02_2_2 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/abdomen/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+
       #seccion_02_3 {
       width: 360px;
       height: 616px;

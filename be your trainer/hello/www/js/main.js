@@ -61,6 +61,9 @@ var playAudio = "";
 var pausaVoz = "";
 var playVoz = "";
 
+var ejercicio = 1;
+var pantalla = 1;
+
 
 window.onload= inicio;
 
@@ -214,6 +217,7 @@ function ocultar(){
 			instAbd_4.className="instAbd_4 ocultar";
 			instAbd_5.className="instAbd_5 ocultar";
 			seccion_02_2_1.className="abdomen1 ocultar";
+			seccion_02_2_2.className="abdomen2 ocultar";
 		seccion_02_3.className="ejPiernas ocultar";
 		seccion_02_4.className="ejBrazos ocultar";
 		seccion_02_5.className="ejPectorales ocultar";
@@ -442,10 +446,13 @@ function timer() {
 	if(totalTime==0){
 		//document.getElementById('clock').style.left ="143px";
 		//totalTime=25; //clave para el contador
-		ocultar();
+		//ocultar();
 		// seccion_02_2_1.className="abdomen1 ocultar";
-		descansoEjercicio.className="descanso animated pulse";
+		
+		ejercicio++;
+		if(ejercicio<3){
 		descansar();
+		}
 		//avisoMano.className="chocala animated pulse";
 		abdomenMano1.className="manoAbdomen1 animated bounceIn";
 
@@ -464,6 +471,8 @@ function timer() {
 
 
 function descansar(){
+	ocultar();
+	descansoEjercicio.className="descanso animated pulse";
 	var bar = new ProgressBar.Line(descansoEjercicio, {
 	  strokeWidth: 4,
 	  easing: 'easeInOut',
@@ -474,6 +483,24 @@ function descansar(){
 	  svgStyle: {width: '100%', height: '100%'}
 	});
 	bar.animate(1.0);
+	pantalla++;
+	setTimeout(pasarAbdomen,15000);
+
+
+}
+
+function pasarAbdomen()
+{  
+	ocultar();
+	switch(pantalla){
+	case 2:
+	seccion_02_2_2.className="abdomen2 animated pulse";
+	totalTime=25;
+	premisas();
+	ejercicio=1;
+	break;
+	}
+
 }
 
 function acerca()
