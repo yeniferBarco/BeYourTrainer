@@ -229,6 +229,9 @@ function ocultar(){
 	avisoMano.className="chocala ocultar";
 	pausarEjercicio.className="menuPausa ocultar";
 	descansoEjercicio.className = "descanso ocultar";
+	btnPlay.className="botonPlay ocultar";
+	btnPausa.className="botonPausa ocultar";
+
 }
 
 function principio()
@@ -269,6 +272,7 @@ function continuar(){
 		if (!time_is_on) {
 	    	time_is_on = 1;
 	    	timer();
+	    	btnPausa.className="botonPausa animated fadeIn"; 
     	}
 	},1000);
 }
@@ -287,7 +291,7 @@ function reiniciar(){
 	abdDinamic1.className="abdD ocultar";
 	abdStatic1.className="abdS animaciones mostrar";
 	btnPausa.className="botonPausa ocultar";
-	btnPlay.className="botonPlay mostrar";
+	btnPlay.className="botonPlay ocultar";
 }
 
 function retroceder()
@@ -311,8 +315,9 @@ function abrirMenu(event) {
 }
 
 function ejercicios()
-{
-    seccion_01.className="inicio ocultar";
+{   
+
+    ocultar();
 	seccion_02.className="ejercicios animated pulse";
 }
 
@@ -335,6 +340,7 @@ function abdomenN1()
 {   
 	ocultar();
 	// seccion_02_2.className="ejAbdomen ocultar";
+	btnPlay.className="botonPlay animated fadeInLeftBig"
 	seccion_02_2_1.className="abdomen1 animated pulse";
 }
 
@@ -496,7 +502,7 @@ function pasarAbdomen()
 	case 2:
 	seccion_02_2_2.className="abdomen2 animated pulse";
 	totalTime=25;
-	premisas();
+	btnPlay.className="botonPlay animated fadeInLeftBig";
 	ejercicio=1;
 	break;
 	}
