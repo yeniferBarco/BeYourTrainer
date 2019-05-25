@@ -233,6 +233,7 @@ function ocultar(){
 	btnPlay.className="botonPlay ocultar";
 	btnPausa.className="botonPausa ocultar";
 	clock.className="clock ocultar";
+	rueda.className="rueda ocultar";
 
 }
 
@@ -263,6 +264,7 @@ function continuar(){
 	// principio();
 	seccion_02_2_1.className="abdomen1 animated pulse";
 	clock.className="clock posicionBotones animated fadeInLeftBig";
+	rueda.className="rueda posicionBotones mostrar";
 
 	bar.animate(1.8, // {
  	//duration: 17500
@@ -293,10 +295,14 @@ function reiniciar(){
 	abdStatic1.className="abdS animaciones mostrar";
 	btnPausa.className="botonPausa ocultar";
 	btnPlay.className="botonPlay ocultar";
+	ejercicio = 1;
+    animacion = 1;
+
 }
 
 function reiniciarInterfaces(){
 	barDescanso.destroy();
+	bar.destroy();		
 }
 
 function retroceder()
@@ -436,6 +442,7 @@ function preparado(){
     		setTimeout(abdom1,7000);
     		break;
     	case 2:
+    	    setTimeout(cabiarA50,6000);
     		setTimeout(abdom2,7000);
     		break;
     }
@@ -475,7 +482,7 @@ function timer() {
 		//totalTime=25; //clave para el contador
 		//ocultar();
 		// seccion_02_2_1.className="abdomen1 ocultar";
-		
+		btnPausa.className="botonPausa ocultar";
 		ejercicio++;
 		if(ejercicio<3){
 			descansar();
@@ -520,7 +527,7 @@ function pasarAbdomen()
 	switch(pantalla){
 
 		case 2:
-			totalTime=20;
+		    totalTime=1000000;
 			seccion_02_2_2.className="abdomen2 animated pulse";
 			btnPlay.className="botonPlay animated fadeInLeftBig";
 			ejercicio=1;
@@ -567,7 +574,8 @@ x.muted = false;
 
 function abdom1()
 {
-	totalTime = 15;
+	totalTime = 5;
+	rueda.className="rueda posicionBotones mostrar";
 	clock.className="clock posicionBotones mostrar";
 	abdStatic1.className="abdS ocultar";	
 	abdDinamic1.className="abdD animaciones mostrar";	
@@ -575,9 +583,16 @@ function abdom1()
 
 function abdom2(){
 	// totalTime = 50;
+	circular();
+	bar.animate(1.0,{duration: 55000});
+	rueda.className="rueda posicionBotones mostrar";
 	clock.className="clock posicionBotones mostrar";
 	abdStatic2.className= "abdS ocultar";
 	abdDinamic22.className = "abdD_2 animaciones2";
+}
+
+function cabiarA50(){
+	totalTime=50;
 }
 
 

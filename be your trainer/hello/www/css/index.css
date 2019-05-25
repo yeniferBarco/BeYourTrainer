@@ -410,6 +410,7 @@ left: 97px;
   height: 150px;
   top: 103px;
   left: 85px;
+  z-index: 10;
 }
 #clock{
   left: 143px;
