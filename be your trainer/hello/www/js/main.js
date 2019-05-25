@@ -255,9 +255,7 @@ function pausar(){
 		ocultar();
 		pausarEjercicio.className = "menuPausa animated pulse";
 	}
-	
 }
-
 
 function continuar(){
 
@@ -298,14 +296,7 @@ function reiniciar(){
 }
 
 function reiniciarInterfaces(){
-
-	totalTime = 50;
-
 	barDescanso.destroy();
-	bar.destroy();
-	clock.className="clock ocultar";
-	clearTimeout(controlTimer);
-
 }
 
 function retroceder()
@@ -527,15 +518,13 @@ function pasarAbdomen()
 {  
 	ocultar();
 	switch(pantalla){
-		case 2:
 
-			
+		case 2:
+			totalTime=20;
 			seccion_02_2_2.className="abdomen2 animated pulse";
 			btnPlay.className="botonPlay animated fadeInLeftBig";
-			reiniciarInterfaces();
 			ejercicio=1;
-			
-			
+			reiniciarInterfaces();
 		break;
 	}
 
