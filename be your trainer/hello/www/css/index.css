@@ -231,6 +231,52 @@ background-color:#b4ff00 ;
               position: relative;
               }
 
+              #seccion_02_3_3 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/piernas/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+              #seccion_02_3_4 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/piernas/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+                 #pierStatic4{
+                  left:83px; 
+                 }
+
+              #seccion_02_3_5 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/piernas/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_3_6 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/piernas/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+                  #pierDinamic6{
+                   left: 72px;
+                  }
+                  #pierStatic6{
+                   left: 72px;
+                  }
+
       #seccion_02_4 {
       width: 360px;
       height: 616px;
@@ -334,7 +380,7 @@ background-color:#b4ff00 ;
 
 .pierD{
   position: absolute;
-  top: 284px;
+  top: 283px;
   left: 97px;
 }
 
