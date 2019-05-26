@@ -56,6 +56,7 @@ var abdomenAdelante5 ="";
 
 var x = document.getElementById("audio1");
 var y = document.getElementById("audioFondo");
+var z = document.getElementById("audioMano");
 
 
 var pausaAudio = "";
@@ -211,7 +212,7 @@ function entrada()
 	 
 	 if(JSON.parse(localStorage.getItem("salvacion"))){
 	 	localStorage.setItem("salvacion", false);
-	 	setTimeout(ejercicios, 3000);
+	 	setTimeout(despuesDeMano, 3000);
 
 	 }
 	 else{
@@ -638,6 +639,7 @@ function ajuste()
 
 function pausaM(){
 	y.pause();
+	z.pause();
 	off.className="offA ocultar";
 	on.className="onA animated fadeIn";
 }
@@ -715,6 +717,12 @@ localStorage.setItem("salvacion", true);
 location.reload();
 }
 
+function despuesDeMano()
+{
+	z.autoplay = true;
+	z.play();
+    ejercicios();
+}
 
 
 

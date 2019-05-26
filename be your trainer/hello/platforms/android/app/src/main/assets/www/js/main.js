@@ -56,6 +56,7 @@ var abdomenAdelante5 ="";
 
 var x = document.getElementById("audio1");
 var y = document.getElementById("audioFondo");
+var z = document.getElementById("audioMano");
 
 
 var pausaAudio = "";
@@ -71,10 +72,10 @@ var animacion = 1;
 var contPausa = 1;
 var interfaceFinal = 0;
 
+
 window.onload= inicio;
 
 function inicio(){
-
 inicializar();
 asignarEventos();
 entrada();
@@ -162,8 +163,7 @@ function asignarEventos()
 	pause.addEventListener("click", pausar);
 	reiniciarEjercicio.addEventListener("click", reiniciar);
 	continuarEjercicio.addEventListener("click", continuar);
-	mano.addEventListener("click", reiniciar);
-
+	mano.addEventListener("click", reload);
 	pausaAudio.addEventListener("click", pausaM);
 	playAudio.addEventListener("click", playM);
 
@@ -209,7 +209,17 @@ function entrada()
 	pausarEjercicio.className="menuPausa ocultar";
 	avisoMano.className="chocala ocultar";
 	descansoEjercicio.className = "descanso ocultar";
-	setTimeout(principio, 3000);
+	 
+	 if(JSON.parse(localStorage.getItem("salvacion"))){
+	 	localStorage.setItem("salvacion", false);
+	 	setTimeout(despuesDeMano, 3000);
+
+	 }
+	 else{
+	 	setTimeout(principio, 3000);
+	 }
+	
+	
 
 }
 
@@ -322,8 +332,6 @@ function reiniciar(){
 	clock.className="clock ocultar";
 	clearTimeout(controlTimer);
 	
-	totalTime = 15;
-
 	abdDinamic1.className="abdD ocultar";
 	abdStatic1.className="abdS animaciones mostrar";
 	btnPausa.className="botonPausa ocultar";
@@ -334,11 +342,13 @@ function reiniciar(){
     contPausa = 1;
     interfaceFinal = 0;
 
+
     //muyyy importante mostrar y ocultar todos tal y como esta arriba
     abdStatic2.className= "abdS animaciones2 mostrar";
     abdStatic3.className= "abdS animaciones2 mostrar";
     abdStatic4.className= "abdS animaciones2 mostrar";
     abdStatic5.className= "abdS animaciones2 mostrar";
+    totalTime = 1000;
 }
 
 function reiniciarInterfaces(){
@@ -554,10 +564,10 @@ function descansar(){
 	
 	ocultar();
 
-	// if (interfaceFinal==2) {
-	// 	avisoMano.className="chocala animated pulse";
-	// }
-	// if(interfaceFinal==0){
+	 if (interfaceFinal==2) {
+		avisoMano.className="chocala animated pulse";
+	}
+	   else{
 		descansoEjercicio.className="descanso animated pulse";
 		barDescanso = new ProgressBar.Line(descansoEjercicio, {
 		  strokeWidth: 4,
@@ -572,7 +582,7 @@ function descansar(){
 		pantalla++;
 		contPausa++;
 		setTimeout(pasarAbdomen,15000);
-	// }
+	    }
 	
 }
 
@@ -594,24 +604,22 @@ function pasarAbdomen()
 			btnPlay.className="botonPlay animated fadeInLeftBig";
 			ejercicio=1;
 			reiniciarInterfaces();
-		break;
+		    break;
 		case 4:
 		    totalTime=1000000;
 			seccion_02_2_4.className="abdomen4 animated pulse";
 			btnPlay.className="botonPlay animated fadeInLeftBig";
 			ejercicio=1;
 			reiniciarInterfaces();
-		break;
+		    break;
 		case 5:
 		    totalTime=1000000;
 			seccion_02_2_5.className="abdomen5 animated pulse";
 			btnPlay.className="botonPlay animated fadeInLeftBig";
 			ejercicio=1;
-			// interfaceFinal=2;
+			interfaceFinal=2;
 			reiniciarInterfaces();
-		break;
-		
-
+		    break;
 
 	}
 
@@ -631,6 +639,7 @@ function ajuste()
 
 function pausaM(){
 	y.pause();
+	z.pause();
 	off.className="offA ocultar";
 	on.className="onA animated fadeIn";
 }
@@ -656,6 +665,7 @@ function abdom1()
 {
 	totalTime = 5;
 	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones ocultar";
 	clock.className="clock posicionBotones mostrar";
 	abdStatic1.className="abdS ocultar";	
 	abdDinamic1.className="abdD animaciones mostrar";	
@@ -700,6 +710,18 @@ function cabiarA50(){
 
 function cabiarA25(){
 	totalTime=25;
+}
+
+function reload(){
+localStorage.setItem("salvacion", true);
+location.reload();
+}
+
+function despuesDeMano()
+{
+	z.autoplay = true;
+	z.play();
+    ejercicios();
 }
 
 
