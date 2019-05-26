@@ -16,6 +16,7 @@ var pectorales = "";
 var gluteos = ""; 
 
 var ListoAbd = "";
+var ListoPier = "";
 
 //Contadores para la pausa.
 var totalTime = 10;
@@ -27,8 +28,11 @@ var barDescanso;
 
 var ajustes_hamburguesa="";
 var acercaDe_hamburguesa="";
+
+
 var play="";
 var pause = "";
+
 var reiniciarEjercicio = "";
 var continuarEjercicio = "";
 var mano = "";
@@ -77,6 +81,8 @@ var pantalla = 1;
 var animacion = 1;
 var contPausa = 1;
 var interfaceFinal = 0;
+//para diferenciar en la premisa la parte del cuerpo
+var cuerpo = 1;
 
 //Var para los tipos de audio
 var tipoAudio = 50;
@@ -114,8 +120,14 @@ function inicializar()
 	gluteos= document.getElementById('btnGluteos');
 	
 	ListoAbd= document.getElementById('btnListoAbd');
+    ListoPier= document.getElementById('btnListoPies');
+
+
+
 	play= document.getElementById('btnPlay');
 	pause= document.getElementById('btnPausa');
+
+
 	reiniciarEjercicio= document.getElementById('btnAbandonarPausa');
 	continuarEjercicio= document.getElementById('btnContinuar');
 	mano = document.getElementById('abdomenMano1');
@@ -165,11 +177,18 @@ function asignarEventos()
 
 
 	ListoAbd.addEventListener("click",abdomenN1);
+    ListoPier.addEventListener("click",piernasN1);
+
+
 	menu.addEventListener('click', abrirMenu, false);
 	acercaDe_hamburguesa.addEventListener("click",acerca);
 	ajustes_hamburguesa.addEventListener("click",ajuste);
+
+
 	play.addEventListener("click",preparado);
 	pause.addEventListener("click", pausar);
+
+
 	reiniciarEjercicio.addEventListener("click", reiniciar);
 	continuarEjercicio.addEventListener("click", continuar);
 	mano.addEventListener("click", reload);
@@ -249,6 +268,8 @@ function ocultar(){
 			seccion_02_2_4.className="abdomen4 ocultar";
 			seccion_02_2_5.className="abdomen5 ocultar";
 		seccion_02_3.className="ejPiernas ocultar";
+			seccion_02_3_1.className="piernas1 ocultar";
+			seccion_02_3_2.className="piernas2 ocultar";
 		seccion_02_4.className="ejBrazos ocultar";
 		seccion_02_5.className="ejPectorales ocultar";
 		seccion_02_6.className="ejGluteos ocultar";	
@@ -259,14 +280,20 @@ function ocultar(){
 	avisoMano.className="chocala ocultar";
 	pausarEjercicio.className="menuPausa ocultar";
 	descansoEjercicio.className = "descanso ocultar";
+
 	btnPlay.className="botonPlay ocultar";
 	btnPausa.className="botonPausa ocultar";
+
+
+
 	clock.className="clock ocultar";
 	rueda.className="rueda ocultar";
 
 	abdDinamic22.className = "abdD_2 ocultar";
 	abdDinamic33.className = "abdD_2 ocultar";
 	abdDinamic44.className = "abdD_2 ocultar";
+
+
 }
 
 function principio()
@@ -362,6 +389,7 @@ function reiniciar(){
     animacion = 1;
     contPausa = 1;
     interfaceFinal = 0;
+    cuerpo = 1;
 
 
     //muyyy importante mostrar y ocultar todos tal y como esta arriba
@@ -465,6 +493,15 @@ function piernasMenu()
 	seccion_02_3.className="ejAbdomen animated pulse";
 }
 
+function piernasN1()
+{   
+	ocultar();
+    cuerpo=2;
+	btnPlay.className="botonPlay animated fadeInLeftBig"
+	seccion_02_3_1.className="piernas1 animated pulse";
+}
+
+
 function brazosMenu()
 {   
 	btnAtrasAbdomen.className="atras animated fadeInRightBig";
@@ -504,7 +541,7 @@ function preparado(){
 	premisas();
 
     console.log(animacion);
-
+    if(cuerpo==1){
     switch(animacion){
 
     	case 1:
@@ -528,6 +565,40 @@ function preparado(){
     		break;
     }
 
+    }
+
+    if(cuerpo==2)
+    {
+     
+      switch(animacion){
+
+    	case 1:
+    		setTimeout(pier1,7000);
+    		break;
+    	case 2:
+    	    setTimeout(cabiarA30,6000);
+    		setTimeout(pier2,7000);
+    		break;
+    	case 3:
+    		setTimeout(cabiarA25,6000);
+    		setTimeout(pier3,7000);
+    		break;
+    	case 4:
+    		setTimeout(cabiarA25,6000);
+    		setTimeout(pier4,7000);
+    		break;
+    	case 5:
+    		setTimeout(cabiarA50,6000);
+    		setTimeout(pier5,7000);
+    		break;
+    	case 6:
+    		setTimeout(cabiarA50,6000);
+    		setTimeout(pier6,7000);
+    		break;	
+    }
+
+    }
+
     animacion++;
 
     setTimeout(()=>{
@@ -540,6 +611,8 @@ function preparado(){
     	}
 	},7000); 
 } 
+
+
 
 function premisas(){
 
@@ -555,7 +628,11 @@ function premisas(){
 			break;
 	}
 
-	btnPlay.className="botonPlay ocultar";
+
+    btnPlay.className="botonPlay ocultar";
+
+   
+	
 	premisa.className="premisa animated fadeInRightBig";
 	
     document.getElementById('premisa').style.left ="36px"; 
@@ -627,6 +704,8 @@ function descansar(){
 function pasarAbdomen()
 {  
 	ocultar();
+	if(cuerpo==1)
+	{
 	switch(pantalla){
 
 		case 2:
@@ -664,6 +743,49 @@ function pasarAbdomen()
 		    break;
 
 	}
+   }
+
+
+   	if(cuerpo==2)
+	{
+	switch(pantalla){
+
+		case 2:
+		    totalTime=1000000;
+		    tipoAudio=30;//mirar los switch de los audios
+			seccion_02_3_2.className="piernas2 animated pulse";
+			btnPlay.className="botonPlay animated fadeInLeftBig";
+			ejercicio=1;
+			reiniciarInterfaces();
+			break;
+		case 3:
+		    totalTime=1000000;
+		    tipoAudio=25;
+			seccion_02_2_3.className="abdomen3 animated pulse";
+			btnPlay.className="botonPlay animated fadeInLeftBig";
+			ejercicio=1;
+			reiniciarInterfaces();
+		    break;
+		case 4:
+		    totalTime=1000000;
+		    tipoAudio=25;
+			seccion_02_2_4.className="abdomen4 animated pulse";
+			btnPlay.className="botonPlay animated fadeInLeftBig";
+			ejercicio=1;
+			reiniciarInterfaces();
+		    break;
+		case 5:
+		    totalTime=1000000;
+		    tipoAudio=50;
+			seccion_02_2_5.className="abdomen5 animated pulse";
+			btnPlay.className="botonPlay animated fadeInLeftBig";
+			ejercicio=1;
+			interfaceFinal=2;
+			reiniciarInterfaces();
+		    break;
+
+	}
+   } 	
 
 }
 
@@ -747,18 +869,49 @@ function abdom4(){
 	abdDinamic44.className = "abdD_2 animaciones2 mostrar";
 }
 
+
+
 function abdom5(){
 	circular();
 	bar.animate(1.0,{duration: 55000});
 	rueda.className="rueda posicionBotones mostrar";
 	clock.className="clock posicionBotones mostrar";
 }
+
+
+function pier1()
+{  
+	totalTime = 30;
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	pierStatic1.className="pierS ocultar";	
+	pierDinamic1.className="pierD  mostrar";	
+}
+
+function pier2()
+{  
+	circular();
+	bar.animate(1.0,{duration: 32000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	pierStatic2.className="pierS ocultar";	
+	pierDinamic2.className="pierD  mostrar";	
+}
+
 function cabiarA50(){
 	totalTime=50;
 }
 
 function cabiarA25(){
 	totalTime=25;
+}
+
+function cabiarA20(){
+	totalTime=20;
+}
+
+function cabiarA30(){
+	totalTime=30;
 }
 
 function reload(){
