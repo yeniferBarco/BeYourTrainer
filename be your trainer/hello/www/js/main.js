@@ -490,7 +490,7 @@ function circular(){
 	bar = new ProgressBar.Circle(rueda, {
 	strokeWidth: 6,
 	easing: 'easeInOut',
-	duration: 17500,
+	duration: 55000,
 	color: '#f3ff00',
 	trailColor: '#eee',
 	trailWidth: 1,
@@ -711,7 +711,7 @@ function ponerVoz(){
 }
 
 function abdom1()
-{
+{  
 	totalTime = 50;
 	rueda.className="rueda posicionBotones mostrar";
 	clock.className="clock posicionBotones ocultar";
@@ -731,7 +731,7 @@ function abdom2(){
 
 function abdom3(){
 	circular();
-	bar.animate(1.1,{duration: 28000});
+	bar.animate(1.0,{duration: 27000});
 	rueda.className="rueda posicionBotones mostrar";
 	clock.className="clock posicionBotones mostrar";
 	abdStatic3.className= "abdS ocultar";
@@ -740,7 +740,7 @@ function abdom3(){
 
 function abdom4(){
 	circular();
-	bar.animate(1.1,{duration: 28000});
+	bar.animate(1.0,{duration: 27000});
 	rueda.className="rueda posicionBotones mostrar";
 	clock.className="clock posicionBotones mostrar";
 	abdStatic4.className= "abdS ocultar";
@@ -749,7 +749,7 @@ function abdom4(){
 
 function abdom5(){
 	circular();
-	bar.animate(1.1,{duration: 28000});
+	bar.animate(1.0,{duration: 55000});
 	rueda.className="rueda posicionBotones mostrar";
 	clock.className="clock posicionBotones mostrar";
 }
