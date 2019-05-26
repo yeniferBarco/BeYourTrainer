@@ -3,7 +3,13 @@ margin:0px;
 padding:0px;
 background-color:#b4ff00 ;
 }
-
+/* ejemplo 1 de 5 */
+.letreroContador
+{
+  top: 568px;
+  left: 105px;
+}
+/* para la altura de los gifs en los instructivos*/
 .topInstructivo{
   position: absolute;
   top: 165px;
@@ -139,14 +145,65 @@ background-color:#b4ff00 ;
             position: relative;
           }
 
+          .instructivosAtras
+          {
+           top: 563px;
+           left: 138px;
+
+          }
+
+          .instructivosAdelante
+          {
+            top:563px;
+            left:198px;
+          }
+
               #seccion_02_2_1 {
               width: 360px;
               height: 616px;
               overflow: hidden;
-              background: url(../img/abdomen/fondo_general.png);
+              background: url(../img/abdomen/fondo_ejercicios.png);
               background-repeat: no-repeat round;
               position: relative;
               }
+
+              #seccion_02_2_2 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/abdomen/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_2_3 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/abdomen/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+
+              #seccion_02_2_4 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/abdomen/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_2_5 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/abdomen/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
       #seccion_02_3 {
       width: 360px;
       height: 616px;
@@ -227,7 +284,13 @@ background-color:#b4ff00 ;
   position: absolute;
   top: 327px;
   left: 42px;
-  
+  z-index: 10;
+}
+
+.animaciones2{
+  position: absolute;
+  top: 327px;
+  left: 23px;
 }
 
 .abdD{
@@ -236,8 +299,14 @@ background-color:#b4ff00 ;
   left: 42px;
   height:172px;
   width:272px;
-
 }
+
+.abdD_2{
+  position: absolute;
+  top: 327px;
+  left: 23px;
+}
+
 
 #descansoEjercicio{
   width: 360px;
@@ -279,7 +348,8 @@ position: absolute;
 .botonPlay{
   top: 487px;
   left: 149px;
-  position: relative;
+  position: absolute;
+  z-index: 10;
 }
 
 .fMano{
@@ -321,7 +391,8 @@ position: absolute;
 .botonPausa{
   top: 487px;
   left: 149px;
-  position: relative;
+  position: absolute;
+  z-index: 10;
 }
 
 /*botones para el menu de pausa*/
@@ -366,6 +437,7 @@ left: 97px;
   height: 150px;
   top: 103px;
   left: 85px;
+  z-index: 10;
 }
 #clock{
   left: 143px;
@@ -377,6 +449,7 @@ left: 97px;
   font-size: 67px;
   font-weight: 600;
   text-align: center;
+  z-index: 10;
 }
 #premisa{
   left: 36px;
