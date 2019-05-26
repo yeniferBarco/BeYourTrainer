@@ -315,7 +315,12 @@ background-color:#b4ff00 ;
   background: url(../img/descanso/fondo_descanso.png);
   background-repeat: no-repeat round;
   position: relative;
+}
 
+#toalla{
+  position: absolute;
+  top: 151px;
+  left: 36px;
 }
 
 #pausarEjercicio{
@@ -515,6 +520,7 @@ left:100px;
   /*margin: 20px;*/
   width: 400px;
   height: 516px;
+  z-index: 20;
 }
 
 
@@ -522,8 +528,6 @@ left:100px;
 top:300px;
 left:100px; 
 }
-
-
 
 .loader,
 .loader:before,

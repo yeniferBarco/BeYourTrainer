@@ -54,9 +54,15 @@ var abdomenAdelante5 ="";
 
 
 
-var x = document.getElementById("audio1");
-var y = document.getElementById("audioFondo");
+// var x = document.getElementById("audio1");
+var y = document.getElementById("audioFondo"); //50 segundos preparad050
 var z = document.getElementById("audioMano");
+
+var manoChocar = document.getElementById("audiomanoAparece");
+var audioDescansar = document.getElementById("audioDescanso");
+var audiopreparado50= document.getElementById("preparado50");
+var audioSilbido = document.getElementById("audioSilbido");
+var audiopreparado25 = document.getElementById("preparado25");
 
 
 var pausaAudio = "";
@@ -71,6 +77,9 @@ var pantalla = 1;
 var animacion = 1;
 var contPausa = 1;
 var interfaceFinal = 0;
+
+//Var para los tipos de audio
+var tipoAudio = 50;
 
 
 window.onload= inicio;
@@ -273,6 +282,8 @@ function pausar(){
 	time_is_on = 0;
 	clearTimeout(controlTimer);
 	bar.stop();
+	audiopreparado50.pause();
+	audiopreparado25.pause();
 	
 	if(time_is_on==0){
 		ocultar();
@@ -283,7 +294,17 @@ function pausar(){
 function continuar(){
 
 	ocultar();
-	// principio();
+
+	switch(tipoAudio){
+
+		case 50:
+			audiopreparado50.play();
+			break;
+		case 25:
+			audiopreparado25.play();
+			break;
+	}
+
 	switch(contPausa){
 		case 1:
 			seccion_02_2_1.className="abdomen1 animated pulse";
@@ -305,7 +326,7 @@ function continuar(){
         	abdStatic5.className = "abdS animaciones2 mostrar";
         	break;
 
-	   }
+	}
 	clock.className="clock posicionBotones animated fadeInLeftBig";
 	rueda.className="rueda posicionBotones mostrar";
 
@@ -498,7 +519,7 @@ function preparado(){
     		setTimeout(abdom3,7000);
     		break;
     	case 4:
-    		setTimeout(cabiarA50,6000);
+    		setTimeout(cabiarA25,6000);
     		setTimeout(abdom4,7000);
     		break;
     	case 5:
@@ -521,7 +542,19 @@ function preparado(){
 } 
 
 function premisas(){
-	x.play(); 
+
+	switch(tipoAudio){
+
+		case 50:
+			audiopreparado50.autoplay = true;
+			audiopreparado50.play();
+			break;
+		case 25:
+			audiopreparado25.autoplay = true;
+			audiopreparado25.play();
+			break;
+	}
+
 	btnPlay.className="botonPlay ocultar";
 	premisa.className="premisa animated fadeInRightBig";
 	
@@ -537,15 +570,16 @@ function timer() {
     document.getElementById('clock').innerHTML = totalTime;		  
     // clock.className="clock posicionBotones";
 	if(totalTime==0){
-		//document.getElementById('clock').style.left ="143px";
-		//totalTime=25; //clave para el contador
-		//ocultar();
-		// seccion_02_2_1.className="abdomen1 ocultar";
+
 		btnPausa.className="botonPausa ocultar";
 		ejercicio++;
 
 		if(ejercicio<3){
-			descansar();
+			
+			audioSilbido.autoplay = true;
+			audioSilbido.play();
+
+			setTimeout(descansar,1000);
 		}
 	} 
 	else{
@@ -566,8 +600,10 @@ function descansar(){
 
 	 if (interfaceFinal==2) {
 		avisoMano.className="chocala animated pulse";
+		manoChocar.autoplay = true;
+		manoChocar.play();
 	}
-	   else{
+	else{
 		descansoEjercicio.className="descanso animated pulse";
 		barDescanso = new ProgressBar.Line(descansoEjercicio, {
 		  strokeWidth: 4,
@@ -582,7 +618,9 @@ function descansar(){
 		pantalla++;
 		contPausa++;
 		setTimeout(pasarAbdomen,15000);
-	    }
+		audioDescansar.autoplay = true;
+		audioDescansar.play();
+	}
 	
 }
 
@@ -593,6 +631,7 @@ function pasarAbdomen()
 
 		case 2:
 		    totalTime=1000000;
+		    tipoAudio=50;
 			seccion_02_2_2.className="abdomen2 animated pulse";
 			btnPlay.className="botonPlay animated fadeInLeftBig";
 			ejercicio=1;
@@ -600,6 +639,7 @@ function pasarAbdomen()
 			break;
 		case 3:
 		    totalTime=1000000;
+		    tipoAudio=25;
 			seccion_02_2_3.className="abdomen3 animated pulse";
 			btnPlay.className="botonPlay animated fadeInLeftBig";
 			ejercicio=1;
@@ -607,6 +647,7 @@ function pasarAbdomen()
 		    break;
 		case 4:
 		    totalTime=1000000;
+		    tipoAudio=25;
 			seccion_02_2_4.className="abdomen4 animated pulse";
 			btnPlay.className="botonPlay animated fadeInLeftBig";
 			ejercicio=1;
@@ -614,6 +655,7 @@ function pasarAbdomen()
 		    break;
 		case 5:
 		    totalTime=1000000;
+		    tipoAudio=50;
 			seccion_02_2_5.className="abdomen5 animated pulse";
 			btnPlay.className="botonPlay animated fadeInLeftBig";
 			ejercicio=1;
@@ -651,19 +693,26 @@ function playM(){
 	
 }
 function quitarVoz(){
-offV.className="offVoz ocultar";
-onV.className="onVoz animated fadeIn";	
-x.muted = true;
+	offV.className="offVoz ocultar";
+	onV.className="onVoz animated fadeIn";	
+	manoChocar.muted = true;
+	audioDescansar.muted = true;
+	audiopreparado50.muted = true;
+	audiopreparado25.muted = true;
 }
+
 function ponerVoz(){
-onV.className="onVoz ocultar";	
-offV.className="offVoz animated fadeIn";
-x.muted = false;
+	onV.className="onVoz ocultar";	
+	offV.className="offVoz animated fadeIn";
+	manoChocar.muted = false;
+	audioDescansar.muted = false;
+	audiopreparado50.muted = false;
+	audiopreparado25.muted = false;
 }
 
 function abdom1()
 {
-	totalTime = 5;
+	totalTime = 50;
 	rueda.className="rueda posicionBotones mostrar";
 	clock.className="clock posicionBotones ocultar";
 	clock.className="clock posicionBotones mostrar";
@@ -705,7 +754,7 @@ function abdom5(){
 	clock.className="clock posicionBotones mostrar";
 }
 function cabiarA50(){
-	totalTime=5;
+	totalTime=50;
 }
 
 function cabiarA25(){
