@@ -176,6 +176,33 @@ background-color:#b4ff00 ;
               position: relative;
               }
 
+              #seccion_02_2_3 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/abdomen/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+
+              #seccion_02_2_4 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/abdomen/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_2_5 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/abdomen/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
 
       #seccion_02_3 {
       width: 360px;
@@ -257,7 +284,7 @@ background-color:#b4ff00 ;
   position: absolute;
   top: 327px;
   left: 42px;
- /* z-index: 10;*/
+  z-index: 10;
 }
 
 .animaciones2{
