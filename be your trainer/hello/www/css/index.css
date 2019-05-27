@@ -63,6 +63,43 @@ background-color:#b4ff00 ;
       background-repeat: no-repeat round;
       position: relative;
       }
+
+          .topInstructivo2{
+            position: absolute;
+            top: 156px;
+            left: 88px;
+          }
+
+          #calDinamic22{
+            left: 108px;
+          }
+
+          #calDinamic33{
+            left: 28px;
+          }
+
+          #calDinamic55{
+            left: 109px;
+          }
+
+          #calDinamic66{
+            left: 105px;
+          }
+          #calDinami77{
+            left: 79px;
+          }
+          #calDinamic88{
+            left: 134px;
+          }
+          #calDinamic99{
+            left: 115px;
+          }
+          #calDinamic1010{
+            left: 112px;
+          }
+
+
+
           #calMin_1{
            top: 318px;
            left: 34px;
@@ -719,6 +756,32 @@ background-color:#b4ff00 ;
               #pecMin_3{
                 top: 396px;
                 left: 236px;
+              }
+
+              #instPec_1{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/pectorales/pectorales_instructivo1.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }       
+
+              #instPec_2{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/pectorales/pectorales_instructivo2.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }                                      
+              #instPec_3{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/pectorales/pectorales_instructivo3.png);
+                background-repeat: no-repeat round;
+                position: relative;
               }
 
               #seccion_02_5_1 {
