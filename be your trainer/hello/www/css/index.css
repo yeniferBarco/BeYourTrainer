@@ -63,7 +63,56 @@ background-color:#b4ff00 ;
       background-repeat: no-repeat round;
       position: relative;
       }
+          #calMin_1{
+           top: 318px;
+           left: 34px;
+          }
 
+          #calMin_2{
+           top: 287px;
+           left: 124px;
+          }
+
+          #calMin_3{
+           top: 330px;
+           left: 188px;
+          }
+
+          #calMin_4{
+           top: 310px;
+           left: 273px;
+          }
+
+          #calMin_5{
+           top: 385px;
+           left: 39px;
+          }
+
+          #calMin_6{
+           top: 406px;
+           left: 118px;
+          }
+
+          #calMin_7{
+           top: 394px;
+           left: 175px;
+          }
+
+          #calMin_8{
+           top: 377px;
+           left: 281px;
+          }
+
+          #calMin_9{
+           top: 494px;
+           left: 106px;
+          }
+
+          #calMin_10{
+           top: 494px;
+           left: 207px;
+          }                                                  
+                
                     #seccion_02_1_1 {
                      width: 360px;
                      height: 616px;
