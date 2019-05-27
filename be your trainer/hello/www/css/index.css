@@ -348,7 +348,32 @@ background-color:#b4ff00 ;
       background-repeat: no-repeat round;
       position: relative;
       }
+              #seccion_02_5_1 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/pectorales/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
 
+              #seccion_02_5_2 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/pectorales/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_5_3 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/pectorales/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
       #seccion_02_6 {
       width: 360px;
       height: 616px;
@@ -357,6 +382,60 @@ background-color:#b4ff00 ;
       background-repeat: no-repeat round;
       position: relative;
       }        
+              #seccion_02_6_1 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/gluteos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_6_2 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/gluteos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_6_3 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/gluteos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_6_4 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/gluteos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_6_5 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/gluteos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_6_6 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/gluteos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
 
 #seccion_03 {
     width: 360px;
@@ -416,14 +495,28 @@ background-color:#b4ff00 ;
     top: 283px;
     left: 97px;
     z-index: 10;
-  }
+}
 
 .animaciones4 {
     position: absolute;
     top: 319px;
     left: 29px;
     z-index: 10;
-  }
+}
+
+.animaciones5 {
+    position: absolute;
+    top: 319px;
+    left: 29px;
+    z-index: 10;
+}
+
+.animaciones6 {
+    position: absolute;
+    top: 292px;
+    left: 19px;
+    z-index: 10;
+}
 
 .abdD{
   position: absolute;
@@ -449,6 +542,18 @@ background-color:#b4ff00 ;
   position: absolute;
   top: 319px;
   left: 45px;
+}
+
+.pecD{
+  position: absolute;
+  top: 319px;
+  left: 29px;
+}
+
+.gluD{
+  position: absolute;
+  top: 292px;
+  left: 19px;
 }
 
 
@@ -586,6 +691,16 @@ left: 97px;
 }
 
 #btnListoBra{
+  top: 134px;
+  left: 120px;
+}
+
+#btnListoPec{
+  top: 134px;
+  left: 120px;
+}
+
+#btnListoGlu{
   top: 134px;
   left: 120px;
 }
