@@ -62,12 +62,13 @@ var abdomenAdelante5 ="";
 var y = document.getElementById("audioFondo"); //50 segundos preparad050
 var z = document.getElementById("audioMano");
 
+var audioSilbido = document.getElementById("audioSilbido");
 var manoChocar = document.getElementById("audiomanoAparece");
 var audioDescansar = document.getElementById("audioDescanso");
 var audiopreparado50= document.getElementById("preparado50");
-var audioSilbido = document.getElementById("audioSilbido");
 var audiopreparado25 = document.getElementById("preparado25");
-
+var audiopreparado30= document.getElementById("preparado30");
+var audiopreparado20= document.getElementById("preparado20");
 
 var pausaAudio = "";
 var playAudio = "";
@@ -399,7 +400,7 @@ function continuar(){
         	pierDinamic6.className = "pierD  mostrar";
         	break;        	
 
-	}
+		}
 
 	}
 
@@ -430,9 +431,15 @@ function reiniciar(){
 	
 	ocultar();
 	ejercicios();
+
 	bar.destroy();
 	clock.className="clock ocultar";
 	clearTimeout(controlTimer);
+
+	preparado20.currentTime = 0;
+	preparado30.currentTime = 0;
+	preparado25.currentTime = 0;
+	preparado50.currentTime = 0;
 	
 	abdDinamic1.className="abdD ocultar";
 	abdStatic1.className="abdS animaciones mostrar";
@@ -588,31 +595,30 @@ function gluteosMenu()
 
 function circular(){
 	switch(cuerpo){
-	case 1:
-	bar = new ProgressBar.Circle(rueda, {
-	strokeWidth: 6,
-	easing: 'easeInOut',
-	duration: 55000,
-	color: '#f3ff00',
-	trailColor: '#eee',
-	trailWidth: 1,
-	svgStyle: null
-	});
-    bar.animate(1.0);
-    break;
-    case 2:
-    bar = new ProgressBar.Circle(rueda, {
-	strokeWidth: 6,
-	easing: 'easeInOut',
-	duration: 33000,
-	color: '#f3ff00',
-	trailColor: '#eee',
-	trailWidth: 1,
-	svgStyle: null
-	});
-    bar.animate(1.0);
-    break;
-
+		case 1:
+			bar = new ProgressBar.Circle(rueda, {
+			strokeWidth: 6,
+			easing: 'easeInOut',
+			duration: 55000,
+			color: '#f3ff00',
+			trailColor: '#eee',
+			trailWidth: 1,
+			svgStyle: null
+			});
+		    bar.animate(1.0);
+		    break;
+	    case 2:
+		    bar = new ProgressBar.Circle(rueda, {
+			strokeWidth: 6,
+			easing: 'easeInOut',
+			duration: 33000,
+			color: '#f3ff00',
+			trailColor: '#eee',
+			trailWidth: 1,
+			svgStyle: null
+			});
+		    bar.animate(1.0);
+		    break;
     }
 }
 
@@ -622,60 +628,61 @@ function preparado(){
 
     console.log(animacion);
     if(cuerpo==1){
-    switch(animacion){
+	    switch(animacion){
 
-    	case 1:
-    		setTimeout(abdom1,7000);
-    		break;
-    	case 2:
-    	    setTimeout(cabiarA50,6000);
-    		setTimeout(abdom2,7000);
-    		break;
-    	case 3:
-    		setTimeout(cabiarA25,6000);
-    		setTimeout(abdom3,7000);
-    		break;
-    	case 4:
-    		setTimeout(cabiarA25,6000);
-    		setTimeout(abdom4,7000);
-    		break;
-    	case 5:
-    		setTimeout(cabiarA50,6000);
-    		setTimeout(abdom5,7000);
-    		break;
-    }
+	    	case 1:
+	    		setTimeout(abdom1,7000);
+	    		break;
+	    	case 2:
+	    	    setTimeout(cabiarA50,6000);
+	    		setTimeout(abdom2,7000);
+	    		break;
+	    	case 3:
+	    		setTimeout(cabiarA25,6000);
+	    		setTimeout(abdom3,7000);
+	    		break;
+	    	case 4:
+	    		setTimeout(cabiarA25,6000);
+	    		setTimeout(abdom4,7000);
+	    		break;
+	    	case 5:
+	    		setTimeout(cabiarA50,6000);
+	    		setTimeout(abdom5,7000);
+	    		break;
+	    }
 
     }
 
     if(cuerpo==2)
     {
      
-      switch(animacion){
+     	switch(animacion){
 
-    	case 1:
-    		setTimeout(pier1,7000);
-    		break;
-    	case 2:
-    	    setTimeout(cabiarA30,6000);
-    		setTimeout(pier2,7000);
-    		break;
-    	case 3:
-    		setTimeout(cabiarA20,6000);
-    		setTimeout(pier3,7000);
-    		break;
-    	case 4:
-    		setTimeout(cabiarA30,6000);
-    		setTimeout(pier4,7000);
-    		break;
-    	case 5:
-    		setTimeout(cabiarA30,6000);
-    		setTimeout(pier5,7000);
-    		break;
-    	case 6:
-    		setTimeout(cabiarA20,6000);
-    		setTimeout(pier6,7000);
-    		break;	
-    }
+	    	case 1:
+	    		setTimeout(cabiarA30,6000);
+	    		setTimeout(pier1,7000);
+	    		break;
+	    	case 2:
+	    	    setTimeout(cabiarA30,6000);
+	    		setTimeout(pier2,7000);
+	    		break;
+	    	case 3:
+	    		setTimeout(cabiarA20,6000);
+	    		setTimeout(pier3,7000);
+	    		break;
+	    	case 4:
+	    		setTimeout(cabiarA30,6000);
+	    		setTimeout(pier4,7000);
+	    		break;
+	    	case 5:
+	    		setTimeout(cabiarA30,6000);
+	    		setTimeout(pier5,7000);
+	    		break;
+	    	case 6:
+	    		setTimeout(cabiarA20,6000);
+	    		setTimeout(pier6,7000);
+	    		break;	
+  		}
 
     }
 
@@ -696,17 +703,39 @@ function preparado(){
 
 function premisas(){
 
-	switch(tipoAudio){
+	if(cuerpo==1){
+		switch(tipoAudio){
 
-		case 50:
-			audiopreparado50.autoplay = true;
-			audiopreparado50.play();
-			break;
-		case 25:
-			audiopreparado25.autoplay = true;
-			audiopreparado25.play();
-			break;
+			case 50:
+				audiopreparado50.autoplay = true;
+				audiopreparado50.play();
+				break;
+			case 25:
+				audiopreparado25.autoplay = true;
+				audiopreparado25.play();
+				break;
+		}
 	}
+	if(cuerpo==2){
+
+		if (pantalla==1){
+			tipoAudio=30;
+		}
+
+		switch(tipoAudio){
+
+			case 30:
+				audiopreparado30.autoplay = true;
+				audiopreparado30.play();
+				break;
+			case 20:
+				audiopreparado20.autoplay = true;
+				audiopreparado20.play();
+				break;
+		}
+	}
+
+	
 
 
     btnPlay.className="botonPlay ocultar";
@@ -786,95 +815,95 @@ function pasarAbdomen()
 	ocultar();
 	if(cuerpo==1)
 	{
-	switch(pantalla){
+		switch(pantalla){
 
-		case 2:
-		    totalTime=1000000;
-		    tipoAudio=50;
-			seccion_02_2_2.className="abdomen2 animated pulse";
-			btnPlay.className="botonPlay animated fadeInLeftBig";
-			ejercicio=1;
-			reiniciarInterfaces();
-			break;
-		case 3:
-		    totalTime=1000000;
-		    tipoAudio=25;
-			seccion_02_2_3.className="abdomen3 animated pulse";
-			btnPlay.className="botonPlay animated fadeInLeftBig";
-			ejercicio=1;
-			reiniciarInterfaces();
-		    break;
-		case 4:
-		    totalTime=1000000;
-		    tipoAudio=25;
-			seccion_02_2_4.className="abdomen4 animated pulse";
-			btnPlay.className="botonPlay animated fadeInLeftBig";
-			ejercicio=1;
-			reiniciarInterfaces();
-		    break;
-		case 5:
-		    totalTime=1000000;
-		    tipoAudio=50;
-			seccion_02_2_5.className="abdomen5 animated pulse";
-			btnPlay.className="botonPlay animated fadeInLeftBig";
-			ejercicio=1;
-			interfaceFinal=2;
-			reiniciarInterfaces();
-		    break;
+			case 2:
+			    totalTime=1000000;
+			    tipoAudio=50;
+				seccion_02_2_2.className="abdomen2 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+				break;
+			case 3:
+			    totalTime=1000000;
+			    tipoAudio=25;
+				seccion_02_2_3.className="abdomen3 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 4:
+			    totalTime=1000000;
+			    tipoAudio=25;
+				seccion_02_2_4.className="abdomen4 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 5:
+			    totalTime=1000000;
+			    tipoAudio=50;
+				seccion_02_2_5.className="abdomen5 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				interfaceFinal=2;
+				reiniciarInterfaces();
+			    break;
 
-	}
-   }
+		}
+   	}
 
 
    	if(cuerpo==2)
 	{
-	switch(pantalla){
+		switch(pantalla){
 
-		case 2:
-		    totalTime=1000000;
-		    tipoAudio=30;//mirar los switch de los audios
-			seccion_02_3_2.className="piernas2 animated pulse";
-			btnPlay.className="botonPlay animated fadeInLeftBig";
-			ejercicio=1;
-			reiniciarInterfaces();
-			break;
-		case 3:
-		    totalTime=1000000;
-		    tipoAudio=20;
-			seccion_02_3_3.className="piernas3 animated pulse";
-			btnPlay.className="botonPlay animated fadeInLeftBig";
-			ejercicio=1;
-			reiniciarInterfaces();
-		    break;
-		case 4:
-		    totalTime=1000000;
-		    tipoAudio=30;
-			seccion_02_3_4.className="piernas4 animated pulse";
-			btnPlay.className="botonPlay animated fadeInLeftBig";
-			ejercicio=1;
-			reiniciarInterfaces();
-		    break;
-		case 5:
-		    totalTime=1000000;
-		    tipoAudio=30;
-			seccion_02_3_5.className="piernas5 animated pulse";
-			btnPlay.className="botonPlay animated fadeInLeftBig";
-			ejercicio=1;
-			//interfaceFinal=2;
-			reiniciarInterfaces();
-		    break;
-		case 6:
-		    totalTime=1000000;
-		    tipoAudio=20;
-			seccion_02_3_6.className="piernas6 animated pulse";
-			btnPlay.className="botonPlay animated fadeInLeftBig";
-			ejercicio=1;
-			interfaceFinal=2;
-			reiniciarInterfaces();
-		    break;
-    
+			case 2:
+			    totalTime=1000000;
+			    tipoAudio=30;//mirar los switch de los audios
+				seccion_02_3_2.className="piernas2 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+				break;
+			case 3:
+			    totalTime=1000000;
+			    tipoAudio=20;
+				seccion_02_3_3.className="piernas3 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 4:
+			    totalTime=1000000;
+			    tipoAudio=30;
+				seccion_02_3_4.className="piernas4 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 5:
+			    totalTime=1000000;
+			    tipoAudio=30;
+				seccion_02_3_5.className="piernas5 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				//interfaceFinal=2;
+				reiniciarInterfaces();
+			    break;
+			case 6:
+			    totalTime=1000000;
+			    tipoAudio=20;
+				seccion_02_3_6.className="piernas6 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				interfaceFinal=2;
+				reiniciarInterfaces();
+			    break;
+	    
 
-	}
+		}
    } 	
 
 }
@@ -911,6 +940,8 @@ function quitarVoz(){
 	audioDescansar.muted = true;
 	audiopreparado50.muted = true;
 	audiopreparado25.muted = true;
+	audiopreparado30.muted = true;
+	audiopreparado20.muted = true;
 }
 
 function ponerVoz(){
@@ -919,7 +950,9 @@ function ponerVoz(){
 	manoChocar.muted = false;
 	audioDescansar.muted = false;
 	audiopreparado50.muted = false;
-	audiopreparado25.muted = false;
+	audiopreparado25.muted = false;	
+	audiopreparado30.muted = false;
+	audiopreparado20.muted = false;
 }
 
 function abdom1()
