@@ -20,6 +20,7 @@ var ListoPier = "";
 var ListoBra = "";
 var ListoPec = "";
 var ListoGlu = "";
+var ListoCal = "";
 
 //Contadores para la pausa.
 var totalTime = 10;
@@ -130,7 +131,7 @@ function inicializar()
     ListoBra= document.getElementById('btnListoBra');
     ListoPec= document.getElementById('btnListoPec');
     ListoGlu= document.getElementById('btnListoGlu');
-
+    ListoCal= document.getElementById('btnListoCal');
 
 	play= document.getElementById('btnPlay');
 	pause= document.getElementById('btnPausa');
@@ -189,6 +190,7 @@ function asignarEventos()
     ListoBra.addEventListener("click",brazosN1);
     ListoPec.addEventListener("click",pectoralesN1);
     ListoGlu.addEventListener("click", gluteosN1);
+    ListoCal.addEventListener("click", calentamientoN1);
 
 
 	menu.addEventListener('click', abrirMenu, false);
@@ -267,6 +269,16 @@ function ocultar(){
     seccion_01.className="inicio ocultar";
 	seccion_02.className="ejercicios ocultar";
 	    seccion_02_1.className="ejCalentamiento ocultar";
+	        seccion_02_1_1.className="calentamiento1 ocultar";
+	        seccion_02_1_2.className="calentamiento2 ocultar";
+	        seccion_02_1_3.className="calentamiento3 ocultar";
+	        seccion_02_1_4.className="calentamiento4 ocultar";
+	        seccion_02_1_5.className="calentamiento5 ocultar";
+	        seccion_02_1_6.className="calentamiento6 ocultar";
+	        seccion_02_1_7.className="calentamiento7 ocultar";
+	        seccion_02_1_8.className="calentamiento8 ocultar";
+	        seccion_02_1_9.className="calentamiento9 ocultar";
+	        seccion_02_1_10.className="calentamiento10 ocultar";
 		seccion_02_2.className="ejAbdomen ocultar";
 			instAbd_1.className="instAbd_1 ocultar";
 			instAbd_2.className="instAbd_2 ocultar";
@@ -346,6 +358,15 @@ function ocultar(){
     gluDinamic4.className = "gluD ocultar";
     gluDinamic5.className = "gluD ocultar";
     gluDinamic6.className = "gluD ocultar";
+
+    //para reiniciar calentamiento
+    calDinamic1.className = "calD ocultar";
+    calDinamic2.className = "calD ocultar";
+    calDinamic3.className = "calD ocultar";
+    calDinamic4.className = "calD ocultar";
+    calDinamic8.className = "calD ocultar";
+    calDinamic9.className = "calD ocultar";
+    calDinamic10.className = "calD ocultar";
 }
 
 function principio()
@@ -536,6 +557,56 @@ function continuar(){
 	}
 
 
+    if(cuerpo==6)
+          {
+
+	switch(contPausa){
+		case 1:
+			seccion_02_1_1.className="calentamiento1 animated pulse";
+			calDinamic1.className="calD mostrar";
+			break;
+        case 2:
+			seccion_02_1_2.className="calentamiento2 animated pulse";
+			calDinamic2.className="calD mostrar";
+        	break;
+        case 3:
+			seccion_02_1_3.className="calentamiento3 animated pulse";
+			calDinamic3.className="calD mostrar";
+        	break;
+        case 4:
+			seccion_02_1_4.className="calentamiento4 animated pulse";
+			calDinamic4.className="calD mostrar";
+        	break;
+        case 5:
+			seccion_02_1_5.className="calentamiento5 animated pulse";
+			calStatic5.className="calS animaciones7 mostrar";
+        	break;
+        case 6:
+			seccion_02_1_6.className="calentamiento6 animated pulse";
+			calStatic6.className="calS animaciones7 mostrar";
+        	break;
+        case 7:
+			seccion_02_1_7.className="calentamiento7 animated pulse";
+			calStatic7.className="calS animaciones7 mostrar";
+        	break;
+        case 8:
+			seccion_02_1_8.className="calentamiento8 animated pulse";
+			calDinamic8.className="calD mostrar";
+        	break;
+        case 9:
+			seccion_02_1_9.className="calentamiento9 animated pulse";
+			calDinamic9.className="calD mostrar";
+        	break; 
+        case 10:
+			seccion_02_1_10.className="calentamiento10 animated pulse";
+			calDinamic10.className="calD mostrar";
+        	break;          	         	        	         	        	
+
+		}
+
+	}	
+
+
 
 
 	clock.className="clock posicionBotones animated fadeInLeftBig";
@@ -617,6 +688,17 @@ function reiniciar(){
     gluStatic4.className="gluS animaciones6 mostrar";
     gluStatic5.className="gluS animaciones6 mostrar";
     gluStatic6.className="gluS animaciones6 mostrar";
+    //mostrar estado calentamiento
+    calStatic1.className="calS animaciones7 mostrar";
+    calStatic2.className="calS animaciones7 mostrar";
+    calStatic3.className="calS animaciones7 mostrar";
+    calStatic4.className="calS animaciones7 mostrar";
+    calStatic5.className="calS animaciones7 mostrar";
+    calStatic6.className="calS animaciones7 mostrar";
+    calStatic7.className="calS animaciones7 mostrar";
+    calStatic8.className="calS animaciones7 mostrar";
+    calStatic9.className="calS animaciones7 mostrar";
+    calStatic10.className="calS animaciones7 mostrar";
 
 }
 
@@ -658,6 +740,17 @@ function calentamientoMenu()
    	seccion_02.className="inicio ocultar";
 	seccion_02_1.className="ejAbdomen animated pulse";
 }
+
+function calentamientoN1()
+{
+
+    ocultar();
+    cuerpo=6;
+	btnPlay.className="botonPlay animated fadeInLeftBig"
+	seccion_02_1_1.className="calentamiento1 animated pulse";
+
+}
+
 
 function abdomenMenu()
 {   
@@ -830,7 +923,19 @@ function circular(){
 			svgStyle: null
 			});
 		    bar.animate(1.0);
-		    break;		
+		    break;
+		case 6:
+		 	bar = new ProgressBar.Circle(rueda, {
+			strokeWidth: 6,
+			easing: 'easeInOut',
+			duration: 17000,
+			color: '#f3ff00',
+			trailColor: '#eee',
+			trailWidth: 1,
+			svgStyle: null
+			});
+		    bar.animate(1.0);
+		    break;			    		
 
     }
 }
@@ -975,6 +1080,57 @@ function preparado(){
 
     }
 
+if(cuerpo==6)
+    {
+     
+     	switch(animacion){
+
+	    	case 1:
+	    		setTimeout(cabiarA15,6000);
+	    		setTimeout(cal1,7000);
+	    		break;
+	    	case 2:
+	    	    setTimeout(cabiarA15,6000);
+	    		setTimeout(cal2,7000);
+	    		break;
+	    	case 3:
+	    		setTimeout(cabiarA15,6000);
+	    		setTimeout(cal3,7000);
+	    		break;
+	    	case 4:
+	    		setTimeout(cabiarA15,6000);
+	    		setTimeout(cal4,7000);
+	    		break;
+	    	case 5:
+	    		setTimeout(cabiarA15,6000);
+	    		setTimeout(cal5,7000);
+	    		break;
+	    	case 6:
+	    		setTimeout(cabiarA15,6000);
+	    		setTimeout(cal6,7000);
+	    		break;
+	    	case 7:
+	    		setTimeout(cabiarA15,6000);
+	    		setTimeout(cal7,7000);
+	    		break;
+	    	case 8:
+	    		setTimeout(cabiarA20,6000);
+	    		setTimeout(cal8,7000);
+	    		break;
+	    	case 9:
+	    		setTimeout(cabiarA20,6000);
+	    		setTimeout(cal9,7000);
+	    		break;
+	    	case 10:
+	    		setTimeout(cabiarA20,6000);
+	    		setTimeout(cal10,7000);
+	    		break;
+
+
+  		}
+
+    }    
+
     animacion++;
 
     setTimeout(()=>{
@@ -1072,6 +1228,26 @@ function premisas(){
 				break;
 		}
 	}
+
+	if(cuerpo==6){
+
+		if (pantalla==1){
+			tipoAudio=15;
+		}
+
+		switch(tipoAudio){
+
+			case 15:
+				audiopreparado15.autoplay = true;
+				audiopreparado15.play();
+				break;
+			case 20:
+				audiopreparado20.autoplay = true;
+				audiopreparado20.play();
+				break;
+		}
+	}
+
 	
 
 
@@ -1356,6 +1532,90 @@ function pasarAbdomen()
 			    break;
 		}
    }
+
+    if(cuerpo==6)
+	   {
+		switch(pantalla){
+
+			case 2:
+			    totalTime=1000000;
+			    tipoAudio=15;//mirar los switch de los audios
+				seccion_02_1_2.className="calentamiento2 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+				break;
+			case 3:
+			    totalTime=1000000;
+			    tipoAudio=15;//mirar los switch de los audios
+				seccion_02_1_3.className="calentamiento3 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 4:
+			    totalTime=1000000;
+			    tipoAudio=15;//mirar los switch de los audios
+				seccion_02_1_4.className="calentamiento4 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 5:
+			    totalTime=1000000;
+			    tipoAudio=15;//mirar los switch de los audios
+				seccion_02_1_5.className="calentamiento5 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 6:
+			    totalTime=1000000;
+			    tipoAudio=15;//mirar los switch de los audios
+				seccion_02_1_6.className="calentamiento6 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 7:
+			    totalTime=1000000;
+			    tipoAudio=15;//mirar los switch de los audios
+				seccion_02_1_7.className="calentamiento7 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 8:
+			    totalTime=1000000;
+			    tipoAudio=20;//mirar los switch de los audios
+				seccion_02_1_8.className="calentamiento8 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 9:
+			    totalTime=1000000;
+			    tipoAudio=20;//mirar los switch de los audios
+				seccion_02_1_9.className="calentamiento9 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;			    			    
+			case 10:
+			    totalTime=1000000;
+			    tipoAudio=20;//mirar los switch de los audios
+				seccion_02_1_10.className="calentamiento10 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				interfaceFinal=2;
+				reiniciarInterfaces();
+			    break;
+
+		}
+   }
+
+
+
 }
 
 function acerca()
@@ -1647,6 +1907,105 @@ function glu6()
 	gluStatic6.className="gluS ocultar";
 	gluDinamic6.className="gluD  mostrar";	
 }
+
+function cal1()
+{  
+	totalTime=15;
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic1.className="calS ocultar";
+	calDinamic1.className="calD  mostrar";	
+}
+
+function cal2()
+{  
+	circular();
+	bar.animate(1.0,{duration: 17000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic2.className="calS ocultar";
+	calDinamic2.className="calD  mostrar";	
+}
+
+function cal3()
+{  
+	circular();
+	bar.animate(1.0,{duration: 17000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic3.className="calS ocultar";
+	calDinamic3.className="calD  mostrar";	
+}
+
+function cal4()
+{   totalTime=15;
+	circular();
+	bar.animate(1.0,{duration: 17000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic4.className="calS ocultar";
+	calDinamic4.className="calD  mostrar";	
+}
+
+function cal5()
+{  
+	circular();
+	bar.animate(1.0,{duration: 17000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic5.className="calS animaciones7 mostrar";	
+}
+
+function cal6()
+{  
+	circular();
+	bar.animate(1.0,{duration: 17000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic6.className="calS animaciones7 mostrar";	
+}
+
+function cal7()
+{  
+	circular();
+	bar.animate(1.0,{duration: 17000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic7.className="calS animaciones7 mostrar";	
+}
+
+function cal8()
+{  
+	circular();
+	bar.animate(1.0,{duration: 22000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic8.className="calS ocultar";
+	calDinamic8.className="calD  mostrar";	
+}
+
+function cal9()
+{  
+	circular();
+	bar.animate(1.0,{duration: 22000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic9.className="calS ocultar";
+	calDinamic9.className="calD  mostrar";	
+}
+
+function cal10()
+{  
+	circular();
+	bar.animate(1.0,{duration: 22000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic10.className="calS ocultar";
+	calDinamic10.className="calD  mostrar";	
+}
+
+
+
 
 
 function cabiarA50(){

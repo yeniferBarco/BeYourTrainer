@@ -64,6 +64,172 @@ background-color:#b4ff00 ;
       position: relative;
       }
 
+                    #seccion_02_1_1 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+
+                    #seccion_02_1_2 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+
+                        #calDinamic2
+                        {
+                          top: 292px;
+                          left: 114px;
+                        }
+
+                    #seccion_02_1_3 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+                        #calStatic3
+                        {
+                          top: 292px;
+                          left: 30px;
+                        }
+                        #calDinamic3
+                        {
+                          top: 292px;
+                          left: 30px;
+                        }                     
+                    #seccion_02_1_4 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+
+                         #calStatic4
+                         {
+                          top: 292px;
+                          left: 72px;
+                         }
+                         #calDinamic4
+                         {
+                          top: 292px;
+                          left: 72px;                         
+                        }
+                    #seccion_02_1_5 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+                         #calStatic5
+                         {
+                          top: 292px;
+                          left: 101px;
+                         }
+
+                    #seccion_02_1_6 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+
+                          #calStatic6
+                         {
+                          top: 292px;
+                          left: 94px;
+                         }
+                                             
+                    #seccion_02_1_7 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+
+                          #calStatic7
+                         {
+                          top: 292px;
+                          left: 45px;
+                         }
+
+                    #seccion_02_1_8 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+                          #calStatic8
+                         {
+                          top: 292px;
+                          left: 129px;
+                          
+                         }
+                         #calDinamic8
+                         {
+                          top: 292px;
+                          left: 129px;                         
+                        }                         
+
+                    #seccion_02_1_9 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+                          #calStatic9
+                         {
+                          top: 292px;
+                          left: 132px;
+                          
+                         }
+                         #calDinamic9
+                         {
+                          top: 292px;
+                          left: 132px;                         
+                         }                          
+
+                    #seccion_02_1_10 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+                          #calStatic10
+                         {
+                          top: 292px;
+                          left: 132px;
+                          
+                         }
+                         #calDinamic10
+                         {
+                          top: 292px;
+                          left: 132px;                         
+                         } 
+
+
       #seccion_02_2 {
       width: 360px;
       height: 616px;
@@ -518,6 +684,13 @@ background-color:#b4ff00 ;
     z-index: 10;
 }
 
+.animaciones7 {
+    position: absolute;
+    top: 292px;
+    left: 90px;
+    z-index: 10;
+}
+
 .abdD{
   position: absolute;
   top: 313px;
@@ -554,6 +727,12 @@ background-color:#b4ff00 ;
   position: absolute;
   top: 292px;
   left: 19px;
+}
+
+.calD{
+  position: absolute;
+  top: 292px;
+  left: 90px;
 }
 
 
@@ -638,7 +817,7 @@ position: absolute;
 
 .lDescanso{
   top: 62px;
-  left: 22px;
+  left: 29px;
   position: relative;
 }
 
@@ -680,6 +859,16 @@ left: 97px;
   left: 96px;
 }
 
+.titulosCal{
+  top: 22px;
+  left: 56px;
+}
+
+.titulosCal1{
+  top: 22px;
+  left: 75px;
+}
+
 #btnListoAbd{
   top: 134px;
   left: 120px;
@@ -701,6 +890,11 @@ left: 97px;
 }
 
 #btnListoGlu{
+  top: 134px;
+  left: 120px;
+}
+
+#btnListoCal{
   top: 134px;
   left: 120px;
 }
