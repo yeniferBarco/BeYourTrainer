@@ -111,8 +111,91 @@ background-color:#b4ff00 ;
           #calMin_10{
            top: 494px;
            left: 207px;
-          }                                                  
-                
+          }      
+
+          #instCal_1{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo1.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }       
+
+          #instCal_2{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo2.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }                                      
+          #instCal_3{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo3.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+
+          #instCal_4{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo4.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+          #instCal_5{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo5.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+          #instCal_6{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo6.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+          #instCal_7{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo7.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+          #instCal_8{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo8.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+          #instCal_9{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo9.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+          #instCal_10{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo10.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+
                     #seccion_02_1_1 {
                      width: 360px;
                      height: 616px;
@@ -428,6 +511,41 @@ background-color:#b4ff00 ;
       position: relative;
       }
 
+              #pierMin_1{
+                top: 353px;
+                left: 35px;
+              }
+
+              #pierMin_2{
+                top: 371px;
+                left: 133px;
+              }
+
+              #pierMin_3{
+                top: 367px;
+                left: 229px;
+              }
+
+              #pierMin_4{
+                top: 468px;
+                left: 29px;
+              }
+
+              #pierMin_5{
+                top: 453px;
+                left: 127px;
+              }
+
+              #pierMin_5{
+                top: 473px;
+                left: 129px;
+              }
+
+              #pierMin_6{
+                top: 476px;
+                left: 227px;
+              }
+            
               #seccion_02_3_1 {
               width: 360px;
               height: 616px;
@@ -501,6 +619,31 @@ background-color:#b4ff00 ;
       position: relative;
       }
 
+              #braMin_1{
+                top: 353px;
+                left: 11px;
+              }
+
+              #braMin_2{
+                top: 353px;
+                left: 124px;
+              }
+
+              #braMin_3{
+                top: 341px;
+                left: 238px;
+              }
+
+              #braMin_4{
+                top: 480px;
+                left: 61px;
+              }
+
+              #braMin_5{
+                top: 453px;
+                left: 195px;
+              }
+
               #seccion_02_4_1 {
               width: 360px;
               height: 616px;
@@ -563,6 +706,21 @@ background-color:#b4ff00 ;
       background-repeat: no-repeat round;
       position: relative;
       }
+               #pecMin_1{
+                top: 396px;
+                left: 23px;
+              }
+
+              #pecMin_2{
+                top: 396px;
+                left: 130px;
+              }
+
+              #pecMin_3{
+                top: 396px;
+                left: 236px;
+              }
+
               #seccion_02_5_1 {
               width: 360px;
               height: 616px;
@@ -597,6 +755,40 @@ background-color:#b4ff00 ;
       background-repeat: no-repeat round;
       position: relative;
       }        
+          #gluMin_1{
+            top: 353px;
+            left: 11px;
+          }
+
+          #gluMin_2{
+            top: 364px;
+            left: 124px;
+          }
+
+          #gluMin_3{
+            top: 370px;
+            left: 229px;
+          }
+
+          #gluMin_4{
+            top: 468px;
+            left: 12px;
+          }
+
+          #gluMin_5{
+            top: 453px;
+            left: 127px;
+          }
+
+          #gluMin_5{
+            top: 453px;
+            left: 125px;
+          }
+
+          #gluMin_6{
+            top: 476px;
+            left: 220px;
+          }
               #seccion_02_6_1 {
               width: 360px;
               height: 616px;

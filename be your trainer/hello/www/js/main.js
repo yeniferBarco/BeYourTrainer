@@ -61,6 +61,29 @@ var abdomenAtras5 ="";
 var abdomenAdelante5 ="";
 
 
+// pasar de instrctivo calentamiento
+
+var calentamientoAtras1 ="";
+var calentamientoAdelante1 ="";
+var calentamientoAtras2 ="";
+var calentamientoAdelante2 ="";
+var calentamientoAtras3 ="";
+var calentamientoAdelante3 ="";
+var calentamientoAtras4 ="";
+var calentamientoAdelante4 ="";
+var calentamientoAtras5 ="";
+var calentamientoAdelante5 ="";
+var calentamientoAtras5 ="";
+var calentamientoAdelante6 ="";
+var calentamientoAtras5 ="";
+var calentamientoAdelante7 ="";
+var calentamientoAtras5 ="";
+var calentamientoAdelante8 ="";
+var calentamientoAtras5 ="";
+var calentamientoAdelante9 ="";
+var calentamientoAtras5 ="";
+var calentamientoAdelante10 ="";
+
 
 // var x = document.getElementById("audio1");
 var y = document.getElementById("audioFondo"); //50 segundos preparad050
@@ -151,6 +174,13 @@ function inicializar()
 	minAbd_4=document.getElementById('adbMin_4');
 	minAbd_5=document.getElementById('adbMin_5');
 
+
+	minCal_1=document.getElementById('calMin_1');
+	minCal_2=document.getElementById('calMin_2');
+	minCal_3=document.getElementById('calMin_3');
+	minCal_4=document.getElementById('calMin_4');
+	minCal_5=document.getElementById('calMin_5');
+
 	abdomenAtras1=document.getElementById('atrasInt1');
 	abdomenAdelante1=document.getElementById('adelanteInt1');
 	abdomenAtras2=document.getElementById('atrasInt2');
@@ -161,6 +191,27 @@ function inicializar()
 	abdomenAdelante4=document.getElementById('adelanteInt4');
 	abdomenAtras5=document.getElementById('atrasInt5');
 	abdomenAdelante5=document.getElementById('adelanteInt5');
+
+	calentamientoAtras1 = document.getElementById('atrasIntCal1');
+	calentamientoAdelante1 = document.getElementById('adelanteIntCal1');
+	calentamientoAtras2 = document.getElementById('atrasIntCal2');
+	calentamientoAdelante2 = document.getElementById('adelanteIntCal2');
+	calentamientoAtras3 = document.getElementById('atrasIntCal3');
+	calentamientoAdelante3 = document.getElementById('adelanteIntCal3');
+	calentamientoAtras4 = document.getElementById('atrasIntCal4');
+	calentamientoAdelante4 =document.getElementById('adelanteIntCal4');
+	calentamientoAtras5 = document.getElementById('atrasIntCal5');
+	calentamientoAdelante5 = document.getElementById('adelanteIntCal5');
+	calentamientoAtras5 = document.getElementById('atrasIntCal6');
+	calentamientoAdelante6 = document.getElementById('adelanteIntCal6');
+	calentamientoAtras5 = document.getElementById('atrasIntCal7');
+	calentamientoAdelante7 = document.getElementById('adelanteIntCal7');
+	calentamientoAtras5 = document.getElementById('atrasIntCal8');
+	calentamientoAdelante8 = document.getElementById('adelanteIntCal8');
+	calentamientoAtras5 = document.getElementById('atrasIntCal9');
+	calentamientoAdelante9 = document.getElementById('adelanteIntCal9');
+	calentamientoAtras5 = document.getElementById('atrasIntCal10');
+	calentamientoAdelante10 =document.getElementById('adelanteIntCal10'); 
 
 }
 
@@ -211,6 +262,8 @@ function asignarEventos()
 	pausaVoz.addEventListener("click", quitarVoz);
 	playVoz.addEventListener("click", ponerVoz);
 
+
+	//instructivo para abdomen
 	minAbd_1.addEventListener("click",inst1_abd);
 	minAbd_2.addEventListener("click",inst2_abd);
 	minAbd_3.addEventListener("click",inst3_abd);
@@ -228,6 +281,17 @@ function asignarEventos()
     abdomenAtras5.addEventListener("click",inst4_abd);
     abdomenAdelante5.addEventListener("click",inst1_abd);
 
+   	//instructivo para abdomen
+   	calMin_1.addEventListener("click",inst1_cal);
+   	calMin_2.addEventListener("click",inst2_cal);
+   	calMin_3.addEventListener("click",inst3_cal);
+   	calMin_4.addEventListener("click",inst4_cal);
+   	calMin_5.addEventListener("click",inst5_cal);
+   	calMin_6.addEventListener("click",inst6_cal);
+   	calMin_7.addEventListener("click",inst7_cal);
+   	calMin_8.addEventListener("click",inst8_cal);
+   	calMin_9.addEventListener("click",inst9_cal);
+   	calMin_10.addEventListener("click",inst10_cal);
 
 }
 
@@ -269,6 +333,16 @@ function ocultar(){
     seccion_01.className="inicio ocultar";
 	seccion_02.className="ejercicios ocultar";
 	    seccion_02_1.className="ejCalentamiento ocultar";
+	    	instCal_1.className="instCal_1 ocultar";
+	    	instCal_2.className="instCal_2 ocultar";
+	    	instCal_3.className="instCal_3 ocultar";
+	    	instCal_4.className="instCal_4 ocultar";
+	    	instCal_5.className="instCal_5 ocultar";
+	    	instCal_6.className="instCal_6 ocultar";
+	    	instCal_7.className="instCal_7 ocultar";
+	    	instCal_8.className="instCal_8 ocultar";
+	    	instCal_9.className="instCal_9 ocultar";
+	    	instCal_10.className="instCal_10 ocultar";
 	        seccion_02_1_1.className="calentamiento1 ocultar";
 	        seccion_02_1_2.className="calentamiento2 ocultar";
 	        seccion_02_1_3.className="calentamiento3 ocultar";
@@ -751,6 +825,57 @@ function calentamientoN1()
 
 }
 
+function inst1_cal() {
+	ocultar();
+	instCal_1.className="instCal_1 animated pulse";
+	//btnAtrasMinAbdomen.className="atras animated fadeInRightBig";
+}
+
+function inst2_cal() {
+	ocultar();
+	instCal_2.className="instCal_2 animated pulse";
+	// btnAtrasMinAbdomen.className="atras animated fadeInRightBig";
+}
+function inst3_cal() {
+	ocultar();
+	instCal_3.className="instCal_3 animated pulse";
+	// btnAtrasMinAbdomen.className="atras animated fadeInRightBig";
+}
+function inst4_cal() {
+	ocultar();
+	instCal_4.className="instCal_4 animated pulse";
+	// btnAtrasMinAbdomen.className="atras animated fadeInRightBig";
+}
+function inst5_cal() {
+	ocultar();
+	instCal_5.className="instCal_5 animated pulse";
+	// btnAtrasMinAbdomen.className="atras animated fadeInRightBig";
+}
+function inst6_cal() {
+	ocultar();
+	instCal_6.className="instCal_6 animated pulse";
+	// btnAtrasMinAbdomen.className="atras animated fadeInRightBig";
+}
+function inst7_cal() {
+	ocultar();
+	instCal_7.className="instCal_7 animated pulse";
+	// btnAtrasMinAbdomen.className="atras animated fadeInRightBig";
+}
+function inst8_cal() {
+	ocultar();
+	instCal_8.className="instCal_8 animated pulse";
+	// btnAtrasMinAbdomen.className="atras animated fadeInRightBig";
+}
+function inst9_cal() {
+	ocultar();
+	instCal_9.className="instCal_9 animated pulse";
+	// btnAtrasMinAbdomen.className="atras animated fadeInRightBig";
+}
+function inst10_cal() {
+	ocultar();
+	instCal_10.className="instCal_10 animated pulse";
+	// btnAtrasMinAbdomen.className="atras animated fadeInRightBig";
+}
 
 function abdomenMenu()
 {   
