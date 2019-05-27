@@ -17,6 +17,7 @@ var gluteos = "";
 
 var ListoAbd = "";
 var ListoPier = "";
+var ListoBra = "";
 
 //Contadores para la pausa.
 var totalTime = 10;
@@ -69,6 +70,8 @@ var audiopreparado50= document.getElementById("preparado50");
 var audiopreparado25 = document.getElementById("preparado25");
 var audiopreparado30= document.getElementById("preparado30");
 var audiopreparado20= document.getElementById("preparado20");
+var audiopreparado15= document.getElementById("preparado15");
+
 
 var pausaAudio = "";
 var playAudio = "";
@@ -122,6 +125,7 @@ function inicializar()
 	
 	ListoAbd= document.getElementById('btnListoAbd');
     ListoPier= document.getElementById('btnListoPies');
+    ListoBra= document.getElementById('btnListoBra');
 
 
 
@@ -179,6 +183,7 @@ function asignarEventos()
 
 	ListoAbd.addEventListener("click",abdomenN1);
     ListoPier.addEventListener("click",piernasN1);
+    ListoBra.addEventListener("click",brazosN1);
 
 
 	menu.addEventListener('click', abrirMenu, false);
@@ -276,6 +281,11 @@ function ocultar(){
 			seccion_02_3_5.className="piernas5 ocultar";
 			seccion_02_3_6.className="piernas6 ocultar";
 		seccion_02_4.className="ejBrazos ocultar";
+			seccion_02_4_1.className="brazos1 ocultar";
+			seccion_02_4_2.className="brazos2 ocultar";
+			seccion_02_4_3.className="brazos3 ocultar";
+			seccion_02_4_4.className="brazos4 ocultar";
+			seccion_02_4_5.className="brazos5 ocultar";
 		seccion_02_5.className="ejPectorales ocultar";
 		seccion_02_6.className="ejGluteos ocultar";	
 	seccion_03.className="acerca ocultar";
@@ -304,6 +314,11 @@ function ocultar(){
     pierDinamic5.className = "pierD ocultar";
     pierDinamic6.className = "pierD ocultar";
 
+    // para el reiniciar brazos
+    braDinamic1.className = "braD ocultar";
+    braDinamic2.className = "braD ocultar";
+    braDinamic3.className = "braD ocultar";
+    braDinamic5.className = "braD ocultar"
 }
 
 function principio()
@@ -321,6 +336,9 @@ function pausar(){
 	bar.stop();
 	audiopreparado50.pause();
 	audiopreparado25.pause();
+	audiopreparado30.pause();
+	audiopreparado20.pause();
+	audiopreparado15.pause();
 	
 	if(time_is_on==0){
 		ocultar();
@@ -340,6 +358,16 @@ function continuar(){
 		case 25:
 			audiopreparado25.play();
 			break;
+		case 30:
+			audiopreparado30.play();
+			break;
+		case 20:
+			audiopreparado20.play();
+			break;
+		case 15:
+			audiopreparado15.play();
+			break;
+
 	}
     if(cuerpo==1)
     {
@@ -404,6 +432,33 @@ function continuar(){
 
 	}
 
+	if(cuerpo==3){
+
+		switch(contPausa){
+			case 1:
+				seccion_02_4_1.className="brazos1 animated pulse";
+				braDinamic1.className="braD  mostrar";
+				break;
+	        case 2:
+		        seccion_02_4_2.className="brazos2 animated pulse";
+		        braDinamic2.className="braD  mostrar";
+	        	break;
+	        case 3:
+	        	seccion_02_4_3.className = "brazos3 animated pulse";
+	        	braDinamic3.className = "braD mostrar";
+	        	break;
+	        case 4:
+	        	seccion_02_4_4.className = "brazos4 animated pulse";
+	        	braStatic4.className = "braS animaciones4 mostrar";
+	        	break;
+	        case 5:
+	        	seccion_02_4_5.className = "brazos5 animted pulse";
+	        	braDinamic5.className = "braD  mostrar";
+	        	break;    	
+		}
+
+	}
+
 
 
 
@@ -440,6 +495,7 @@ function reiniciar(){
 	preparado30.currentTime = 0;
 	preparado25.currentTime = 0;
 	preparado50.currentTime = 0;
+	preparado15.currentTime = 0;
 	
 	abdDinamic1.className="abdD ocultar";
 	abdStatic1.className="abdS animaciones mostrar";
@@ -467,6 +523,13 @@ function reiniciar(){
     pierStatic4.className="pierS animaciones3 mostrar";
     pierStatic5.className="pierS animaciones3 mostrar";
     pierStatic6.className="pierS animaciones3 mostrar";
+
+     //mostrar estatico brazos
+    braStatic1.className="braS animaciones4 mostrar";
+    braStatic2.className="braS animaciones4 mostrar";
+    braStatic3.className="braS animaciones4 mostrar";
+    braStatic4.className="braS animaciones4 mostrar";
+    braStatic5.className="braS animaciones4 mostrar";
 
 }
 
@@ -579,6 +642,16 @@ function brazosMenu()
 	seccion_02_4.className="ejAbdomen animated pulse";
 }
 
+function brazosN1()
+{   
+	ocultar();
+    cuerpo=3;
+	btnPlay.className="botonPlay animated fadeInLeftBig"
+	seccion_02_4_1.className="brazos1 animated pulse";
+}
+
+
+
 function pectoralesMenu()
 {   
 	btnAtrasAbdomen.className="atras animated fadeInRightBig";
@@ -619,6 +692,19 @@ function circular(){
 			});
 		    bar.animate(1.0);
 		    break;
+		case 3:
+		 	bar = new ProgressBar.Circle(rueda, {
+			strokeWidth: 6,
+			easing: 'easeInOut',
+			duration: 33000,
+			color: '#f3ff00',
+			trailColor: '#eee',
+			trailWidth: 1,
+			svgStyle: null
+			});
+		    bar.animate(1.0);
+		    break;
+
     }
 }
 
@@ -686,6 +772,32 @@ function preparado(){
 
     }
 
+    if(cuerpo==3){
+	    switch(animacion){
+
+	    	case 1:
+	    		setTimeout(bra1,7000);
+	    		break;
+	    	case 2:
+	    	    setTimeout(cabiarA30,6000);
+	    		setTimeout(bra2,7000);
+	    		break;
+	    	case 3:
+	    		setTimeout(cabiarA15,6000);
+	    		setTimeout(bra3,7000);
+	    		break;
+	    	case 4:
+	    		setTimeout(cabiarA30,6000);
+	    		setTimeout(bra4,7000);
+	    		break;
+	    	case 5:
+	    		setTimeout(cabiarA30,6000);
+	    		setTimeout(bra5,7000);
+	    		break;
+	    }
+
+    }
+
     animacion++;
 
     setTimeout(()=>{
@@ -731,6 +843,25 @@ function premisas(){
 			case 20:
 				audiopreparado20.autoplay = true;
 				audiopreparado20.play();
+				break;
+		}
+	}
+
+	if(cuerpo==3){
+
+		if (pantalla==1){
+			tipoAudio=30;
+		}
+
+		switch(tipoAudio){
+
+			case 30:
+				audiopreparado30.autoplay = true;
+				audiopreparado30.play();
+				break;
+			case 15:
+				audiopreparado15.autoplay = true;
+				audiopreparado15.play();
 				break;
 		}
 	}
@@ -906,6 +1037,47 @@ function pasarAbdomen()
 		}
    } 	
 
+   if(cuerpo==3)
+	{
+		switch(pantalla){
+
+			case 2:
+			    totalTime=1000000;
+			    tipoAudio=30;
+				seccion_02_4_2.className="brazos2 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+				break;
+			case 3:
+			    totalTime=1000000;
+			    tipoAudio=15;
+				seccion_02_4_3.className="brazos3 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 4:
+			    totalTime=1000000;
+			    tipoAudio=30;
+				seccion_02_4_4.className="brazos4 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 5:
+			    totalTime=1000000;
+			    tipoAudio=30;
+				seccion_02_4_5.className="brazos5 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				interfaceFinal=2;
+				reiniciarInterfaces();
+			    break;
+
+		}
+   	}
+
 }
 
 function acerca()
@@ -942,6 +1114,7 @@ function quitarVoz(){
 	audiopreparado25.muted = true;
 	audiopreparado30.muted = true;
 	audiopreparado20.muted = true;
+	audiopreparado15.muted = true;
 }
 
 function ponerVoz(){
@@ -953,6 +1126,7 @@ function ponerVoz(){
 	audiopreparado25.muted = false;	
 	audiopreparado30.muted = false;
 	audiopreparado20.muted = false;
+	audiopreparado15.muted = false;
 }
 
 function abdom1()
@@ -1060,6 +1234,54 @@ function pier6()
 	pierDinamic6.className="pierD  mostrar";	
 }
 
+function bra1()
+{  
+	totalTime = 30;
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	braStatic1.className="braS ocultar";	
+	braDinamic1.className="braD  mostrar";	
+}
+
+function bra2()
+{  
+	circular();
+	bar.animate(1.0,{duration: 33000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	braStatic2.className="braS ocultar";	
+	braDinamic2.className="braD  mostrar";	
+}
+
+function bra3()
+{  
+	circular();
+	bar.animate(1.0,{duration: 17000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	braStatic3.className="braS ocultar";	
+	braDinamic3.className="braD  mostrar";	
+}
+
+function bra4()
+{  
+	circular();
+	bar.animate(1.0,{duration: 33000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	braStatic4.className="braS animaciones4 mostrar";
+}
+
+function bra5()
+{  
+	circular();
+	bar.animate(1.0,{duration: 33000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	braStatic5.className="braS ocultar";
+	braDinamic5.className="braD  mostrar";	
+}
+
 function cabiarA50(){
 	totalTime=50;
 }
@@ -1074,6 +1296,10 @@ function cabiarA20(){
 
 function cabiarA30(){
 	totalTime=30;
+}
+
+function cabiarA15(){
+	totalTime=15;
 }
 
 function reload(){

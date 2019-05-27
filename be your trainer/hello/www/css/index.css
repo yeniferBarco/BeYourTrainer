@@ -286,6 +286,60 @@ background-color:#b4ff00 ;
       position: relative;
       }
 
+              #seccion_02_4_1 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/brazos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_4_2 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/brazos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_4_3 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/brazos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_4_4 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/brazos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_4_5 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/brazos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #braDinamic5{
+                left: 27px;
+                top: 290px;
+              }
+              #braStatic5{
+                left: 27px;
+                top: 290px;
+              }
+
       #seccion_02_5 {
       width: 360px;
       height: 616px;
@@ -364,6 +418,13 @@ background-color:#b4ff00 ;
     z-index: 10;
   }
 
+.animaciones4 {
+    position: absolute;
+    top: 319px;
+    left: 29px;
+    z-index: 10;
+  }
+
 .abdD{
   position: absolute;
   top: 313px;
@@ -382,6 +443,12 @@ background-color:#b4ff00 ;
   position: absolute;
   top: 283px;
   left: 97px;
+}
+
+.braD{
+  position: absolute;
+  top: 319px;
+  left: 45px;
 }
 
 
@@ -514,6 +581,11 @@ left: 97px;
 }
 
 #btnListoPies{
+  top: 134px;
+  left: 120px;
+}
+
+#btnListoBra{
   top: 134px;
   left: 120px;
 }
