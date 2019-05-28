@@ -92,6 +92,14 @@ var minBra_3="";
 var minBra_4="";
 var minBra_5="";
 
+//miniaturas gluteos
+var minGlu_1="";
+var minGlu_2="";
+var minGlu_3="";
+var minGlu_4="";
+var minGlu_5="";
+var minGlu_6="";
+
 
 //para pasar de instructivo abdomen
 var abdomenAtras1 ="";
@@ -162,6 +170,20 @@ var brazosAtras4 ="";
 var brazosAdelante4 ="";
 var brazosAtras5 ="";
 var brazosAdelante5 ="";
+
+// pasar de instrctivo Gluteos
+var gluteosAtras1 ="";
+var gluteosAdelante1 ="";
+var gluteosAtras2 ="";
+var gluteosAdelante2 ="";
+var gluteosAtras3 ="";
+var gluteosAdelante3 ="";
+var gluteosAtras4 ="";
+var gluteosAdelante4 ="";
+var gluteosAtras5 ="";
+var gluteosAdelante5 ="";
+var gluteosAtras6 ="";
+var gluteosAdelante6 ="";
 
 
 // var x = document.getElementById("audio1");
@@ -283,12 +305,21 @@ function inicializar()
 	minPec_2=document.getElementById('pecMin_2');
 	minPec_3=document.getElementById('pecMin_3');
 
+	// Miniaturas piernas
 	minPier_1=document.getElementById('pierMin_1');
 	minPier_2=document.getElementById('pierMin_2');
 	minPier_3=document.getElementById('pierMin_3');
 	minPier_4=document.getElementById('pierMin_4');
 	minPier_5=document.getElementById('pierMin_5');
 	minPier_6=document.getElementById('pierMin_6');
+
+	// Miniaturas gluteos
+	minGluteos_1=document.getElementById('gluMin_1');
+	minGluteos_2=document.getElementById('gluMin_2');
+	minGluteos_3=document.getElementById('gluMin_3');
+	minGluteos_4=document.getElementById('gluMin_4');
+	minGluteos_5=document.getElementById('gluMin_5');
+	minGluteos_6=document.getElementById('gluMin_6');
 
 	// Miniaturas brazos
 	minBra_1=document.getElementById('braMin_1');
@@ -365,6 +396,20 @@ function inicializar()
 	brazosAdelante4=document.getElementById('adelanteIntBra4');
 	brazosAtras5=document.getElementById('atrasIntBra5');
 	brazosAdelante5=document.getElementById('adelanteIntBra5');
+
+	//Boton de retroceder y avanzar gluteos
+	gluteosAtras1=document.getElementById('atrasIntGlu1');
+	gluteosAdelante1=document.getElementById('adelanteIntGlu1');
+	gluteosAtras2=document.getElementById('atrasIntGlu2');
+	gluteosAdelante2=document.getElementById('adelanteIntGlu2');
+	gluteosAtras3=document.getElementById('atrasIntGlu3');
+	gluteosAdelante3=document.getElementById('adelanteIntGlu3');
+	gluteosAtras4=document.getElementById('atrasIntGlu4');
+	gluteosAdelante4=document.getElementById('adelanteIntGlu4');
+	gluteosAtras5=document.getElementById('atrasIntGlu5');
+	gluteosAdelante5=document.getElementById('adelanteIntGlu5');
+	gluteosAtras6=document.getElementById('atrasIntGlu6');
+	gluteosAdelante6=document.getElementById('adelanteIntGlu6');
 
 }
 
@@ -525,6 +570,27 @@ function asignarEventos()
     brazosAdelante4.addEventListener("click",inst5_bra);
     brazosAtras5.addEventListener("click",inst4_bra);
     brazosAdelante5.addEventListener("click",inst1_bra);
+
+    //instructivo para gluteos
+	gluMin_1.addEventListener("click",inst1_glu);
+	gluMin_2.addEventListener("click",inst2_glu);
+	gluMin_3.addEventListener("click",inst3_glu);
+	gluMin_4.addEventListener("click",inst4_glu);
+	gluMin_5.addEventListener("click",inst5_glu);
+	gluMin_6.addEventListener("click",inst6_glu);
+
+	gluteosAtras1.addEventListener("click",inst6_glu);
+    gluteosAdelante1.addEventListener("click",inst2_glu);
+    gluteosAtras2.addEventListener("click",inst1_glu);
+    gluteosAdelante2.addEventListener("click",inst3_glu);
+    gluteosAtras3.addEventListener("click",inst2_glu);
+   	gluteosAdelante3.addEventListener("click",inst4_glu);
+    gluteosAtras4.addEventListener("click",inst3_glu);
+    gluteosAdelante4.addEventListener("click",inst5_glu);
+    gluteosAtras5.addEventListener("click",inst4_glu);    
+    gluteosAdelante5.addEventListener("click",inst6_glu);
+    gluteosAtras6.addEventListener("click",inst5_glu);    
+    gluteosAdelante6.addEventListener("click",inst1_glu);
 }
 
 function entrada()
@@ -634,6 +700,12 @@ function ocultar(){
 			seccion_02_5_2.className="pectorales2 ocultar";
 			seccion_02_5_3.className="pectorales3 ocultar";
 		seccion_02_6.className="ejGluteos ocultar";	
+			instGlu_1.className="instGlu_1 ocultar";
+			instGlu_2.className="instGlu_2 ocultar";
+			instGlu_3.className="instGlu_3 ocultar";
+			instGlu_4.className="instGlu_4 ocultar";
+			instGlu_5.className="instGlu_5 ocultar";
+			instGlu_6.className="instGlu_6 ocultar";
 			seccion_02_6_1.className="gluteos1 ocultar";
 			seccion_02_6_2.className="gluteos2 ocultar";
 			seccion_02_6_3.className="gluteos3 ocultar";
@@ -1329,6 +1401,38 @@ function gluteosN1()
 	btnPlay.className="botonPlay animated fadeInLeftBig"
 	seccion_02_6_1.className="gluteos1 animated pulse";
 }
+
+function inst1_glu() {
+	ocultar();
+	instGlu_1.className="instGlu_1 animated pulse";
+	btnAtrasMinGluteos.className="atras animated fadeInRightBig";
+}
+function inst2_glu() {
+	ocultar();
+	instGlu_2.className="instGlu_2 animated pulse";
+	btnAtrasMinGluteos.className="atras animated fadeInRightBig";
+}
+function inst3_glu() {
+	ocultar();
+	instGlu_3.className="instGlu_3 animated pulse";
+	btnAtrasMinGluteos.className="atras animated fadeInRightBig";
+}
+function inst4_glu() {
+	ocultar();
+	instGlu_4.className="instGlu_4 animated pulse";
+	btnAtrasMinGluteos.className="atras animated fadeInRightBig";
+}
+function inst5_glu() {
+	ocultar();
+	instGlu_5.className="instGlu_5 animated pulse";
+	btnAtrasMinGluteos.className="atras animated fadeInRightBig";
+}
+function inst6_glu() {
+	ocultar();
+	instGlu_6.className="instGlu_6 animated pulse";
+	btnAtrasMinGluteos.className="atras animated fadeInRightBig";
+}
+
 
 function circular(){
 	switch(cuerpo){

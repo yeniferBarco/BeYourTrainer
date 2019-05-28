@@ -921,40 +921,96 @@ background-color:#b4ff00 ;
       background-repeat: no-repeat round;
       position: relative;
       }        
-          #gluMin_1{
-            top: 353px;
-            left: 11px;
-          }
+              #gluMin_1{
+                top: 353px;
+                left: 11px;
+              }
 
-          #gluMin_2{
-            top: 364px;
-            left: 124px;
-          }
+              #gluMin_2{
+                top: 364px;
+                left: 124px;
+              }
 
-          #gluMin_3{
-            top: 370px;
-            left: 229px;
-          }
+              #gluMin_3{
+                top: 370px;
+                left: 229px;
+              }
 
-          #gluMin_4{
-            top: 468px;
-            left: 12px;
-          }
+              #gluMin_4{
+                top: 468px;
+                left: 12px;
+              }
 
-          #gluMin_5{
-            top: 453px;
-            left: 127px;
-          }
+              #gluMin_5{
+                top: 453px;
+                left: 127px;
+              }
 
-          #gluMin_5{
-            top: 453px;
-            left: 125px;
-          }
+              #gluMin_5{
+                top: 453px;
+                left: 125px;
+              }
 
-          #gluMin_6{
-            top: 476px;
-            left: 220px;
-          }
+              #gluMin_6{
+                top: 476px;
+                left: 220px;
+              }
+
+              #instGlu_1{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/gluteos/gluteos_instructivo1.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instGlu_2{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/gluteos/gluteos_instructivo2--.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instGlu_3{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/gluteos/gluteos_instructivo3.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instGlu_4{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/gluteos/gluteos_instructivo4.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instGlu_5{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/gluteos/gluteos_instructivo5.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instGlu_6{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/gluteos/gluteos_instructivo6.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+
+                      .topInstructivo4 {
+                          position: absolute;
+                          top: 156px;
+                          left: 27px;
+                      }
+
               #seccion_02_6_1 {
               width: 360px;
               height: 616px;
