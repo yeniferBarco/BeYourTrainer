@@ -582,7 +582,64 @@ background-color:#b4ff00 ;
                 top: 476px;
                 left: 227px;
               }
-            
+
+              #instPier_1{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/piernas/piernas_instructivo1.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instPier_2{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/piernas/piernas_instructivo2.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instPier_3{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/piernas/piernas_instructivo3.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instPier_4{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/piernas/piernas_instructivo4.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instPier_5{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/piernas/piernas_instructivo5.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instPier_6{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/piernas/piernas_instructivo6.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }     
+              #pierDinamic11{
+                left: 97px;
+              }
+              #pierDinamic22{
+                left: 103px;
+              }
+              #pierDinamic66{
+                left: 64px;
+              }
               #seccion_02_3_1 {
               width: 360px;
               height: 616px;
@@ -647,13 +704,13 @@ background-color:#b4ff00 ;
                    left: 72px;
                   }
 
-      #seccion_02_4 {
-      width: 360px;
-      height: 616px;
-      overflow: hidden;
-      background: url(../img/comenzar/fondo_general.png);
-      background-repeat: no-repeat round;
-      position: relative;
+      #seccion_02_4{
+        width: 360px;
+        height: 616px;
+        overflow: hidden;
+        background: url(../img/comenzar/fondo_general.png);
+        background-repeat: no-repeat round;
+        position: relative;
       }
 
               #braMin_1{
@@ -680,6 +737,52 @@ background-color:#b4ff00 ;
                 top: 453px;
                 left: 195px;
               }
+
+              #instBra_1{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/brazos/brazos_instructivo1.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              } 
+              #instBra_2{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/brazos/brazos_instructivo2.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              } 
+               #instBra_3{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/brazos/brazos_instructivo3.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              } 
+              #instBra_4{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/brazos/brazos_instructivo4.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              } 
+              #instBra_5{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/brazos/brazos_instructivo5.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              } 
+                    .topInstructivo3 {
+                      position: absolute;
+                      top: 156px;
+                      left: 36px;
+                    }
 
               #seccion_02_4_1 {
               width: 360px;

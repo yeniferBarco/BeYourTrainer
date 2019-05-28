@@ -7,9 +7,17 @@ var atrasAjuste = "";
 var atrasAcerca = "";
 var atrasAbdomen ="";
 var atrasCalentamiento="";
+var atrasPiernas="";
+var atrasBrazos="";
+var atrasGluteos="";
+var atrasPectorales="";
+
 var atrasAbdInstructivo = "";
 var atrasCalInstructivo = "";
 var atrasPecInstructivo = "";
+var atrasPierInstructivo = "";
+var atrasBraInstructivo = "";
+var atrasGluInstructivo = "";
 
 
 var calentamiento = "";
@@ -53,11 +61,37 @@ var minAbd_4="";
 var minAbd_5="";
 
 //miniaturas calentamiento
+var minCal_1="";
+var minCal_2="";
+var minCal_3="";
+var minCal_4="";
+var minCal_5="";
+var minCal_6="";
+var minCal_7="";
+var minCal_8="";
+var minCal_9="";
+var minCal_10="";
 
 //miniaturas pectorales
 var minPec_1="";
 var	minPec_2="";
 var	minPec_3="";
+
+//miniaturas piernas
+var minPier_1="";
+var minPier_2="";
+var minPier_3="";
+var minPier_4="";
+var minPier_5="";
+var minPier_6="";
+
+//miniaturas brazos
+var minBra_1="";
+var minBra_2="";
+var minBra_3="";
+var minBra_4="";
+var minBra_5="";
+
 
 //para pasar de instructivo abdomen
 var abdomenAtras1 ="";
@@ -102,6 +136,33 @@ var pectoralesAtras2 ="";
 var pectoralesAdelante2 ="";
 var pectoralesAtras3 ="";
 var pectoralesAdelante3 ="";
+
+// pasar de instrctivo piernas
+var piernasAtras1 ="";
+var piernasAdelante1 ="";
+var piernasAtras2 ="";
+var piernasAdelante2 ="";
+var piernasAtras3 ="";
+var piernasAdelante3 ="";
+var piernasAtras4 ="";
+var piernasAdelante4 ="";
+var piernasAtras5 ="";
+var piernasAdelante5 ="";
+var piernasAtras6 ="";
+var piernasAdelante6 ="";
+
+// pasar de instrctivo brazos
+var brazosAtras1 ="";
+var brazosAdelante1 ="";
+var brazosAtras2 ="";
+var brazosAdelante2 ="";
+var brazosAtras3 ="";
+var brazosAdelante3 ="";
+var brazosAtras4 ="";
+var brazosAdelante4 ="";
+var brazosAtras5 ="";
+var brazosAdelante5 ="";
+
 
 // var x = document.getElementById("audio1");
 var y = document.getElementById("audioFondo"); //50 segundos preparad050
@@ -159,9 +220,13 @@ function inicializar()
 	atrasPectorales = document.getElementById('btnAtrasPectorales');
 	atrasGluteos = document.getElementById('btnAtrasGluteos');
 	atrasCalentamiento = document.getElementById('btnAtrasMinCalentamiento')
+
 	atrasAbdInstructivo = document.getElementById('btnAtrasMinAbdomen');
 	atrasCalInstructivo = document.getElementById('btnAtrasMinCalentamiento');
 	atrasPecInstructivo = document.getElementById('btnAtrasMinPectorales');
+	atrasPierInstructivo = document.getElementById('btnAtrasMinPiernas');
+	atrasGluInstructivo = document.getElementById('btnAtrasMinGluteos');
+	atrasBraInstructivo = document.getElementById('btnAtrasMinBrazos');
 	// menuEjercicios = document.getElementById('btnMenuEjercicios');
 	acercaDe= document.getElementById('btnAcercade');
 	ajustes= document.getElementById('btnAjustes');
@@ -194,13 +259,14 @@ function inicializar()
 	pausaVoz= document.getElementById('offV');
 	playVoz= document.getElementById('onV');
 
+	// Miniaturas abdomen
 	minAbd_1=document.getElementById('adbMin_1');
 	minAbd_2=document.getElementById('adbMin_2');
 	minAbd_3=document.getElementById('adbMin_3');
 	minAbd_4=document.getElementById('adbMin_4');
 	minAbd_5=document.getElementById('adbMin_5');
 
-
+	// Miniaturas calentamiento
 	minCal_1=document.getElementById('calMin_1');
 	minCal_2=document.getElementById('calMin_2');
 	minCal_3=document.getElementById('calMin_3');
@@ -212,10 +278,25 @@ function inicializar()
 	minCal_9=document.getElementById('calMin_9');
 	minCal_10=document.getElementById('calMin_10');
 
-
+	// Miniaturas pectorales
 	minPec_1=document.getElementById('pecMin_1');
 	minPec_2=document.getElementById('pecMin_2');
 	minPec_3=document.getElementById('pecMin_3');
+
+	minPier_1=document.getElementById('pierMin_1');
+	minPier_2=document.getElementById('pierMin_2');
+	minPier_3=document.getElementById('pierMin_3');
+	minPier_4=document.getElementById('pierMin_4');
+	minPier_5=document.getElementById('pierMin_5');
+	minPier_6=document.getElementById('pierMin_6');
+
+	// Miniaturas brazos
+	minBra_1=document.getElementById('braMin_1');
+	minBra_2=document.getElementById('braMin_2');
+	minBra_3=document.getElementById('braMin_3');
+	minBra_4=document.getElementById('braMin_4');
+	minBra_5=document.getElementById('braMin_5');
+
 
 	//Boton de retroceder y avanzar abdomen
 	abdomenAtras1=document.getElementById('atrasInt1');
@@ -259,6 +340,32 @@ function inicializar()
 	pectoralesAtras3 = document.getElementById('atrasIntPec3');
 	pectoralesAdelante3 = document.getElementById('adelantePec3');
 
+	//Boton de retroceder y avanzar piernas
+	piernasAtras1=document.getElementById('atrasIntPier1');
+	piernasAdelante1=document.getElementById('adelanteIntPier1');
+	piernasAtras2=document.getElementById('atrasIntPier2');
+	piernasAdelante2=document.getElementById('adelanteIntPier2');
+	piernasAtras3=document.getElementById('atrasIntPier3');
+	piernasAdelante3=document.getElementById('adelanteIntPier3');
+	piernasAtras4=document.getElementById('atrasIntPier4');
+	piernasAdelante4=document.getElementById('adelanteIntPier4');
+	piernasAtras5=document.getElementById('atrasIntPier5');
+	piernasAdelante5=document.getElementById('adelanteIntPier5');
+	piernasAtras6=document.getElementById('atrasIntPier6');
+	piernasAdelante6=document.getElementById('adelanteIntPier6');
+
+	//Boton de retroceder y avanzar brazos
+	brazosAtras1=document.getElementById('atrasIntBra1');
+	brazosAdelante1=document.getElementById('adelanteIntBra1');
+	brazosAtras2=document.getElementById('atrasIntBra2');
+	brazosAdelante2=document.getElementById('adelanteIntBra2');
+	brazosAtras3=document.getElementById('atrasIntBra3');
+	brazosAdelante3=document.getElementById('adelanteIntBra3');
+	brazosAtras4=document.getElementById('atrasIntBra4');
+	brazosAdelante4=document.getElementById('adelanteIntBra4');
+	brazosAtras5=document.getElementById('atrasIntBra5');
+	brazosAdelante5=document.getElementById('adelanteIntBra5');
+
 }
 
 
@@ -270,9 +377,15 @@ function asignarEventos()
 	atrasAjuste.addEventListener("click", retroceder);
 	atrasAcerca.addEventListener("click", retroceder);
 	atrasAbdomen.addEventListener("click", retrocederMenu);
+	atrasPiernas.addEventListener("click", retrocederMenu);
+
 	atrasAbdInstructivo.addEventListener("click", abdomenMenu);
 	atrasCalInstructivo.addEventListener("click", calentamientoMenu);
 	atrasPecInstructivo.addEventListener("click", pectoralesMenu);
+	atrasPierInstructivo.addEventListener("click", piernasMenu);
+	atrasBraInstructivo.addEventListener("click", brazosMenu);
+	atrasGluInstructivo.addEventListener("click", gluteosMenu);
+
 	acercaDe.addEventListener("click",acerca);
 	ajustes.addEventListener("click",ajuste);
 
@@ -362,8 +475,6 @@ function asignarEventos()
 	calentamientoAtras10.addEventListener("click",inst9_cal); 
 	calentamientoAdelante10.addEventListener("click",inst1_cal);
 
-
-
 	//instructivo para pectorales
    	pecMin_1.addEventListener("click",inst1_pec);
 	pecMin_2.addEventListener("click",inst2_pec);
@@ -375,6 +486,45 @@ function asignarEventos()
     pectoralesAdelante2.addEventListener("click",inst3_pec);
     pectoralesAtras3.addEventListener("click",inst2_pec);
     pectoralesAdelante3.addEventListener("click",inst1_pec);
+
+    //instructivo para piernas
+	minPier_1.addEventListener("click",inst1_pier);
+	minPier_2.addEventListener("click",inst2_pier);
+	minPier_3.addEventListener("click",inst3_pier);
+	minPier_4.addEventListener("click",inst4_pier);
+	minPier_5.addEventListener("click",inst5_pier);
+	minPier_6.addEventListener("click",inst6_pier);
+
+	piernasAtras1.addEventListener("click",inst6_pier);
+    piernasAdelante1.addEventListener("click",inst2_pier);
+    piernasAtras2.addEventListener("click",inst1_pier);
+    piernasAdelante2.addEventListener("click",inst3_pier);
+    piernasAtras3.addEventListener("click",inst2_pier);
+   	piernasAdelante3.addEventListener("click",inst4_pier);
+    piernasAtras4.addEventListener("click",inst3_pier);
+    piernasAdelante4.addEventListener("click",inst5_pier);
+    piernasAtras5.addEventListener("click",inst4_pier);    
+    piernasAdelante5.addEventListener("click",inst6_pier);
+    piernasAtras6.addEventListener("click",inst5_pier);    
+    piernasAdelante6.addEventListener("click",inst1_pier);
+
+    //instructivo para brazos
+	minBra_1.addEventListener("click",inst1_bra);
+	minBra_2.addEventListener("click",inst2_bra);
+	minBra_3.addEventListener("click",inst3_bra);
+	minBra_4.addEventListener("click",inst4_bra);
+	minBra_5.addEventListener("click",inst5_bra);
+
+	brazosAtras1.addEventListener("click",inst5_bra);
+    brazosAdelante1.addEventListener("click",inst2_bra);
+    brazosAtras2.addEventListener("click",inst1_bra);
+    brazosAdelante2.addEventListener("click",inst3_bra);
+    brazosAtras3.addEventListener("click",inst2_bra);
+    brazosAdelante3.addEventListener("click",inst4_bra);
+    brazosAtras4.addEventListener("click",inst3_bra);
+    brazosAdelante4.addEventListener("click",inst5_bra);
+    brazosAtras5.addEventListener("click",inst4_bra);
+    brazosAdelante5.addEventListener("click",inst1_bra);
 }
 
 function entrada()
@@ -386,6 +536,7 @@ function entrada()
 	btnAtrasBrazos.className="atras ocultar";
 	btnAtrasPectorales.className="atras ocultar";
 	btnAtrasGluteos.className="atras ocultar";
+
 	seccion_00.className="entrada animated";
     seccion_01.className="inicio animated ocultar";
 	seccion_02.className="ejercicios ocultar";
@@ -452,6 +603,12 @@ function ocultar(){
 			seccion_02_2_4.className="abdomen4 ocultar";
 			seccion_02_2_5.className="abdomen5 ocultar";
 		seccion_02_3.className="ejPiernas ocultar";
+			instPier_1.className="instPier_1 ocultar";
+			instPier_2.className="instPier_2 ocultar";
+			instPier_3.className="instPier_3 ocultar";
+			instPier_4.className="instPier_4 ocultar";
+			instPier_5.className="instPier_5 ocultar";
+			instPier_6.className="instPier_6 ocultar";
 			seccion_02_3_1.className="piernas1 ocultar";
 			seccion_02_3_2.className="piernas2 ocultar";
 			seccion_02_3_3.className="piernas3 ocultar";
@@ -459,6 +616,11 @@ function ocultar(){
 			seccion_02_3_5.className="piernas5 ocultar";
 			seccion_02_3_6.className="piernas6 ocultar";
 		seccion_02_4.className="ejBrazos ocultar";
+			instBra_1.className="instBra_1 ocultar";
+			instBra_2.className="instBra_2 ocultar";
+			instBra_3.className="instBra_3 ocultar";
+			instBra_4.className="instBra_4 ocultar";
+			instBra_5.className="instBra_5 ocultar";
 			seccion_02_4_1.className="brazos1 ocultar";
 			seccion_02_4_2.className="brazos2 ocultar";
 			seccion_02_4_3.className="brazos3 ocultar";
@@ -491,6 +653,9 @@ function ocultar(){
 	btnAtrasMinAbdomen.className="atras ocultar";
 	btnAtrasMinCalentamiento.className="atras ocultar";
 	btnAtrasMinPectorales.className="atras ocultar";
+	btnAtrasMinPiernas.className="atras ocultar";
+	btnAtrasMinBrazos.className="atras ocultar";
+	btnAtrasMinGluteos.className="atras ocultar";
 
 	avisoMano.className="chocala ocultar";
 	pausarEjercicio.className="menuPausa ocultar";
@@ -503,11 +668,13 @@ function ocultar(){
 
 	clock.className="clock ocultar";
 	rueda.className="rueda ocultar";
-    //para el reiniciar
+
+    //para el reiniciar abdomen
 	abdDinamic22.className = "abdD_2 ocultar";
 	abdDinamic33.className = "abdD_2 ocultar";
 	abdDinamic44.className = "abdD_2 ocultar";
-    //para el reiniciar
+
+    //para el reiniciar piernas
     pierDinamic1.className = "pierD ocultar";
     pierDinamic2.className = "pierD ocultar";
     pierDinamic3.className = "pierD ocultar";
@@ -911,7 +1078,7 @@ function ejercicios()
 function calentamientoMenu()
 {
 	ocultar();
-	btnAtrasCalentamiento.className="atras animated fadeInRightBig";
+	btnAtrasAbdomen.className="atras animated fadeInRightBig";
    	seccion_02.className="inicio ocultar";
 	seccion_02_1.className="ejAbdomen animated pulse";
 }
@@ -1025,10 +1192,11 @@ function inst5_abd() {
 	btnAtrasMinAbdomen.className="atras animated fadeInRightBig";
 }
 
+
 function piernasMenu()
 {   
 	ocultar();
-	btnAtrasAbdomen.className="atras animated fadeInRightBig";
+	btnAtrasPiernas.className="atras animated fadeInRightBig";
    	seccion_02.className="inicio ocultar";
 	seccion_02_3.className="ejAbdomen animated pulse";
 }
@@ -1039,6 +1207,36 @@ function piernasN1()
     cuerpo=2;
 	btnPlay.className="botonPlay animated fadeInLeftBig"
 	seccion_02_3_1.className="piernas1 animated pulse";
+}
+function inst1_pier() {
+	ocultar();
+	instPier_1.className="instPier_1 animated pulse";
+	btnAtrasMinPiernas.className="atras animated fadeInRightBig";
+}
+function inst2_pier() {
+	ocultar();
+	instPier_2.className="instPier_2 animated pulse";
+	btnAtrasMinPiernas.className="atras animated fadeInRightBig";
+}
+function inst3_pier() {
+	ocultar();
+	instPier_3.className="instPier_3 animated pulse";
+	btnAtrasMinPiernas.className="atras animated fadeInRightBig";
+}
+function inst4_pier() {
+	ocultar();
+	instPier_4.className="instPier_4 animated pulse";
+	btnAtrasMinPiernas.className="atras animated fadeInRightBig";
+}
+function inst5_pier() {
+	ocultar();
+	instPier_5.className="instPier_5 animated pulse";
+	btnAtrasMinPiernas.className="atras animated fadeInRightBig";
+}
+function inst6_pier() {
+	ocultar();
+	instPier_6.className="instPier_6 animated pulse";
+	btnAtrasMinPiernas.className="atras animated fadeInRightBig";
 }
 
 
@@ -1058,7 +1256,31 @@ function brazosN1()
 	seccion_02_4_1.className="brazos1 animated pulse";
 }
 
-
+function inst1_bra() {
+	ocultar();
+	instBra_1.className="instBra_1 animated pulse";
+	btnAtrasMinBrazos.className="atras animated fadeInRightBig";
+}
+function inst2_bra() {
+	ocultar();
+	instBra_2.className="instBra_2 animated pulse";
+	btnAtrasMinBrazos.className="atras animated fadeInRightBig";
+}
+function inst3_bra() {
+	ocultar();
+	instBra_3.className="instBra_3 animated pulse";
+	btnAtrasMinBrazos.className="atras animated fadeInRightBig";
+}
+function inst4_bra() {
+	ocultar();
+	instBra_4.className="instBra_4 animated pulse";
+	btnAtrasMinBrazos.className="atras animated fadeInRightBig";
+}
+function inst5_bra() {
+	ocultar();
+	instBra_5.className="instBra_5 animated pulse";
+	btnAtrasMinBrazos.className="atras animated fadeInRightBig";
+}
 
 function pectoralesMenu()
 {   
