@@ -1829,7 +1829,8 @@ function premisas(){
 	
 	premisa.className="premisa mostrar";
 	
-    document.getElementById('premisa').style.left ="36px"; 
+	 document.getElementById('premisa').style.left ="70px"; 
+    // document.getElementById('premisa').style.left ="36px"; 
 	document.getElementById('premisa').innerHTML = "¿PREPARADO?" , document.getElementById('premisa').classList.add("mostrar");                       
     setTimeout(function(){document.getElementById('premisa').innerHTML = "¿LISTO?" , document.getElementById('premisa').style.left ="99px" },3000);
     setTimeout(function(){document.getElementById('premisa').innerHTML = "¡YA!" , document.getElementById('premisa').style.left ="143px"},5000); 

@@ -64,6 +64,341 @@ background-color:#b4ff00 ;
       position: relative;
       }
 
+          .topInstructivo2{
+            position: absolute;
+            top: 156px;
+            left: 88px;
+          }
+
+          #calDinamic22{
+            left: 108px;
+          }
+
+          #calDinamic33{
+            left: 28px;
+          }
+
+          #calDinamic55{
+            left: 109px;
+          }
+
+          #calDinamic66{
+            left: 105px;
+          }
+          #calDinami77{
+            left: 79px;
+          }
+          #calDinamic88{
+            left: 134px;
+          }
+          #calDinamic99{
+            left: 115px;
+          }
+          #calDinamic1010{
+            left: 112px;
+          }
+
+
+
+          #calMin_1{
+           top: 318px;
+           left: 34px;
+          }
+
+          #calMin_2{
+           top: 287px;
+           left: 124px;
+          }
+
+          #calMin_3{
+           top: 330px;
+           left: 188px;
+          }
+
+          #calMin_4{
+           top: 310px;
+           left: 273px;
+          }
+
+          #calMin_5{
+           top: 385px;
+           left: 39px;
+          }
+
+          #calMin_6{
+           top: 406px;
+           left: 118px;
+          }
+
+          #calMin_7{
+           top: 394px;
+           left: 175px;
+          }
+
+          #calMin_8{
+           top: 377px;
+           left: 281px;
+          }
+
+          #calMin_9{
+           top: 494px;
+           left: 106px;
+          }
+
+          #calMin_10{
+           top: 494px;
+           left: 207px;
+          }      
+
+          #instCal_1{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo1.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }       
+
+          #instCal_2{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo2.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }                                      
+          #instCal_3{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo3.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+
+          #instCal_4{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo4.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+          #instCal_5{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo5.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+          #instCal_6{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo6.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+          #instCal_7{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo7.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+          #instCal_8{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo8.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+          #instCal_9{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo9.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+          #instCal_10{
+            width: 360px;
+            height: 616px;
+            overflow: hidden;
+            background: url(../img/calentamiento/calenta_instructivo10.png);
+            background-repeat: no-repeat round;
+            position: relative;
+          }
+
+                    #seccion_02_1_1 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+
+                    #seccion_02_1_2 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+
+                        #calDinamic2
+                        {
+                          top: 292px;
+                          left: 114px;
+                        }
+
+                    #seccion_02_1_3 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+                        #calStatic3
+                        {
+                          top: 292px;
+                          left: 30px;
+                        }
+                        #calDinamic3
+                        {
+                          top: 292px;
+                          left: 30px;
+                        }                     
+                    #seccion_02_1_4 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+
+                         #calStatic4
+                         {
+                          top: 292px;
+                          left: 72px;
+                         }
+                         #calDinamic4
+                         {
+                          top: 292px;
+                          left: 72px;                         
+                        }
+                    #seccion_02_1_5 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+                         #calStatic5
+                         {
+                          top: 292px;
+                          left: 101px;
+                         }
+
+                    #seccion_02_1_6 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+
+                          #calStatic6
+                         {
+                          top: 292px;
+                          left: 94px;
+                         }
+                                             
+                    #seccion_02_1_7 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+
+                          #calStatic7
+                         {
+                          top: 292px;
+                          left: 45px;
+                         }
+
+                    #seccion_02_1_8 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+                          #calStatic8
+                         {
+                          top: 292px;
+                          left: 129px;
+                          
+                         }
+                         #calDinamic8
+                         {
+                          top: 292px;
+                          left: 129px;                         
+                        }                         
+
+                    #seccion_02_1_9 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+                          #calStatic9
+                         {
+                          top: 292px;
+                          left: 132px;
+                          
+                         }
+                         #calDinamic9
+                         {
+                          top: 292px;
+                          left: 132px;                         
+                         }                          
+
+                    #seccion_02_1_10 {
+                     width: 360px;
+                     height: 616px;
+                     overflow: hidden;
+                     background: url(../img/calentamiento/fondo_ejercicios.png);
+                     background-repeat: no-repeat round;
+                     position: relative;
+                     }
+                          #calStatic10
+                         {
+                          top: 292px;
+                          left: 132px;
+                          
+                         }
+                         #calDinamic10
+                         {
+                          top: 292px;
+                          left: 132px;                         
+                         } 
+
+
       #seccion_02_2 {
       width: 360px;
       height: 616px;
@@ -213,14 +548,295 @@ background-color:#b4ff00 ;
       position: relative;
       }
 
-      #seccion_02_4 {
-      width: 360px;
-      height: 616px;
-      overflow: hidden;
-      background: url(../img/comenzar/fondo_general.png);
-      background-repeat: no-repeat round;
-      position: relative;
+              #pierMin_1{
+                top: 353px;
+                left: 35px;
+              }
+
+              #pierMin_2{
+                top: 371px;
+                left: 133px;
+              }
+
+              #pierMin_3{
+                top: 367px;
+                left: 229px;
+              }
+
+              #pierMin_4{
+                top: 468px;
+                left: 29px;
+              }
+
+              #pierMin_5{
+                top: 453px;
+                left: 127px;
+              }
+
+              #pierMin_5{
+                top: 473px;
+                left: 129px;
+              }
+
+              #pierMin_6{
+                top: 476px;
+                left: 227px;
+              }
+
+              #instPier_1{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/piernas/piernas_instructivo1.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instPier_2{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/piernas/piernas_instructivo2.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instPier_3{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/piernas/piernas_instructivo3.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instPier_4{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/piernas/piernas_instructivo4.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instPier_5{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/piernas/piernas_instructivo5.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instPier_6{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/piernas/piernas_instructivo6.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }     
+              #pierDinamic11{
+                left: 97px;
+              }
+              #pierDinamic22{
+                left: 103px;
+              }
+              #pierDinamic66{
+                left: 64px;
+              }
+              #seccion_02_3_1 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/piernas/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_3_2 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/piernas/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_3_3 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/piernas/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+              #seccion_02_3_4 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/piernas/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+                 #pierStatic4{
+                  left:83px; 
+                 }
+
+              #seccion_02_3_5 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/piernas/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_3_6 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/piernas/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+                  #pierDinamic6{
+                   left: 72px;
+                  }
+                  #pierStatic6{
+                   left: 72px;
+                  }
+
+      #seccion_02_4{
+        width: 360px;
+        height: 616px;
+        overflow: hidden;
+        background: url(../img/comenzar/fondo_general.png);
+        background-repeat: no-repeat round;
+        position: relative;
       }
+
+              #braMin_1{
+                top: 353px;
+                left: 11px;
+              }
+
+              #braMin_2{
+                top: 353px;
+                left: 124px;
+              }
+
+              #braMin_3{
+                top: 341px;
+                left: 238px;
+              }
+
+              #braMin_4{
+                top: 480px;
+                left: 61px;
+              }
+
+              #braMin_5{
+                top: 453px;
+                left: 195px;
+              }
+
+              #instBra_1{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/brazos/brazos_instructivo1.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              } 
+              #instBra_2{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/brazos/brazos_instructivo2.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              } 
+               #instBra_3{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/brazos/brazos_instructivo3.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              } 
+              #instBra_4{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/brazos/brazos_instructivo4.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              } 
+              #instBra_5{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/brazos/brazos_instructivo5.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              } 
+                    .topInstructivo3 {
+                      position: absolute;
+                      top: 156px;
+                      left: 36px;
+                    }
+
+              #seccion_02_4_1 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/brazos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_4_2 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/brazos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_4_3 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/brazos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_4_4 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/brazos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_4_5 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/brazos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #braDinamic5{
+                left: 27px;
+                top: 290px;
+              }
+              #braStatic5{
+                left: 27px;
+                top: 290px;
+              }
 
       #seccion_02_5 {
       width: 360px;
@@ -230,7 +846,73 @@ background-color:#b4ff00 ;
       background-repeat: no-repeat round;
       position: relative;
       }
+               #pecMin_1{
+                top: 396px;
+                left: 23px;
+              }
 
+              #pecMin_2{
+                top: 396px;
+                left: 130px;
+              }
+
+              #pecMin_3{
+                top: 396px;
+                left: 236px;
+              }
+
+              #instPec_1{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/pectorales/pectorales_instructivo1.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }       
+
+              #instPec_2{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/pectorales/pectorales_instructivo2.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }                                      
+              #instPec_3{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/pectorales/pectorales_instructivo3.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+
+              #seccion_02_5_1 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/pectorales/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_5_2 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/pectorales/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_5_3 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/pectorales/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
       #seccion_02_6 {
       width: 360px;
       height: 616px;
@@ -239,6 +921,150 @@ background-color:#b4ff00 ;
       background-repeat: no-repeat round;
       position: relative;
       }        
+              #gluMin_1{
+                top: 353px;
+                left: 11px;
+              }
+
+              #gluMin_2{
+                top: 364px;
+                left: 124px;
+              }
+
+              #gluMin_3{
+                top: 370px;
+                left: 229px;
+              }
+
+              #gluMin_4{
+                top: 468px;
+                left: 12px;
+              }
+
+              #gluMin_5{
+                top: 453px;
+                left: 127px;
+              }
+
+              #gluMin_5{
+                top: 453px;
+                left: 125px;
+              }
+
+              #gluMin_6{
+                top: 476px;
+                left: 220px;
+              }
+
+              #instGlu_1{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/gluteos/gluteos_instructivo1.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instGlu_2{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/gluteos/gluteos_instructivo2--.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instGlu_3{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/gluteos/gluteos_instructivo3.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instGlu_4{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/gluteos/gluteos_instructivo4.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instGlu_5{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/gluteos/gluteos_instructivo5.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+              #instGlu_6{
+                width: 360px;
+                height: 616px;
+                overflow: hidden;
+                background: url(../img/gluteos/gluteos_instructivo6.png);
+                background-repeat: no-repeat round;
+                position: relative;
+              }
+
+                      .topInstructivo4 {
+                          position: absolute;
+                          top: 156px;
+                          left: 27px;
+                      }
+
+              #seccion_02_6_1 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/gluteos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_6_2 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/gluteos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_6_3 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/gluteos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_6_4 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/gluteos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_6_5 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/gluteos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
+              #seccion_02_6_6 {
+              width: 360px;
+              height: 616px;
+              overflow: hidden;
+              background: url(../img/gluteos/fondo_ejercicios.png);
+              background-repeat: no-repeat round;
+              position: relative;
+              }
+
 
 #seccion_03 {
     width: 360px;
@@ -293,6 +1119,41 @@ background-color:#b4ff00 ;
   left: 23px;
 }
 
+.animaciones3 {
+    position: absolute;
+    top: 283px;
+    left: 97px;
+    z-index: 10;
+}
+
+.animaciones4 {
+    position: absolute;
+    top: 319px;
+    left: 29px;
+    z-index: 10;
+}
+
+.animaciones5 {
+    position: absolute;
+    top: 319px;
+    left: 29px;
+    z-index: 10;
+}
+
+.animaciones6 {
+    position: absolute;
+    top: 292px;
+    left: 19px;
+    z-index: 10;
+}
+
+.animaciones7 {
+    position: absolute;
+    top: 292px;
+    left: 90px;
+    z-index: 10;
+}
+
 .abdD{
   position: absolute;
   top: 313px;
@@ -307,6 +1168,36 @@ background-color:#b4ff00 ;
   left: 23px;
 }
 
+.pierD{
+  position: absolute;
+  top: 283px;
+  left: 97px;
+}
+
+.braD{
+  position: absolute;
+  top: 319px;
+  left: 45px;
+}
+
+.pecD{
+  position: absolute;
+  top: 319px;
+  left: 29px;
+}
+
+.gluD{
+  position: absolute;
+  top: 292px;
+  left: 19px;
+}
+
+.calD{
+  position: absolute;
+  top: 292px;
+  left: 90px;
+}
+
 
 #descansoEjercicio{
   width: 360px;
@@ -315,7 +1206,12 @@ background-color:#b4ff00 ;
   background: url(../img/descanso/fondo_descanso.png);
   background-repeat: no-repeat round;
   position: relative;
+}
 
+#toalla{
+  position: absolute;
+  top: 151px;
+  left: 36px;
 }
 
 #pausarEjercicio{
@@ -384,7 +1280,7 @@ position: absolute;
 
 .lDescanso{
   top: 62px;
-  left: 22px;
+  left: 29px;
   position: relative;
 }
 
@@ -426,7 +1322,42 @@ left: 97px;
   left: 96px;
 }
 
+.titulosCal{
+  top: 22px;
+  left: 56px;
+}
+
+.titulosCal1{
+  top: 22px;
+  left: 75px;
+}
+
 #btnListoAbd{
+  top: 134px;
+  left: 120px;
+}
+
+#btnListoPies{
+  top: 134px;
+  left: 120px;
+}
+
+#btnListoBra{
+  top: 134px;
+  left: 120px;
+}
+
+#btnListoPec{
+  top: 134px;
+  left: 120px;
+}
+
+#btnListoGlu{
+  top: 134px;
+  left: 120px;
+}
+
+#btnListoCal{
   top: 134px;
   left: 120px;
 }
@@ -515,6 +1446,7 @@ left:100px;
   /*margin: 20px;*/
   width: 400px;
   height: 516px;
+  z-index: 20;
 }
 
 
@@ -522,8 +1454,6 @@ left:100px;
 top:300px;
 left:100px; 
 }
-
-
 
 .loader,
 .loader:before,

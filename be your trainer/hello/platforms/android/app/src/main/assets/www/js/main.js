@@ -6,7 +6,19 @@ var atrasInicio = "";
 var atrasAjuste = "";
 var atrasAcerca = "";
 var atrasAbdomen ="";
+var atrasCalentamiento="";
+var atrasPiernas="";
+var atrasBrazos="";
+var atrasGluteos="";
+var atrasPectorales="";
+
 var atrasAbdInstructivo = "";
+var atrasCalInstructivo = "";
+var atrasPecInstructivo = "";
+var atrasPierInstructivo = "";
+var atrasBraInstructivo = "";
+var atrasGluInstructivo = "";
+
 
 var calentamiento = "";
 var abdomen = "";
@@ -16,6 +28,11 @@ var pectorales = "";
 var gluteos = ""; 
 
 var ListoAbd = "";
+var ListoPier = "";
+var ListoBra = "";
+var ListoPec = "";
+var ListoGlu = "";
+var ListoCal = "";
 
 //Contadores para la pausa.
 var totalTime = 10;
@@ -27,8 +44,11 @@ var barDescanso;
 
 var ajustes_hamburguesa="";
 var acercaDe_hamburguesa="";
+
+
 var play="";
 var pause = "";
+
 var reiniciarEjercicio = "";
 var continuarEjercicio = "";
 var mano = "";
@@ -39,6 +59,47 @@ var minAbd_2="";
 var minAbd_3="";
 var minAbd_4="";
 var minAbd_5="";
+
+//miniaturas calentamiento
+var minCal_1="";
+var minCal_2="";
+var minCal_3="";
+var minCal_4="";
+var minCal_5="";
+var minCal_6="";
+var minCal_7="";
+var minCal_8="";
+var minCal_9="";
+var minCal_10="";
+
+//miniaturas pectorales
+var minPec_1="";
+var	minPec_2="";
+var	minPec_3="";
+
+//miniaturas piernas
+var minPier_1="";
+var minPier_2="";
+var minPier_3="";
+var minPier_4="";
+var minPier_5="";
+var minPier_6="";
+
+//miniaturas brazos
+var minBra_1="";
+var minBra_2="";
+var minBra_3="";
+var minBra_4="";
+var minBra_5="";
+
+//miniaturas gluteos
+var minGlu_1="";
+var minGlu_2="";
+var minGlu_3="";
+var minGlu_4="";
+var minGlu_5="";
+var minGlu_6="";
+
 
 //para pasar de instructivo abdomen
 var abdomenAtras1 ="";
@@ -53,10 +114,90 @@ var abdomenAtras5 ="";
 var abdomenAdelante5 ="";
 
 
+// pasar de instrctivo calentamiento
+var calentamientoAtras1 ="";
+var calentamientoAdelante1 ="";
+var calentamientoAtras2 ="";
+var calentamientoAdelante2 ="";
+var calentamientoAtras3 ="";
+var calentamientoAdelante3 ="";
+var calentamientoAtras4 ="";
+var calentamientoAdelante4 ="";
+var calentamientoAtras5 ="";
+var calentamientoAdelante5 ="";
+var calentamientoAtras6 ="";
+var calentamientoAdelante6 ="";
+var calentamientoAtras7 ="";
+var calentamientoAdelante7 ="";
+var calentamientoAtras8 ="";
+var calentamientoAdelante8 ="";
+var calentamientoAtras9 ="";
+var calentamientoAdelante9 ="";
+var calentamientoAtras10 ="";
+var calentamientoAdelante10 ="";
 
-var x = document.getElementById("audio1");
-var y = document.getElementById("audioFondo");
+
+// pasar de instrctivo pectorales
+var pectoralesAtras1 ="";
+var pectoralesAdelante1 ="";
+var pectoralesAtras2 ="";
+var pectoralesAdelante2 ="";
+var pectoralesAtras3 ="";
+var pectoralesAdelante3 ="";
+
+// pasar de instrctivo piernas
+var piernasAtras1 ="";
+var piernasAdelante1 ="";
+var piernasAtras2 ="";
+var piernasAdelante2 ="";
+var piernasAtras3 ="";
+var piernasAdelante3 ="";
+var piernasAtras4 ="";
+var piernasAdelante4 ="";
+var piernasAtras5 ="";
+var piernasAdelante5 ="";
+var piernasAtras6 ="";
+var piernasAdelante6 ="";
+
+// pasar de instrctivo brazos
+var brazosAtras1 ="";
+var brazosAdelante1 ="";
+var brazosAtras2 ="";
+var brazosAdelante2 ="";
+var brazosAtras3 ="";
+var brazosAdelante3 ="";
+var brazosAtras4 ="";
+var brazosAdelante4 ="";
+var brazosAtras5 ="";
+var brazosAdelante5 ="";
+
+// pasar de instrctivo Gluteos
+var gluteosAtras1 ="";
+var gluteosAdelante1 ="";
+var gluteosAtras2 ="";
+var gluteosAdelante2 ="";
+var gluteosAtras3 ="";
+var gluteosAdelante3 ="";
+var gluteosAtras4 ="";
+var gluteosAdelante4 ="";
+var gluteosAtras5 ="";
+var gluteosAdelante5 ="";
+var gluteosAtras6 ="";
+var gluteosAdelante6 ="";
+
+
+// var x = document.getElementById("audio1");
+var y = document.getElementById("audioFondo"); //50 segundos preparad050
 var z = document.getElementById("audioMano");
+
+var audioSilbido = document.getElementById("audioSilbido");
+var manoChocar = document.getElementById("audiomanoAparece");
+var audioDescansar = document.getElementById("audioDescanso");
+var audiopreparado50= document.getElementById("preparado50");
+var audiopreparado25 = document.getElementById("preparado25");
+var audiopreparado30= document.getElementById("preparado30");
+var audiopreparado20= document.getElementById("preparado20");
+var audiopreparado15= document.getElementById("preparado15");
 
 
 var pausaAudio = "";
@@ -71,6 +212,11 @@ var pantalla = 1;
 var animacion = 1;
 var contPausa = 1;
 var interfaceFinal = 0;
+//para diferenciar en la premisa la parte del cuerpo
+var cuerpo = 1;
+
+//Var para los tipos de audio
+var tipoAudio = 50;
 
 
 window.onload= inicio;
@@ -90,7 +236,19 @@ function inicializar()
 	atrasAjuste = document.getElementById('btnAtrasAjuste');
 	atrasAcerca = document.getElementById('btnAtrasAcerca');
 	atrasAbdomen = document.getElementById('btnAtrasAbdomen');
+	atrasCalentamiento = document.getElementById('btnAtrasCalentamiento');
+	atrasPiernas = document.getElementById('btnAtrasPiernas');
+	atrasBrazos = document.getElementById('btnAtrasBrazos');
+	atrasPectorales = document.getElementById('btnAtrasPectorales');
+	atrasGluteos = document.getElementById('btnAtrasGluteos');
+	atrasCalentamiento = document.getElementById('btnAtrasMinCalentamiento')
+
 	atrasAbdInstructivo = document.getElementById('btnAtrasMinAbdomen');
+	atrasCalInstructivo = document.getElementById('btnAtrasMinCalentamiento');
+	atrasPecInstructivo = document.getElementById('btnAtrasMinPectorales');
+	atrasPierInstructivo = document.getElementById('btnAtrasMinPiernas');
+	atrasGluInstructivo = document.getElementById('btnAtrasMinGluteos');
+	atrasBraInstructivo = document.getElementById('btnAtrasMinBrazos');
 	// menuEjercicios = document.getElementById('btnMenuEjercicios');
 	acercaDe= document.getElementById('btnAcercade');
 	ajustes= document.getElementById('btnAjustes');
@@ -105,8 +263,16 @@ function inicializar()
 	gluteos= document.getElementById('btnGluteos');
 	
 	ListoAbd= document.getElementById('btnListoAbd');
+    ListoPier= document.getElementById('btnListoPies');
+    ListoBra= document.getElementById('btnListoBra');
+    ListoPec= document.getElementById('btnListoPec');
+    ListoGlu= document.getElementById('btnListoGlu');
+    ListoCal= document.getElementById('btnListoCal');
+
 	play= document.getElementById('btnPlay');
 	pause= document.getElementById('btnPausa');
+
+
 	reiniciarEjercicio= document.getElementById('btnAbandonarPausa');
 	continuarEjercicio= document.getElementById('btnContinuar');
 	mano = document.getElementById('abdomenMano1');
@@ -115,12 +281,55 @@ function inicializar()
 	pausaVoz= document.getElementById('offV');
 	playVoz= document.getElementById('onV');
 
+	// Miniaturas abdomen
 	minAbd_1=document.getElementById('adbMin_1');
 	minAbd_2=document.getElementById('adbMin_2');
 	minAbd_3=document.getElementById('adbMin_3');
 	minAbd_4=document.getElementById('adbMin_4');
 	minAbd_5=document.getElementById('adbMin_5');
 
+	// Miniaturas calentamiento
+	minCal_1=document.getElementById('calMin_1');
+	minCal_2=document.getElementById('calMin_2');
+	minCal_3=document.getElementById('calMin_3');
+	minCal_4=document.getElementById('calMin_4');
+	minCal_5=document.getElementById('calMin_5');
+	minCal_6=document.getElementById('calMin_6');
+	minCal_7=document.getElementById('calMin_7');
+	minCal_8=document.getElementById('calMin_8');
+	minCal_9=document.getElementById('calMin_9');
+	minCal_10=document.getElementById('calMin_10');
+
+	// Miniaturas pectorales
+	minPec_1=document.getElementById('pecMin_1');
+	minPec_2=document.getElementById('pecMin_2');
+	minPec_3=document.getElementById('pecMin_3');
+
+	// Miniaturas piernas
+	minPier_1=document.getElementById('pierMin_1');
+	minPier_2=document.getElementById('pierMin_2');
+	minPier_3=document.getElementById('pierMin_3');
+	minPier_4=document.getElementById('pierMin_4');
+	minPier_5=document.getElementById('pierMin_5');
+	minPier_6=document.getElementById('pierMin_6');
+
+	// Miniaturas gluteos
+	minGluteos_1=document.getElementById('gluMin_1');
+	minGluteos_2=document.getElementById('gluMin_2');
+	minGluteos_3=document.getElementById('gluMin_3');
+	minGluteos_4=document.getElementById('gluMin_4');
+	minGluteos_5=document.getElementById('gluMin_5');
+	minGluteos_6=document.getElementById('gluMin_6');
+
+	// Miniaturas brazos
+	minBra_1=document.getElementById('braMin_1');
+	minBra_2=document.getElementById('braMin_2');
+	minBra_3=document.getElementById('braMin_3');
+	minBra_4=document.getElementById('braMin_4');
+	minBra_5=document.getElementById('braMin_5');
+
+
+	//Boton de retroceder y avanzar abdomen
 	abdomenAtras1=document.getElementById('atrasInt1');
 	abdomenAdelante1=document.getElementById('adelanteInt1');
 	abdomenAtras2=document.getElementById('atrasInt2');
@@ -131,6 +340,76 @@ function inicializar()
 	abdomenAdelante4=document.getElementById('adelanteInt4');
 	abdomenAtras5=document.getElementById('atrasInt5');
 	abdomenAdelante5=document.getElementById('adelanteInt5');
+
+	//Boton de retroceder y avanzar calentamiento
+	calentamientoAtras1 = document.getElementById('atrasIntCal1');
+	calentamientoAdelante1 = document.getElementById('adelanteCal1');
+	calentamientoAtras2 = document.getElementById('atrasIntCal2');
+	calentamientoAdelante2 = document.getElementById('adelanteCal2');
+	calentamientoAtras3 = document.getElementById('atrasIntCal3');
+	calentamientoAdelante3 = document.getElementById('adelanteCal3');
+	calentamientoAtras4 = document.getElementById('atrasIntCal4');
+	calentamientoAdelante4 =document.getElementById('adelanteCal4');
+	calentamientoAtras5 = document.getElementById('atrasIntCal5');
+	calentamientoAdelante5 = document.getElementById('adelanteCal5');
+	calentamientoAtras6 = document.getElementById('atrasIntCal6');
+	calentamientoAdelante6 = document.getElementById('adelanteCal6');
+	calentamientoAtras7 = document.getElementById('atrasIntCal7');
+	calentamientoAdelante7 = document.getElementById('adelanteCal7');
+	calentamientoAtras8 = document.getElementById('atrasIntCal8');
+	calentamientoAdelante8 = document.getElementById('adelanteCal8');
+	calentamientoAtras9 = document.getElementById('atrasIntCal9');
+	calentamientoAdelante9 = document.getElementById('adelanteCal9');
+	calentamientoAtras10 = document.getElementById('atrasIntCal10');
+	calentamientoAdelante10 =document.getElementById('adelanteCal10'); 
+
+	//Boton de retroceder y avanzar pectorales
+	pectoralesAtras1 = document.getElementById('atrasIntPec1');
+	pectoralesAdelante1 = document.getElementById('adelantePec1');
+	pectoralesAtras2 = document.getElementById('atrasIntPec2');
+	pectoralesAdelante2 = document.getElementById('adelantePec2');
+	pectoralesAtras3 = document.getElementById('atrasIntPec3');
+	pectoralesAdelante3 = document.getElementById('adelantePec3');
+
+	//Boton de retroceder y avanzar piernas
+	piernasAtras1=document.getElementById('atrasIntPier1');
+	piernasAdelante1=document.getElementById('adelanteIntPier1');
+	piernasAtras2=document.getElementById('atrasIntPier2');
+	piernasAdelante2=document.getElementById('adelanteIntPier2');
+	piernasAtras3=document.getElementById('atrasIntPier3');
+	piernasAdelante3=document.getElementById('adelanteIntPier3');
+	piernasAtras4=document.getElementById('atrasIntPier4');
+	piernasAdelante4=document.getElementById('adelanteIntPier4');
+	piernasAtras5=document.getElementById('atrasIntPier5');
+	piernasAdelante5=document.getElementById('adelanteIntPier5');
+	piernasAtras6=document.getElementById('atrasIntPier6');
+	piernasAdelante6=document.getElementById('adelanteIntPier6');
+
+	//Boton de retroceder y avanzar brazos
+	brazosAtras1=document.getElementById('atrasIntBra1');
+	brazosAdelante1=document.getElementById('adelanteIntBra1');
+	brazosAtras2=document.getElementById('atrasIntBra2');
+	brazosAdelante2=document.getElementById('adelanteIntBra2');
+	brazosAtras3=document.getElementById('atrasIntBra3');
+	brazosAdelante3=document.getElementById('adelanteIntBra3');
+	brazosAtras4=document.getElementById('atrasIntBra4');
+	brazosAdelante4=document.getElementById('adelanteIntBra4');
+	brazosAtras5=document.getElementById('atrasIntBra5');
+	brazosAdelante5=document.getElementById('adelanteIntBra5');
+
+	//Boton de retroceder y avanzar gluteos
+	gluteosAtras1=document.getElementById('atrasIntGlu1');
+	gluteosAdelante1=document.getElementById('adelanteIntGlu1');
+	gluteosAtras2=document.getElementById('atrasIntGlu2');
+	gluteosAdelante2=document.getElementById('adelanteIntGlu2');
+	gluteosAtras3=document.getElementById('atrasIntGlu3');
+	gluteosAdelante3=document.getElementById('adelanteIntGlu3');
+	gluteosAtras4=document.getElementById('atrasIntGlu4');
+	gluteosAdelante4=document.getElementById('adelanteIntGlu4');
+	gluteosAtras5=document.getElementById('atrasIntGlu5');
+	gluteosAdelante5=document.getElementById('adelanteIntGlu5');
+	gluteosAtras6=document.getElementById('atrasIntGlu6');
+	gluteosAdelante6=document.getElementById('adelanteIntGlu6');
 
 }
 
@@ -143,7 +422,15 @@ function asignarEventos()
 	atrasAjuste.addEventListener("click", retroceder);
 	atrasAcerca.addEventListener("click", retroceder);
 	atrasAbdomen.addEventListener("click", retrocederMenu);
+	atrasPiernas.addEventListener("click", retrocederMenu);
+
 	atrasAbdInstructivo.addEventListener("click", abdomenMenu);
+	atrasCalInstructivo.addEventListener("click", calentamientoMenu);
+	atrasPecInstructivo.addEventListener("click", pectoralesMenu);
+	atrasPierInstructivo.addEventListener("click", piernasMenu);
+	atrasBraInstructivo.addEventListener("click", brazosMenu);
+	atrasGluInstructivo.addEventListener("click", gluteosMenu);
+
 	acercaDe.addEventListener("click",acerca);
 	ajustes.addEventListener("click",ajuste);
 
@@ -156,11 +443,22 @@ function asignarEventos()
 
 
 	ListoAbd.addEventListener("click",abdomenN1);
+    ListoPier.addEventListener("click",piernasN1);
+    ListoBra.addEventListener("click",brazosN1);
+    ListoPec.addEventListener("click",pectoralesN1);
+    ListoGlu.addEventListener("click", gluteosN1);
+    ListoCal.addEventListener("click", calentamientoN1);
+
+
 	menu.addEventListener('click', abrirMenu, false);
 	acercaDe_hamburguesa.addEventListener("click",acerca);
 	ajustes_hamburguesa.addEventListener("click",ajuste);
+
+
 	play.addEventListener("click",preparado);
 	pause.addEventListener("click", pausar);
+
+
 	reiniciarEjercicio.addEventListener("click", reiniciar);
 	continuarEjercicio.addEventListener("click", continuar);
 	mano.addEventListener("click", reload);
@@ -170,6 +468,8 @@ function asignarEventos()
 	pausaVoz.addEventListener("click", quitarVoz);
 	playVoz.addEventListener("click", ponerVoz);
 
+
+	//instructivo para abdomen
 	minAbd_1.addEventListener("click",inst1_abd);
 	minAbd_2.addEventListener("click",inst2_abd);
 	minAbd_3.addEventListener("click",inst3_abd);
@@ -187,13 +487,122 @@ function asignarEventos()
     abdomenAtras5.addEventListener("click",inst4_abd);
     abdomenAdelante5.addEventListener("click",inst1_abd);
 
+   	//instructivo para calentamiento
+   	calMin_1.addEventListener("click",inst1_cal);
+   	calMin_2.addEventListener("click",inst2_cal);
+   	calMin_3.addEventListener("click",inst3_cal);
+   	calMin_4.addEventListener("click",inst4_cal);
+   	calMin_5.addEventListener("click",inst5_cal);
+   	calMin_6.addEventListener("click",inst6_cal);
+   	calMin_7.addEventListener("click",inst7_cal);
+   	calMin_8.addEventListener("click",inst8_cal);
+   	calMin_9.addEventListener("click",inst9_cal);
+   	calMin_10.addEventListener("click",inst10_cal);
 
+   	calentamientoAtras1.addEventListener("click",inst10_cal);
+	calentamientoAdelante1.addEventListener("click",inst2_cal);
+	calentamientoAtras2.addEventListener("click",inst1_cal); 
+	calentamientoAdelante2.addEventListener("click",inst3_cal); 
+	calentamientoAtras3.addEventListener("click",inst2_cal); 
+	calentamientoAdelante3.addEventListener("click",inst4_cal); 
+	calentamientoAtras4.addEventListener("click",inst3_cal); 
+	calentamientoAdelante4.addEventListener("click",inst5_cal); 
+	calentamientoAtras5.addEventListener("click",inst4_cal); 
+	calentamientoAdelante5.addEventListener("click",inst6_cal); 
+	calentamientoAtras6.addEventListener("click",inst5_cal); 
+	calentamientoAdelante6.addEventListener("click",inst7_cal); 
+	calentamientoAtras7.addEventListener("click",inst6_cal); 
+	calentamientoAdelante7.addEventListener("click",inst8_cal); 
+	calentamientoAtras8.addEventListener("click",inst7_cal); 
+	calentamientoAdelante8.addEventListener("click",inst9_cal); 
+	calentamientoAtras9.addEventListener("click",inst8_cal); 
+	calentamientoAdelante9.addEventListener("click",inst10_cal); 
+	calentamientoAtras10.addEventListener("click",inst9_cal); 
+	calentamientoAdelante10.addEventListener("click",inst1_cal);
+
+	//instructivo para pectorales
+   	pecMin_1.addEventListener("click",inst1_pec);
+	pecMin_2.addEventListener("click",inst2_pec);
+	pecMin_3.addEventListener("click",inst3_pec);
+
+	pectoralesAtras1.addEventListener("click",inst3_pec);
+    pectoralesAdelante1.addEventListener("click",inst2_pec);
+    pectoralesAtras2.addEventListener("click",inst1_pec);
+    pectoralesAdelante2.addEventListener("click",inst3_pec);
+    pectoralesAtras3.addEventListener("click",inst2_pec);
+    pectoralesAdelante3.addEventListener("click",inst1_pec);
+
+    //instructivo para piernas
+	minPier_1.addEventListener("click",inst1_pier);
+	minPier_2.addEventListener("click",inst2_pier);
+	minPier_3.addEventListener("click",inst3_pier);
+	minPier_4.addEventListener("click",inst4_pier);
+	minPier_5.addEventListener("click",inst5_pier);
+	minPier_6.addEventListener("click",inst6_pier);
+
+	piernasAtras1.addEventListener("click",inst6_pier);
+    piernasAdelante1.addEventListener("click",inst2_pier);
+    piernasAtras2.addEventListener("click",inst1_pier);
+    piernasAdelante2.addEventListener("click",inst3_pier);
+    piernasAtras3.addEventListener("click",inst2_pier);
+   	piernasAdelante3.addEventListener("click",inst4_pier);
+    piernasAtras4.addEventListener("click",inst3_pier);
+    piernasAdelante4.addEventListener("click",inst5_pier);
+    piernasAtras5.addEventListener("click",inst4_pier);    
+    piernasAdelante5.addEventListener("click",inst6_pier);
+    piernasAtras6.addEventListener("click",inst5_pier);    
+    piernasAdelante6.addEventListener("click",inst1_pier);
+
+    //instructivo para brazos
+	minBra_1.addEventListener("click",inst1_bra);
+	minBra_2.addEventListener("click",inst2_bra);
+	minBra_3.addEventListener("click",inst3_bra);
+	minBra_4.addEventListener("click",inst4_bra);
+	minBra_5.addEventListener("click",inst5_bra);
+
+	brazosAtras1.addEventListener("click",inst5_bra);
+    brazosAdelante1.addEventListener("click",inst2_bra);
+    brazosAtras2.addEventListener("click",inst1_bra);
+    brazosAdelante2.addEventListener("click",inst3_bra);
+    brazosAtras3.addEventListener("click",inst2_bra);
+    brazosAdelante3.addEventListener("click",inst4_bra);
+    brazosAtras4.addEventListener("click",inst3_bra);
+    brazosAdelante4.addEventListener("click",inst5_bra);
+    brazosAtras5.addEventListener("click",inst4_bra);
+    brazosAdelante5.addEventListener("click",inst1_bra);
+
+    //instructivo para gluteos
+	gluMin_1.addEventListener("click",inst1_glu);
+	gluMin_2.addEventListener("click",inst2_glu);
+	gluMin_3.addEventListener("click",inst3_glu);
+	gluMin_4.addEventListener("click",inst4_glu);
+	gluMin_5.addEventListener("click",inst5_glu);
+	gluMin_6.addEventListener("click",inst6_glu);
+
+	gluteosAtras1.addEventListener("click",inst6_glu);
+    gluteosAdelante1.addEventListener("click",inst2_glu);
+    gluteosAtras2.addEventListener("click",inst1_glu);
+    gluteosAdelante2.addEventListener("click",inst3_glu);
+    gluteosAtras3.addEventListener("click",inst2_glu);
+   	gluteosAdelante3.addEventListener("click",inst4_glu);
+    gluteosAtras4.addEventListener("click",inst3_glu);
+    gluteosAdelante4.addEventListener("click",inst5_glu);
+    gluteosAtras5.addEventListener("click",inst4_glu);    
+    gluteosAdelante5.addEventListener("click",inst6_glu);
+    gluteosAtras6.addEventListener("click",inst5_glu);    
+    gluteosAdelante6.addEventListener("click",inst1_glu);
 }
 
 function entrada()
 {   
 	ocultar();
     btnAtrasAbdomen.className="atras ocultar";
+   	btnAtrasCalentamiento.className="atras ocultar";
+	btnAtrasPiernas.className="atras ocultar";
+	btnAtrasBrazos.className="atras ocultar";
+	btnAtrasPectorales.className="atras ocultar";
+	btnAtrasGluteos.className="atras ocultar";
+
 	seccion_00.className="entrada animated";
     seccion_01.className="inicio animated ocultar";
 	seccion_02.className="ejercicios ocultar";
@@ -228,6 +637,26 @@ function ocultar(){
     seccion_01.className="inicio ocultar";
 	seccion_02.className="ejercicios ocultar";
 	    seccion_02_1.className="ejCalentamiento ocultar";
+	    	instCal_1.className="instCal_1 ocultar";
+	    	instCal_2.className="instCal_2 ocultar";
+	    	instCal_3.className="instCal_3 ocultar";
+	    	instCal_4.className="instCal_4 ocultar";
+	    	instCal_5.className="instCal_5 ocultar";
+	    	instCal_6.className="instCal_6 ocultar";
+	    	instCal_7.className="instCal_7 ocultar";
+	    	instCal_8.className="instCal_8 ocultar";
+	    	instCal_9.className="instCal_9 ocultar";
+	    	instCal_10.className="instCal_10 ocultar";
+	        seccion_02_1_1.className="calentamiento1 ocultar";
+	        seccion_02_1_2.className="calentamiento2 ocultar";
+	        seccion_02_1_3.className="calentamiento3 ocultar";
+	        seccion_02_1_4.className="calentamiento4 ocultar";
+	        seccion_02_1_5.className="calentamiento5 ocultar";
+	        seccion_02_1_6.className="calentamiento6 ocultar";
+	        seccion_02_1_7.className="calentamiento7 ocultar";
+	        seccion_02_1_8.className="calentamiento8 ocultar";
+	        seccion_02_1_9.className="calentamiento9 ocultar";
+	        seccion_02_1_10.className="calentamiento10 ocultar";
 		seccion_02_2.className="ejAbdomen ocultar";
 			instAbd_1.className="instAbd_1 ocultar";
 			instAbd_2.className="instAbd_2 ocultar";
@@ -240,24 +669,117 @@ function ocultar(){
 			seccion_02_2_4.className="abdomen4 ocultar";
 			seccion_02_2_5.className="abdomen5 ocultar";
 		seccion_02_3.className="ejPiernas ocultar";
+			instPier_1.className="instPier_1 ocultar";
+			instPier_2.className="instPier_2 ocultar";
+			instPier_3.className="instPier_3 ocultar";
+			instPier_4.className="instPier_4 ocultar";
+			instPier_5.className="instPier_5 ocultar";
+			instPier_6.className="instPier_6 ocultar";
+			seccion_02_3_1.className="piernas1 ocultar";
+			seccion_02_3_2.className="piernas2 ocultar";
+			seccion_02_3_3.className="piernas3 ocultar";
+			seccion_02_3_4.className="piernas4 ocultar";
+			seccion_02_3_5.className="piernas5 ocultar";
+			seccion_02_3_6.className="piernas6 ocultar";
 		seccion_02_4.className="ejBrazos ocultar";
+			instBra_1.className="instBra_1 ocultar";
+			instBra_2.className="instBra_2 ocultar";
+			instBra_3.className="instBra_3 ocultar";
+			instBra_4.className="instBra_4 ocultar";
+			instBra_5.className="instBra_5 ocultar";
+			seccion_02_4_1.className="brazos1 ocultar";
+			seccion_02_4_2.className="brazos2 ocultar";
+			seccion_02_4_3.className="brazos3 ocultar";
+			seccion_02_4_4.className="brazos4 ocultar";
+			seccion_02_4_5.className="brazos5 ocultar";
 		seccion_02_5.className="ejPectorales ocultar";
+			instPec_1.className="instPec_1 ocultar";
+			instPec_2.className="instPec_2 ocultar";
+			instPec_3.className="instPec_3 ocultar";
+			seccion_02_5_1.className="pectorales1 ocultar";
+			seccion_02_5_2.className="pectorales2 ocultar";
+			seccion_02_5_3.className="pectorales3 ocultar";
 		seccion_02_6.className="ejGluteos ocultar";	
+			instGlu_1.className="instGlu_1 ocultar";
+			instGlu_2.className="instGlu_2 ocultar";
+			instGlu_3.className="instGlu_3 ocultar";
+			instGlu_4.className="instGlu_4 ocultar";
+			instGlu_5.className="instGlu_5 ocultar";
+			instGlu_6.className="instGlu_6 ocultar";
+			seccion_02_6_1.className="gluteos1 ocultar";
+			seccion_02_6_2.className="gluteos2 ocultar";
+			seccion_02_6_3.className="gluteos3 ocultar";
+			seccion_02_6_4.className="gluteos4 ocultar";
+			seccion_02_6_5.className="gluteos5 ocultar";
+			seccion_02_6_6.className="gluteos6 ocultar";
 	seccion_03.className="acerca ocultar";
 	seccion_04.className="ajuste ocultar";
+
 	btnAtrasAbdomen.className="atras ocultar";
+	btnAtrasCalentamiento.className="atras ocultar";
+	btnAtrasPiernas.className="atras ocultar";
+	btnAtrasBrazos.className="atras ocultar";
+	btnAtrasPectorales.className="atras ocultar";
+	btnAtrasGluteos.className="atras ocultar";
+
 	btnAtrasMinAbdomen.className="atras ocultar";
+	btnAtrasMinCalentamiento.className="atras ocultar";
+	btnAtrasMinPectorales.className="atras ocultar";
+	btnAtrasMinPiernas.className="atras ocultar";
+	btnAtrasMinBrazos.className="atras ocultar";
+	btnAtrasMinGluteos.className="atras ocultar";
+
 	avisoMano.className="chocala ocultar";
 	pausarEjercicio.className="menuPausa ocultar";
 	descansoEjercicio.className = "descanso ocultar";
+
 	btnPlay.className="botonPlay ocultar";
 	btnPausa.className="botonPausa ocultar";
+
+
+
 	clock.className="clock ocultar";
 	rueda.className="rueda ocultar";
 
+    //para el reiniciar abdomen
 	abdDinamic22.className = "abdD_2 ocultar";
 	abdDinamic33.className = "abdD_2 ocultar";
 	abdDinamic44.className = "abdD_2 ocultar";
+
+    //para el reiniciar piernas
+    pierDinamic1.className = "pierD ocultar";
+    pierDinamic2.className = "pierD ocultar";
+    pierDinamic3.className = "pierD ocultar";
+    pierDinamic5.className = "pierD ocultar";
+    pierDinamic6.className = "pierD ocultar";
+
+    // para el reiniciar brazos
+    braDinamic1.className = "braD ocultar";
+    braDinamic2.className = "braD ocultar";
+    braDinamic3.className = "braD ocultar";
+    braDinamic5.className = "braD ocultar"
+
+    //para el reiniciar pectorales
+    pecDinamic1.className = "pecD ocultar";
+    pecDinamic2.className = "pecD ocultar";
+    pecDinamic3.className = "pecD ocultar";
+
+    //para el reiniciar gluteos
+    gluDinamic1.className = "gluD ocultar";
+    gluDinamic2.className = "gluD ocultar";
+    gluDinamic3.className = "gluD ocultar";
+    gluDinamic4.className = "gluD ocultar";
+    gluDinamic5.className = "gluD ocultar";
+    gluDinamic6.className = "gluD ocultar";
+
+    //para reiniciar calentamiento
+    calDinamic1.className = "calD ocultar";
+    calDinamic2.className = "calD ocultar";
+    calDinamic3.className = "calD ocultar";
+    calDinamic4.className = "calD ocultar";
+    calDinamic8.className = "calD ocultar";
+    calDinamic9.className = "calD ocultar";
+    calDinamic10.className = "calD ocultar";
 }
 
 function principio()
@@ -273,6 +795,11 @@ function pausar(){
 	time_is_on = 0;
 	clearTimeout(controlTimer);
 	bar.stop();
+	audiopreparado50.pause();
+	audiopreparado25.pause();
+	audiopreparado30.pause();
+	audiopreparado20.pause();
+	audiopreparado15.pause();
 	
 	if(time_is_on==0){
 		ocultar();
@@ -283,35 +810,224 @@ function pausar(){
 function continuar(){
 
 	ocultar();
-	// principio();
+
+	switch(tipoAudio){
+
+		case 50:
+			audiopreparado50.play();
+			break;
+		case 25:
+			audiopreparado25.play();
+			break;
+		case 30:
+			audiopreparado30.play();
+			break;
+		case 20:
+			audiopreparado20.play();
+			break;
+		case 15:
+			audiopreparado15.play();
+			break;
+
+	}
+    if(cuerpo==1)
+    {
+
+		switch(contPausa){
+			case 1:
+				seccion_02_2_1.className="abdomen1 animated pulse";
+				break;
+	        case 2:
+		        seccion_02_2_2.className="abdomen2 animated pulse";
+		        abdDinamic22.className = "abdD_2 animaciones2 mostrar";
+
+	        	break;
+	        case 3:
+	        	seccion_02_2_3.className = "abdomen3 animted pulse";
+	        	abdDinamic33.className = "abd_2 animaciones2 mostrar";
+	        	break;
+	        case 4:
+	        	seccion_02_2_4.className = "abdomen4 animted pulse";
+	        	abdDinamic44.className = "abd_2 animaciones2 mostrar";
+	        	break;
+	        case 5:
+	        	seccion_02_2_5.className = "abdomen5 animted pulse";
+	        	abdStatic5.className = "abdS animaciones2 mostrar";
+	        	break;
+		}
+
+	}
+
+
+	if(cuerpo==2)
+    {
+
+		switch(contPausa){
+			case 1:
+				seccion_02_3_1.className="piernas1 animated pulse";
+				pierDinamic1.className="pierD  mostrar";
+				break;
+	        case 2:
+		        seccion_02_3_2.className="piernas2 animated pulse";
+		        pierDinamic2.className="pierD  mostrar";
+	        	break;
+	        case 3:
+	        	seccion_02_3_3.className = "piernas3  animted pulse";
+	        	pierDinamic3.className = "pierD mostrar";
+	        	break;
+	        case 4:
+	        	seccion_02_3_4.className = "piernas4 animted pulse";
+	        	pierStatic4.className = "pierS animaciones3 mostrar";
+	        	break;
+	        case 5:
+	        	seccion_02_3_5.className = "piernas5 animted pulse";
+	        	pierDinamic5.className = "pierD  mostrar";
+	        	break;
+	        case 6:
+	        	seccion_02_3_6.className = "piernas6 animted pulse";
+	        	pierDinamic6.className = "pierD  mostrar";
+	        	break;        	
+
+		}
+	}
+
+	if(cuerpo==3){
+
+		switch(contPausa){
+			case 1:
+				seccion_02_4_1.className="brazos1 animated pulse";
+				braDinamic1.className="braD  mostrar";
+				break;
+	        case 2:
+		        seccion_02_4_2.className="brazos2 animated pulse";
+		        braDinamic2.className="braD  mostrar";
+	        	break;
+	        case 3:
+	        	seccion_02_4_3.className = "brazos3 animated pulse";
+	        	braDinamic3.className = "braD mostrar";
+	        	break;
+	        case 4:
+	        	seccion_02_4_4.className = "brazos4 animated pulse";
+	        	braStatic4.className = "braS animaciones4 mostrar";
+	        	break;
+	        case 5:
+	        	seccion_02_4_5.className = "brazos5 animted pulse";
+	        	braDinamic5.className = "braD  mostrar";
+	        	break;    	
+		}
+
+	}
+
+	if(cuerpo==4){
+
+		switch(contPausa){
+			case 1:
+				seccion_02_5_1.className="pectorales1 animated pulse";
+				pecDinamic1.className="pecD  mostrar";
+				break;
+	        case 2:
+		        seccion_02_5_2.className="pectorales2 animated pulse";
+		        pecDinamic2.className="pecD  mostrar";
+	        	break;
+	        case 3:
+	        	seccion_02_5_3.className = "pectorales3 animated pulse";
+	        	pecDinamic3.className = "pecD mostrar";
+	        	break;	
+		}
+	}
+
+	if(cuerpo==5)
+    {
+
 	switch(contPausa){
 		case 1:
-			seccion_02_2_1.className="abdomen1 animated pulse";
+			seccion_02_6_1.className="gluteos1 animated pulse";
+			gluDinamic1.className="gluD mostrar";
 			break;
         case 2:
-	        seccion_02_2_2.className="abdomen2 animated pulse";
-	        abdDinamic22.className = "abdD_2 animaciones2 mostrar";
+	        seccion_02_6_2.className="gluteos2 animated pulse";
+	        gluDinamic2.className="gluD mostrar";
         	break;
         case 3:
-        	seccion_02_2_3.className = "abdomen3 animted pulse";
-        	abdDinamic33.className = "abd_2 animaciones2 mostrar";
+        	seccion_02_6_3.className = "gluteos3  animted pulse";
+        	gluDinamic3.className = "gluD mostrar";
         	break;
         case 4:
-        	seccion_02_2_4.className = "abdomen4 animted pulse";
-        	abdDinamic44.className = "abd_2 animaciones2 mostrar";
+        	seccion_02_6_4.className = "gluteos4 animted pulse";
+        	gluDinamic4.className = "gluD animaciones3 mostrar";
         	break;
         case 5:
-        	seccion_02_2_5.className = "abdomen5 animted pulse";
-        	abdStatic5.className = "abdS animaciones2 mostrar";
+        	seccion_02_6_5.className = "gluteos5 animted pulse";
+        	gluDinamic5.className = "gluD mostrar";
         	break;
+        case 6:
+        	seccion_02_6_6.className = "gluteos6 animted pulse";
+        	gluDinamic6.className = "gluD mostrar";
+        	break;        	
 
-	   }
+		}
+
+	}
+
+
+    if(cuerpo==6)
+          {
+
+	switch(contPausa){
+		case 1:
+			seccion_02_1_1.className="calentamiento1 animated pulse";
+			calDinamic1.className="calD mostrar";
+			break;
+        case 2:
+			seccion_02_1_2.className="calentamiento2 animated pulse";
+			calDinamic2.className="calD mostrar";
+        	break;
+        case 3:
+			seccion_02_1_3.className="calentamiento3 animated pulse";
+			calDinamic3.className="calD mostrar";
+        	break;
+        case 4:
+			seccion_02_1_4.className="calentamiento4 animated pulse";
+			calDinamic4.className="calD mostrar";
+        	break;
+        case 5:
+			seccion_02_1_5.className="calentamiento5 animated pulse";
+			calStatic5.className="calS animaciones7 mostrar";
+        	break;
+        case 6:
+			seccion_02_1_6.className="calentamiento6 animated pulse";
+			calStatic6.className="calS animaciones7 mostrar";
+        	break;
+        case 7:
+			seccion_02_1_7.className="calentamiento7 animated pulse";
+			calStatic7.className="calS animaciones7 mostrar";
+        	break;
+        case 8:
+			seccion_02_1_8.className="calentamiento8 animated pulse";
+			calDinamic8.className="calD mostrar";
+        	break;
+        case 9:
+			seccion_02_1_9.className="calentamiento9 animated pulse";
+			calDinamic9.className="calD mostrar";
+        	break; 
+        case 10:
+			seccion_02_1_10.className="calentamiento10 animated pulse";
+			calDinamic10.className="calD mostrar";
+        	break;          	         	        	         	        	
+
+		}
+
+	}	
+
+
+
+
 	clock.className="clock posicionBotones animated fadeInLeftBig";
 	rueda.className="rueda posicionBotones mostrar";
 
-	bar.animate(1.8, // {
- 	//duration: 17500
-	// }
+	bar.animate(1.0,  {
+ 	duration: 11000
+	 }
 	);
 
 	setTimeout(()=>{
@@ -328,9 +1044,16 @@ function reiniciar(){
 	
 	ocultar();
 	ejercicios();
+
 	bar.destroy();
 	clock.className="clock ocultar";
 	clearTimeout(controlTimer);
+
+	preparado20.currentTime = 0;
+	preparado30.currentTime = 0;
+	preparado25.currentTime = 0;
+	preparado50.currentTime = 0;
+	preparado15.currentTime = 0;
 	
 	abdDinamic1.className="abdD ocultar";
 	abdStatic1.className="abdS animaciones mostrar";
@@ -341,6 +1064,7 @@ function reiniciar(){
     animacion = 1;
     contPausa = 1;
     interfaceFinal = 0;
+    cuerpo = 1;
 
 
     //muyyy importante mostrar y ocultar todos tal y como esta arriba
@@ -348,7 +1072,47 @@ function reiniciar(){
     abdStatic3.className= "abdS animaciones2 mostrar";
     abdStatic4.className= "abdS animaciones2 mostrar";
     abdStatic5.className= "abdS animaciones2 mostrar";
-    totalTime = 1000;
+    //totalTime = 1000;
+
+    //mostrar estatico piernas
+    pierStatic1.className="pierS animaciones3 mostrar";
+    pierStatic2.className="pierS animaciones3 mostrar";
+    pierStatic3.className="pierS animaciones3 mostrar";
+    pierStatic4.className="pierS animaciones3 mostrar";
+    pierStatic5.className="pierS animaciones3 mostrar";
+    pierStatic6.className="pierS animaciones3 mostrar";
+
+     //mostrar estatico brazos
+    braStatic1.className="braS animaciones4 mostrar";
+    braStatic2.className="braS animaciones4 mostrar";
+    braStatic3.className="braS animaciones4 mostrar";
+    braStatic4.className="braS animaciones4 mostrar";
+    braStatic5.className="braS animaciones4 mostrar";
+
+    //mostrar estatico pectorales
+    pecStatic1.className="pecS animaciones5 mostrar";
+    pecStatic2.className="pecS animaciones5 mostrar";
+    pecStatic3.className="pecS animaciones5 mostrar";
+
+    //mostrar estatico pectorales
+    gluStatic1.className="gluS animaciones6 mostrar";
+    gluStatic2.className="gluS animaciones6 mostrar";
+    gluStatic3.className="gluS animaciones6 mostrar";
+    gluStatic4.className="gluS animaciones6 mostrar";
+    gluStatic5.className="gluS animaciones6 mostrar";
+    gluStatic6.className="gluS animaciones6 mostrar";
+    //mostrar estado calentamiento
+    calStatic1.className="calS animaciones7 mostrar";
+    calStatic2.className="calS animaciones7 mostrar";
+    calStatic3.className="calS animaciones7 mostrar";
+    calStatic4.className="calS animaciones7 mostrar";
+    calStatic5.className="calS animaciones7 mostrar";
+    calStatic6.className="calS animaciones7 mostrar";
+    calStatic7.className="calS animaciones7 mostrar";
+    calStatic8.className="calS animaciones7 mostrar";
+    calStatic9.className="calS animaciones7 mostrar";
+    calStatic10.className="calS animaciones7 mostrar";
+
 }
 
 function reiniciarInterfaces(){
@@ -385,9 +1149,72 @@ function ejercicios()
 
 function calentamientoMenu()
 {
+	ocultar();
 	btnAtrasAbdomen.className="atras animated fadeInRightBig";
    	seccion_02.className="inicio ocultar";
 	seccion_02_1.className="ejAbdomen animated pulse";
+}
+
+function calentamientoN1()
+{
+
+    ocultar();
+    cuerpo=6;
+	btnPlay.className="botonPlay animated fadeInLeftBig"
+	seccion_02_1_1.className="calentamiento1 animated pulse";
+
+}
+
+function inst1_cal() {
+	ocultar();
+	instCal_1.className="instCal_1 animated pulse";
+	btnAtrasMinCalentamiento.className="atras animated fadeInRightBig";
+}
+
+function inst2_cal() {
+	ocultar();
+	instCal_2.className="instCal_2 animated pulse";
+	btnAtrasMinCalentamiento.className="atras animated fadeInRightBig";
+}
+function inst3_cal() {
+	ocultar();
+	instCal_3.className="instCal_3 animated pulse";
+	btnAtrasMinCalentamiento.className="atras animated fadeInRightBig";
+}
+function inst4_cal() {
+	ocultar();
+	instCal_4.className="instCal_4 animated pulse";
+	btnAtrasMinCalentamiento.className="atras animated fadeInRightBig";	
+}
+function inst5_cal() {
+	ocultar();
+	instCal_5.className="instCal_5 animated pulse";
+	btnAtrasMinCalentamiento.className="atras animated fadeInRightBig";
+}
+function inst6_cal() {
+	ocultar();
+	instCal_6.className="instCal_6 animated pulse";
+	btnAtrasMinCalentamiento.className="atras animated fadeInRightBig";
+}
+function inst7_cal() {
+	ocultar();
+	instCal_7.className="instCal_7 animated pulse";
+	btnAtrasMinCalentamiento.className="atras animated fadeInRightBig";
+}
+function inst8_cal() {
+	ocultar();
+	instCal_8.className="instCal_8 animated pulse";
+	btnAtrasMinCalentamiento.className="atras animated fadeInRightBig";
+}
+function inst9_cal() {
+	ocultar();
+	instCal_9.className="instCal_9 animated pulse";
+	btnAtrasMinCalentamiento.className="atras animated fadeInRightBig";
+}
+function inst10_cal() {
+	ocultar();
+	instCal_10.className="instCal_10 animated pulse";
+	btnAtrasMinCalentamiento.className="atras animated fadeInRightBig";	
 }
 
 function abdomenMenu()
@@ -437,45 +1264,252 @@ function inst5_abd() {
 	btnAtrasMinAbdomen.className="atras animated fadeInRightBig";
 }
 
+
 function piernasMenu()
 {   
-	btnAtrasAbdomen.className="atras animated fadeInRightBig";
+	ocultar();
+	btnAtrasPiernas.className="atras animated fadeInRightBig";
    	seccion_02.className="inicio ocultar";
 	seccion_02_3.className="ejAbdomen animated pulse";
 }
 
+function piernasN1()
+{   
+	ocultar();
+    cuerpo=2;
+	btnPlay.className="botonPlay animated fadeInLeftBig"
+	seccion_02_3_1.className="piernas1 animated pulse";
+}
+function inst1_pier() {
+	ocultar();
+	instPier_1.className="instPier_1 animated pulse";
+	btnAtrasMinPiernas.className="atras animated fadeInRightBig";
+}
+function inst2_pier() {
+	ocultar();
+	instPier_2.className="instPier_2 animated pulse";
+	btnAtrasMinPiernas.className="atras animated fadeInRightBig";
+}
+function inst3_pier() {
+	ocultar();
+	instPier_3.className="instPier_3 animated pulse";
+	btnAtrasMinPiernas.className="atras animated fadeInRightBig";
+}
+function inst4_pier() {
+	ocultar();
+	instPier_4.className="instPier_4 animated pulse";
+	btnAtrasMinPiernas.className="atras animated fadeInRightBig";
+}
+function inst5_pier() {
+	ocultar();
+	instPier_5.className="instPier_5 animated pulse";
+	btnAtrasMinPiernas.className="atras animated fadeInRightBig";
+}
+function inst6_pier() {
+	ocultar();
+	instPier_6.className="instPier_6 animated pulse";
+	btnAtrasMinPiernas.className="atras animated fadeInRightBig";
+}
+
+
 function brazosMenu()
 {   
+	ocultar();
 	btnAtrasAbdomen.className="atras animated fadeInRightBig";
    	seccion_02.className="inicio ocultar";
 	seccion_02_4.className="ejAbdomen animated pulse";
 }
 
+function brazosN1()
+{   
+	ocultar();
+    cuerpo=3;
+	btnPlay.className="botonPlay animated fadeInLeftBig"
+	seccion_02_4_1.className="brazos1 animated pulse";
+}
+
+function inst1_bra() {
+	ocultar();
+	instBra_1.className="instBra_1 animated pulse";
+	btnAtrasMinBrazos.className="atras animated fadeInRightBig";
+}
+function inst2_bra() {
+	ocultar();
+	instBra_2.className="instBra_2 animated pulse";
+	btnAtrasMinBrazos.className="atras animated fadeInRightBig";
+}
+function inst3_bra() {
+	ocultar();
+	instBra_3.className="instBra_3 animated pulse";
+	btnAtrasMinBrazos.className="atras animated fadeInRightBig";
+}
+function inst4_bra() {
+	ocultar();
+	instBra_4.className="instBra_4 animated pulse";
+	btnAtrasMinBrazos.className="atras animated fadeInRightBig";
+}
+function inst5_bra() {
+	ocultar();
+	instBra_5.className="instBra_5 animated pulse";
+	btnAtrasMinBrazos.className="atras animated fadeInRightBig";
+}
+
 function pectoralesMenu()
 {   
+	ocultar();
 	btnAtrasAbdomen.className="atras animated fadeInRightBig";
    	seccion_02.className="inicio ocultar";
 	seccion_02_5.className="ejAbdomen animated pulse";
 }
 
+function pectoralesN1()
+{   
+	ocultar();
+    cuerpo=4;
+	btnPlay.className="botonPlay animated fadeInLeftBig"
+	seccion_02_5_1.className="pectorales1 animated pulse";
+}
+
+function inst1_pec() {
+	ocultar();
+	instPec_1.className="instPec_1 animated pulse";
+	btnAtrasMinPectorales.className="atras animated fadeInRightBig";
+}
+function inst2_pec() {
+	ocultar();
+	instPec_2.className="instPec_2 animated pulse";
+	btnAtrasMinPectorales.className="atras animated fadeInRightBig";
+}
+function inst3_pec() {
+	ocultar();
+	instPec_3.className="instPec_3 animated pulse";
+	btnAtrasMinPectorales.className="atras animated fadeInRightBig";
+}
+
 function gluteosMenu()
 {   
+	ocultar();
 	btnAtrasAbdomen.className="atras animated fadeInRightBig";
    	seccion_02.className="inicio ocultar";
 	seccion_02_6.className="ejAbdomen animated pulse";
 }
 
+function gluteosN1()
+{   
+	ocultar();
+    cuerpo=5;
+	btnPlay.className="botonPlay animated fadeInLeftBig"
+	seccion_02_6_1.className="gluteos1 animated pulse";
+}
+
+function inst1_glu() {
+	ocultar();
+	instGlu_1.className="instGlu_1 animated pulse";
+	btnAtrasMinGluteos.className="atras animated fadeInRightBig";
+}
+function inst2_glu() {
+	ocultar();
+	instGlu_2.className="instGlu_2 animated pulse";
+	btnAtrasMinGluteos.className="atras animated fadeInRightBig";
+}
+function inst3_glu() {
+	ocultar();
+	instGlu_3.className="instGlu_3 animated pulse";
+	btnAtrasMinGluteos.className="atras animated fadeInRightBig";
+}
+function inst4_glu() {
+	ocultar();
+	instGlu_4.className="instGlu_4 animated pulse";
+	btnAtrasMinGluteos.className="atras animated fadeInRightBig";
+}
+function inst5_glu() {
+	ocultar();
+	instGlu_5.className="instGlu_5 animated pulse";
+	btnAtrasMinGluteos.className="atras animated fadeInRightBig";
+}
+function inst6_glu() {
+	ocultar();
+	instGlu_6.className="instGlu_6 animated pulse";
+	btnAtrasMinGluteos.className="atras animated fadeInRightBig";
+}
+
+
 function circular(){
-	bar = new ProgressBar.Circle(rueda, {
-	strokeWidth: 6,
-	easing: 'easeInOut',
-	duration: 17500,
-	color: '#f3ff00',
-	trailColor: '#eee',
-	trailWidth: 1,
-	svgStyle: null
-	});
-    bar.animate(1.0);
+	switch(cuerpo){
+		case 1:
+			bar = new ProgressBar.Circle(rueda, {
+			strokeWidth: 6,
+			easing: 'easeInOut',
+			duration: 55000,
+			color: '#f3ff00',
+			trailColor: '#eee',
+			trailWidth: 1,
+			svgStyle: null
+			});
+		    bar.animate(1.0);
+		    break;
+	    case 2:
+		    bar = new ProgressBar.Circle(rueda, {
+			strokeWidth: 6,
+			easing: 'easeInOut',
+			duration: 33000,
+			color: '#f3ff00',
+			trailColor: '#eee',
+			trailWidth: 1,
+			svgStyle: null
+			});
+		    bar.animate(1.0);
+		    break;
+		case 3:
+		 	bar = new ProgressBar.Circle(rueda, {
+			strokeWidth: 6,
+			easing: 'easeInOut',
+			duration: 33000,
+			color: '#f3ff00',
+			trailColor: '#eee',
+			trailWidth: 1,
+			svgStyle: null
+			});
+		    bar.animate(1.0);
+		    break;
+		case 4:
+		 	bar = new ProgressBar.Circle(rueda, {
+			strokeWidth: 6,
+			easing: 'easeInOut',
+			duration: 17000,
+			color: '#f3ff00',
+			trailColor: '#eee',
+			trailWidth: 1,
+			svgStyle: null
+			});
+		    bar.animate(1.0);
+		    break;
+		case 5:
+		 	bar = new ProgressBar.Circle(rueda, {
+			strokeWidth: 6,
+			easing: 'easeInOut',
+			duration: 27000,
+			color: '#f3ff00',
+			trailColor: '#eee',
+			trailWidth: 1,
+			svgStyle: null
+			});
+		    bar.animate(1.0);
+		    break;
+		case 6:
+		 	bar = new ProgressBar.Circle(rueda, {
+			strokeWidth: 6,
+			easing: 'easeInOut',
+			duration: 17000,
+			color: '#f3ff00',
+			trailColor: '#eee',
+			trailWidth: 1,
+			svgStyle: null
+			});
+		    bar.animate(1.0);
+		    break;			    		
+
+    }
 }
 
 function preparado(){
@@ -483,29 +1517,191 @@ function preparado(){
 	premisas();
 
     console.log(animacion);
+    if(cuerpo==1){
+	    switch(animacion){
 
-    switch(animacion){
+	    	case 1:
+	    		setTimeout(abdom1,7000);
+	    		break;
+	    	case 2:
+	    	    setTimeout(cabiarA50,6000);
+	    		setTimeout(abdom2,7000);
+	    		break;
+	    	case 3:
+	    		setTimeout(cabiarA25,6000);
+	    		setTimeout(abdom3,7000);
+	    		break;
+	    	case 4:
+	    		setTimeout(cabiarA25,6000);
+	    		setTimeout(abdom4,7000);
+	    		break;
+	    	case 5:
+	    		setTimeout(cabiarA50,6000);
+	    		setTimeout(abdom5,7000);
+	    		break;
+	    }
 
-    	case 1:
-    		setTimeout(abdom1,7000);
-    		break;
-    	case 2:
-    	    setTimeout(cabiarA50,6000);
-    		setTimeout(abdom2,7000);
-    		break;
-    	case 3:
-    		setTimeout(cabiarA25,6000);
-    		setTimeout(abdom3,7000);
-    		break;
-    	case 4:
-    		setTimeout(cabiarA50,6000);
-    		setTimeout(abdom4,7000);
-    		break;
-    	case 5:
-    		setTimeout(cabiarA50,6000);
-    		setTimeout(abdom5,7000);
-    		break;
     }
+
+    if(cuerpo==2)
+    {
+     
+     	switch(animacion){
+
+	    	case 1:
+	    		setTimeout(cabiarA30,6000);
+	    		setTimeout(pier1,7000);
+	    		break;
+	    	case 2:
+	    	    setTimeout(cabiarA30,6000);
+	    		setTimeout(pier2,7000);
+	    		break;
+	    	case 3:
+	    		setTimeout(cabiarA20,6000);
+	    		setTimeout(pier3,7000);
+	    		break;
+	    	case 4:
+	    		setTimeout(cabiarA30,6000);
+	    		setTimeout(pier4,7000);
+	    		break;
+	    	case 5:
+	    		setTimeout(cabiarA30,6000);
+	    		setTimeout(pier5,7000);
+	    		break;
+	    	case 6:
+	    		setTimeout(cabiarA20,6000);
+	    		setTimeout(pier6,7000);
+	    		break;	
+  		}
+
+    }
+
+    if(cuerpo==3){
+	    switch(animacion){
+
+	    	case 1:
+	    		setTimeout(bra1,7000);
+	    		break;
+	    	case 2:
+	    	    setTimeout(cabiarA30,6000);
+	    		setTimeout(bra2,7000);
+	    		break;
+	    	case 3:
+	    		setTimeout(cabiarA15,6000);
+	    		setTimeout(bra3,7000);
+	    		break;
+	    	case 4:
+	    		setTimeout(cabiarA30,6000);
+	    		setTimeout(bra4,7000);
+	    		break;
+	    	case 5:
+	    		setTimeout(cabiarA30,6000);
+	    		setTimeout(bra5,7000);
+	    		break;
+	    }
+
+    }
+
+    if(cuerpo==4){
+	    switch(animacion){
+
+	    	case 1:
+	    		setTimeout(pec1,7000);
+	    		break;
+	    	case 2:
+	    	    setTimeout(cabiarA15,6000);
+	    		setTimeout(pec2,7000);
+	    		break;
+	    	case 3:
+	    		setTimeout(cabiarA15,6000);
+	    		setTimeout(pec3,7000);
+	    		break;
+	    }
+    }
+
+    if(cuerpo==5)
+    {
+     
+     	switch(animacion){
+
+	    	case 1:
+	    		setTimeout(cabiarA25,6000);
+	    		setTimeout(glu1,7000);
+	    		break;
+	    	case 2:
+	    	    setTimeout(cabiarA25,6000);
+	    		setTimeout(glu2,7000);
+	    		break;
+	    	case 3:
+	    		setTimeout(cabiarA25,6000);
+	    		setTimeout(glu3,7000);
+	    		break;
+	    	case 4:
+	    		setTimeout(cabiarA25,6000);
+	    		setTimeout(glu4,7000);
+	    		break;
+	    	case 5:
+	    		setTimeout(cabiarA25,6000);
+	    		setTimeout(glu5,7000);
+	    		break;
+	    	case 6:
+	    		setTimeout(cabiarA20,6000);
+	    		setTimeout(glu6,7000);
+	    		break;	
+  		}
+
+    }
+
+if(cuerpo==6)
+    {
+     
+     	switch(animacion){
+
+	    	case 1:
+	    		setTimeout(cabiarA15,6000);
+	    		setTimeout(cal1,7000);
+	    		break;
+	    	case 2:
+	    	    setTimeout(cabiarA15,6000);
+	    		setTimeout(cal2,7000);
+	    		break;
+	    	case 3:
+	    		setTimeout(cabiarA15,6000);
+	    		setTimeout(cal3,7000);
+	    		break;
+	    	case 4:
+	    		setTimeout(cabiarA15,6000);
+	    		setTimeout(cal4,7000);
+	    		break;
+	    	case 5:
+	    		setTimeout(cabiarA15,6000);
+	    		setTimeout(cal5,7000);
+	    		break;
+	    	case 6:
+	    		setTimeout(cabiarA15,6000);
+	    		setTimeout(cal6,7000);
+	    		break;
+	    	case 7:
+	    		setTimeout(cabiarA15,6000);
+	    		setTimeout(cal7,7000);
+	    		break;
+	    	case 8:
+	    		setTimeout(cabiarA20,6000);
+	    		setTimeout(cal8,7000);
+	    		break;
+	    	case 9:
+	    		setTimeout(cabiarA20,6000);
+	    		setTimeout(cal9,7000);
+	    		break;
+	    	case 10:
+	    		setTimeout(cabiarA20,6000);
+	    		setTimeout(cal10,7000);
+	    		break;
+
+
+  		}
+
+    }    
 
     animacion++;
 
@@ -520,13 +1716,122 @@ function preparado(){
 	},7000); 
 } 
 
+
+
 function premisas(){
-	x.play(); 
-	btnPlay.className="botonPlay ocultar";
-	premisa.className="premisa animated fadeInRightBig";
+
+	if(cuerpo==1){
+		switch(tipoAudio){
+
+			case 50:
+				audiopreparado50.autoplay = true;
+				audiopreparado50.play();
+				break;
+			case 25:
+				audiopreparado25.autoplay = true;
+				audiopreparado25.play();
+				break;
+		}
+	}
+	if(cuerpo==2){
+
+		if (pantalla==1){
+			tipoAudio=30;
+		}
+
+		switch(tipoAudio){
+
+			case 30:
+				audiopreparado30.autoplay = true;
+				audiopreparado30.play();
+				break;
+			case 20:
+				audiopreparado20.autoplay = true;
+				audiopreparado20.play();
+				break;
+		}
+	}
+
+	if(cuerpo==3){
+
+		if (pantalla==1){
+			tipoAudio=30;
+		}
+
+		switch(tipoAudio){
+
+			case 30:
+				audiopreparado30.autoplay = true;
+				audiopreparado30.play();
+				break;
+			case 15:
+				audiopreparado15.autoplay = true;
+				audiopreparado15.play();
+				break;
+		}
+	}
+
+	if(cuerpo==4){
+
+		if (pantalla==1){
+			tipoAudio=15;
+		}
+		if (tipoAudio==15){
+			audiopreparado15.autoplay = true;
+			audiopreparado15.play();
+		}
+	}
+
+	if(cuerpo==5){
+
+		if (pantalla==1){
+			tipoAudio=25;
+		}
+
+		switch(tipoAudio){
+
+			case 25:
+				audiopreparado25.autoplay = true;
+				audiopreparado25.play();
+				break;
+			case 20:
+				audiopreparado20.autoplay = true;
+				audiopreparado20.play();
+				break;
+		}
+	}
+
+	if(cuerpo==6){
+
+		if (pantalla==1){
+			tipoAudio=15;
+		}
+
+		switch(tipoAudio){
+
+			case 15:
+				audiopreparado15.autoplay = true;
+				audiopreparado15.play();
+				break;
+			case 20:
+				audiopreparado20.autoplay = true;
+				audiopreparado20.play();
+				break;
+		}
+	}
+
 	
-    document.getElementById('premisa').style.left ="36px"; 
-	document.getElementById('premisa').innerHTML = "¿PREPARADO?" , document.getElementById('premisa').classList.add("animated" , "fadeInRightBig");                       
+
+
+    btnPlay.className="botonPlay ocultar";
+
+   
+	
+	premisa.className="premisa mostrar";
+	
+	 document.getElementById('premisa').style.left ="70px"; 
+    // document.getElementById('premisa').style.left ="36px"; 
+	document.getElementById('premisa').innerHTML = "¿PREPARADO?" , document.getElementById('premisa').classList.add("mostrar");                       
     setTimeout(function(){document.getElementById('premisa').innerHTML = "¿LISTO?" , document.getElementById('premisa').style.left ="99px" },3000);
     setTimeout(function(){document.getElementById('premisa').innerHTML = "¡YA!" , document.getElementById('premisa').style.left ="143px"},5000); 
     setTimeout(function(){document.getElementById('premisa').innerHTML = "" },7000);
@@ -537,15 +1842,16 @@ function timer() {
     document.getElementById('clock').innerHTML = totalTime;		  
     // clock.className="clock posicionBotones";
 	if(totalTime==0){
-		//document.getElementById('clock').style.left ="143px";
-		//totalTime=25; //clave para el contador
-		//ocultar();
-		// seccion_02_2_1.className="abdomen1 ocultar";
+
 		btnPausa.className="botonPausa ocultar";
 		ejercicio++;
 
 		if(ejercicio<3){
-			descansar();
+			
+			audioSilbido.autoplay = true;
+			audioSilbido.play();
+
+			setTimeout(descansar,1000);
 		}
 	} 
 	else{
@@ -566,8 +1872,10 @@ function descansar(){
 
 	 if (interfaceFinal==2) {
 		avisoMano.className="chocala animated pulse";
+		manoChocar.autoplay = true;
+		manoChocar.play();
 	}
-	   else{
+	else{
 		descansoEjercicio.className="descanso animated pulse";
 		barDescanso = new ProgressBar.Line(descansoEjercicio, {
 		  strokeWidth: 4,
@@ -582,46 +1890,304 @@ function descansar(){
 		pantalla++;
 		contPausa++;
 		setTimeout(pasarAbdomen,15000);
-	    }
+		audioDescansar.autoplay = true;
+		audioDescansar.play();
+	}
 	
 }
 
 function pasarAbdomen()
 {  
 	ocultar();
-	switch(pantalla){
+	if(cuerpo==1)
+	{
+		switch(pantalla){
 
-		case 2:
-		    totalTime=1000000;
-			seccion_02_2_2.className="abdomen2 animated pulse";
-			btnPlay.className="botonPlay animated fadeInLeftBig";
-			ejercicio=1;
-			reiniciarInterfaces();
-			break;
-		case 3:
-		    totalTime=1000000;
-			seccion_02_2_3.className="abdomen3 animated pulse";
-			btnPlay.className="botonPlay animated fadeInLeftBig";
-			ejercicio=1;
-			reiniciarInterfaces();
-		    break;
-		case 4:
-		    totalTime=1000000;
-			seccion_02_2_4.className="abdomen4 animated pulse";
-			btnPlay.className="botonPlay animated fadeInLeftBig";
-			ejercicio=1;
-			reiniciarInterfaces();
-		    break;
-		case 5:
-		    totalTime=1000000;
-			seccion_02_2_5.className="abdomen5 animated pulse";
-			btnPlay.className="botonPlay animated fadeInLeftBig";
-			ejercicio=1;
-			interfaceFinal=2;
-			reiniciarInterfaces();
-		    break;
+			case 2:
+			    totalTime=1000000;
+			    tipoAudio=50;
+				seccion_02_2_2.className="abdomen2 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+				break;
+			case 3:
+			    totalTime=1000000;
+			    tipoAudio=25;
+				seccion_02_2_3.className="abdomen3 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 4:
+			    totalTime=1000000;
+			    tipoAudio=25;
+				seccion_02_2_4.className="abdomen4 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 5:
+			    totalTime=1000000;
+			    tipoAudio=50;
+				seccion_02_2_5.className="abdomen5 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				interfaceFinal=2;
+				reiniciarInterfaces();
+			    break;
 
-	}
+		}
+   	}
+
+
+   	if(cuerpo==2)
+	{
+		switch(pantalla){
+
+			case 2:
+			    totalTime=1000000;
+			    tipoAudio=30;//mirar los switch de los audios
+				seccion_02_3_2.className="piernas2 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+				break;
+			case 3:
+			    totalTime=1000000;
+			    tipoAudio=20;
+				seccion_02_3_3.className="piernas3 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 4:
+			    totalTime=1000000;
+			    tipoAudio=30;
+				seccion_02_3_4.className="piernas4 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 5:
+			    totalTime=1000000;
+			    tipoAudio=30;
+				seccion_02_3_5.className="piernas5 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				//interfaceFinal=2;
+				reiniciarInterfaces();
+			    break;
+			case 6:
+			    totalTime=1000000;
+			    tipoAudio=20;
+				seccion_02_3_6.className="piernas6 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				interfaceFinal=2;
+				reiniciarInterfaces();
+			    break;
+	    
+
+		}
+   } 	
+
+   if(cuerpo==3)
+	{
+		switch(pantalla){
+
+			case 2:
+			    totalTime=1000000;
+			    tipoAudio=30;
+				seccion_02_4_2.className="brazos2 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+				break;
+			case 3:
+			    totalTime=1000000;
+			    tipoAudio=15;
+				seccion_02_4_3.className="brazos3 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 4:
+			    totalTime=1000000;
+			    tipoAudio=30;
+				seccion_02_4_4.className="brazos4 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 5:
+			    totalTime=1000000;
+			    tipoAudio=30;
+				seccion_02_4_5.className="brazos5 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				interfaceFinal=2;
+				reiniciarInterfaces();
+			    break;
+
+		}
+   	}
+
+   	if(cuerpo==4)
+	{
+		switch(pantalla){
+
+			case 2:
+			    totalTime=1000000;
+			    tipoAudio=15;
+				seccion_02_5_2.className="pectorales2 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+				break;
+			case 3:
+			    totalTime=1000000;
+			    tipoAudio=15;
+				seccion_02_5_3.className="pectorales3 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				interfaceFinal=2;
+				reiniciarInterfaces();
+			    break;
+		}
+   	}
+
+   	if(cuerpo==5)
+	{
+		switch(pantalla){
+
+			case 2:
+			    totalTime=1000000;
+			    tipoAudio=25;//mirar los switch de los audios
+				seccion_02_6_2.className="gluteos2 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+				break;
+			case 3:
+			    totalTime=1000000;
+			    tipoAudio=25;
+				seccion_02_6_3.className="gluteos3 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 4:
+			    totalTime=1000000;
+			    tipoAudio=25;
+				seccion_02_6_4.className="gluteos4 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 5:
+			    totalTime=1000000;
+			    tipoAudio=25;
+				seccion_02_6_5.className="gluteos5 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				//interfaceFinal=2;
+				reiniciarInterfaces();
+			    break;
+			case 6:
+			    totalTime=1000000;
+			    tipoAudio=20;
+				seccion_02_6_6.className="gluteos6 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				interfaceFinal=2;
+				reiniciarInterfaces();
+			    break;
+		}
+   }
+
+    if(cuerpo==6)
+	   {
+		switch(pantalla){
+
+			case 2:
+			    totalTime=1000000;
+			    tipoAudio=15;//mirar los switch de los audios
+				seccion_02_1_2.className="calentamiento2 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+				break;
+			case 3:
+			    totalTime=1000000;
+			    tipoAudio=15;//mirar los switch de los audios
+				seccion_02_1_3.className="calentamiento3 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 4:
+			    totalTime=1000000;
+			    tipoAudio=15;//mirar los switch de los audios
+				seccion_02_1_4.className="calentamiento4 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 5:
+			    totalTime=1000000;
+			    tipoAudio=15;//mirar los switch de los audios
+				seccion_02_1_5.className="calentamiento5 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 6:
+			    totalTime=1000000;
+			    tipoAudio=15;//mirar los switch de los audios
+				seccion_02_1_6.className="calentamiento6 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 7:
+			    totalTime=1000000;
+			    tipoAudio=15;//mirar los switch de los audios
+				seccion_02_1_7.className="calentamiento7 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 8:
+			    totalTime=1000000;
+			    tipoAudio=20;//mirar los switch de los audios
+				seccion_02_1_8.className="calentamiento8 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;
+			case 9:
+			    totalTime=1000000;
+			    tipoAudio=20;//mirar los switch de los audios
+				seccion_02_1_9.className="calentamiento9 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				reiniciarInterfaces();
+			    break;			    			    
+			case 10:
+			    totalTime=1000000;
+			    tipoAudio=20;//mirar los switch de los audios
+				seccion_02_1_10.className="calentamiento10 animated pulse";
+				btnPlay.className="botonPlay animated fadeInLeftBig";
+				ejercicio=1;
+				interfaceFinal=2;
+				reiniciarInterfaces();
+			    break;
+
+		}
+   }
+
+
 
 }
 
@@ -651,19 +2217,32 @@ function playM(){
 	
 }
 function quitarVoz(){
-offV.className="offVoz ocultar";
-onV.className="onVoz animated fadeIn";	
-x.muted = true;
+	offV.className="offVoz ocultar";
+	onV.className="onVoz animated fadeIn";	
+	manoChocar.muted = true;
+	audioDescansar.muted = true;
+	audiopreparado50.muted = true;
+	audiopreparado25.muted = true;
+	audiopreparado30.muted = true;
+	audiopreparado20.muted = true;
+	audiopreparado15.muted = true;
 }
+
 function ponerVoz(){
-onV.className="onVoz ocultar";	
-offV.className="offVoz animated fadeIn";
-x.muted = false;
+	onV.className="onVoz ocultar";	
+	offV.className="offVoz animated fadeIn";
+	manoChocar.muted = false;
+	audioDescansar.muted = false;
+	audiopreparado50.muted = false;
+	audiopreparado25.muted = false;	
+	audiopreparado30.muted = false;
+	audiopreparado20.muted = false;
+	audiopreparado15.muted = false;
 }
 
 function abdom1()
-{
-	totalTime = 5;
+{  
+	totalTime = 50;
 	rueda.className="rueda posicionBotones mostrar";
 	clock.className="clock posicionBotones ocultar";
 	clock.className="clock posicionBotones mostrar";
@@ -682,7 +2261,7 @@ function abdom2(){
 
 function abdom3(){
 	circular();
-	bar.animate(1.1,{duration: 28000});
+	bar.animate(1.0,{duration: 27000});
 	rueda.className="rueda posicionBotones mostrar";
 	clock.className="clock posicionBotones mostrar";
 	abdStatic3.className= "abdS ocultar";
@@ -691,25 +2270,335 @@ function abdom3(){
 
 function abdom4(){
 	circular();
-	bar.animate(1.1,{duration: 28000});
+	bar.animate(1.0,{duration: 27000});
 	rueda.className="rueda posicionBotones mostrar";
 	clock.className="clock posicionBotones mostrar";
 	abdStatic4.className= "abdS ocultar";
 	abdDinamic44.className = "abdD_2 animaciones2 mostrar";
 }
 
+
+
 function abdom5(){
 	circular();
-	bar.animate(1.1,{duration: 28000});
+	bar.animate(1.0,{duration: 55000});
 	rueda.className="rueda posicionBotones mostrar";
 	clock.className="clock posicionBotones mostrar";
 }
+
+
+function pier1()
+{
+	totalTime = 30;
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	pierStatic1.className="pierS ocultar";	
+	pierDinamic1.className="pierD  mostrar";	
+}
+
+function pier2()
+{  
+	circular();
+	bar.animate(1.0,{duration: 33000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	pierStatic2.className="pierS ocultar";	
+	pierDinamic2.className="pierD  mostrar";	
+}
+
+function pier3()
+{  
+	circular();
+	bar.animate(1.0,{duration: 23000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	pierStatic3.className="pierS ocultar";	
+	pierDinamic3.className="pierD  mostrar";	
+}
+
+function pier4()
+{  
+	circular();
+	bar.animate(1.0,{duration: 33000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	pierStatic4.className="pierS animaciones3 mostrar";		
+}
+
+function pier5()
+{  
+	circular();
+	bar.animate(1.0,{duration: 33000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	pierStatic5.className="pierS ocultar";	
+	pierDinamic5.className="pierD  mostrar";	
+}
+
+function pier6()
+{  
+	circular();
+	bar.animate(1.0,{duration: 23000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	pierStatic6.className="pierS ocultar";	
+	pierDinamic6.className="pierD  mostrar";	
+}
+
+function bra1()
+{  
+	totalTime = 30;
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	braStatic1.className="braS ocultar";	
+	braDinamic1.className="braD  mostrar";	
+}
+
+function bra2()
+{  
+	circular();
+	bar.animate(1.0,{duration: 33000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	braStatic2.className="braS ocultar";	
+	braDinamic2.className="braD  mostrar";	
+}
+
+function bra3()
+{  
+	circular();
+	bar.animate(1.0,{duration: 17000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	braStatic3.className="braS ocultar";	
+	braDinamic3.className="braD  mostrar";	
+}
+
+function bra4()
+{  
+	circular();
+	bar.animate(1.0,{duration: 33000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	braStatic4.className="braS animaciones4 mostrar";
+}
+
+function bra5()
+{  
+	circular();
+	bar.animate(1.0,{duration: 33000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	braStatic5.className="braS ocultar";
+	braDinamic5.className="braD  mostrar";	
+}
+
+function pec1()
+{	
+	totalTime=15;  
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	pecStatic1.className="pecS ocultar";
+	pecDinamic1.className="pecD  mostrar";	
+}
+
+function pec2()
+{  
+	circular();
+	bar.animate(1.0,{duration: 17000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	pecStatic2.className="pecS ocultar";
+	pecDinamic2.className="pecD  mostrar";	
+}
+
+function pec3()
+{  
+	circular();
+	bar.animate(1.0,{duration: 17000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	pecStatic3.className="pecS ocultar";
+	pecDinamic3.className="pecD  mostrar";	
+}
+
+function glu1()
+{  
+	totalTime=25;
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	gluStatic1.className="gluS ocultar";
+	gluDinamic1.className="gluD  mostrar";	
+}
+
+function glu2()
+{  
+	circular();
+	bar.animate(1.0,{duration: 27000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	gluStatic2.className="gluS ocultar";
+	gluDinamic2.className="gluD  mostrar";		
+}
+
+function glu3()
+{  
+	circular();
+	bar.animate(1.0,{duration: 27000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	gluStatic3.className="gluS ocultar";
+	gluDinamic3.className="gluD  mostrar";		
+}
+
+function glu4()
+{  
+	circular();
+	bar.animate(1.0,{duration: 27000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	gluStatic4.className="gluS ocultar";
+	gluDinamic4.className="gluD  mostrar";		
+}
+
+function glu5()
+{  
+	circular();
+	bar.animate(1.0,{duration: 27000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	gluStatic5.className="gluS ocultar";
+	gluDinamic5.className="gluD  mostrar";		
+}
+
+function glu6()
+{  
+	circular();
+	bar.animate(1.0,{duration: 22000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	gluStatic6.className="gluS ocultar";
+	gluDinamic6.className="gluD  mostrar";	
+}
+
+function cal1()
+{  
+	totalTime=15;
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic1.className="calS ocultar";
+	calDinamic1.className="calD  mostrar";	
+}
+
+function cal2()
+{  
+	circular();
+	bar.animate(1.0,{duration: 17000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic2.className="calS ocultar";
+	calDinamic2.className="calD  mostrar";	
+}
+
+function cal3()
+{  
+	circular();
+	bar.animate(1.0,{duration: 17000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic3.className="calS ocultar";
+	calDinamic3.className="calD  mostrar";	
+}
+
+function cal4()
+{   totalTime=15;
+	circular();
+	bar.animate(1.0,{duration: 17000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic4.className="calS ocultar";
+	calDinamic4.className="calD  mostrar";	
+}
+
+function cal5()
+{  
+	circular();
+	bar.animate(1.0,{duration: 17000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic5.className="calS animaciones7 mostrar";	
+}
+
+function cal6()
+{  
+	circular();
+	bar.animate(1.0,{duration: 17000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic6.className="calS animaciones7 mostrar";	
+}
+
+function cal7()
+{  
+	circular();
+	bar.animate(1.0,{duration: 17000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic7.className="calS animaciones7 mostrar";	
+}
+
+function cal8()
+{  
+	circular();
+	bar.animate(1.0,{duration: 22000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic8.className="calS ocultar";
+	calDinamic8.className="calD  mostrar";	
+}
+
+function cal9()
+{  
+	circular();
+	bar.animate(1.0,{duration: 22000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic9.className="calS ocultar";
+	calDinamic9.className="calD  mostrar";	
+}
+
+function cal10()
+{  
+	circular();
+	bar.animate(1.0,{duration: 22000});
+	rueda.className="rueda posicionBotones mostrar";
+	clock.className="clock posicionBotones mostrar";
+	calStatic10.className="calS ocultar";
+	calDinamic10.className="calD  mostrar";	
+}
+
+
+
+
+
 function cabiarA50(){
-	totalTime=5;
+	totalTime=50;
 }
 
 function cabiarA25(){
 	totalTime=25;
+}
+
+function cabiarA20(){
+	totalTime=20;
+}
+
+function cabiarA30(){
+	totalTime=30;
+}
+
+function cabiarA15(){
+	totalTime=15;
 }
 
 function reload(){
