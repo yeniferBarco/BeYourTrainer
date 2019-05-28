@@ -786,9 +786,9 @@ function continuar(){
 	clock.className="clock posicionBotones animated fadeInLeftBig";
 	rueda.className="rueda posicionBotones mostrar";
 
-	bar.animate(1.8, // {
- 	//duration: 17500
-	// }
+	bar.animate(1.0,  {
+ 	duration: 11000
+	 }
 	);
 
 	setTimeout(()=>{
